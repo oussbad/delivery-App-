@@ -9,11 +9,13 @@ class Test extends StatelessWidget {
       appBar: AppBar(
         title: const Text('App'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
-          Text('Boxpend'),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Text('Boxpend'),
+          ],
+        ),
       ),
     );
   }
