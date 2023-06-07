@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Test extends StatelessWidget {
   const Test({super.key});
@@ -7,7 +8,7 @@ class Test extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('App'),
+        title: Text('APP'.tr),
       ),
       body: Center(
         child: Column(
