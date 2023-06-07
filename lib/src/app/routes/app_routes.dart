@@ -1,11 +1,15 @@
 part of 'app_pages.dart';
 
 abstract class _Paths {
-  static const test = '/test';
+  // Just a simple template to copy from
+  static const template = '/template';
+  //--------------------------------------
+
 }
 
 abstract class AppRoutes {
   AppRoutes._();
-
-  static const test = _Paths.test;
+  // Just a simple template to copy from
+  static const template = _Paths.template;
+  //--------------------------------------
 }
