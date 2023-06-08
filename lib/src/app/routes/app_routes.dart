@@ -4,7 +4,7 @@ abstract class _Paths {
   // Just a simple template to copy from
   static const template = '/template';
   //--------------------------------------
-
+  static const splash = '/splash';
 }
 
 abstract class AppRoutes {
@@ -12,4 +12,5 @@ abstract class AppRoutes {
   // Just a simple template to copy from
   static const template = _Paths.template;
   //--------------------------------------
+  static const splash = _Paths.splash;
 }
