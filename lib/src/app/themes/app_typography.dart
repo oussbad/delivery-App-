@@ -1,5 +1,5 @@
-class AppTypograhy {
-  AppTypograhy._();
+class AppTypography {
+  AppTypography._();
 
   static const String familyInter = 'Inter';
 
