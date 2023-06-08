@@ -21,10 +21,19 @@ class AppPalette {
   );
 
   //BG Colors
+  static Color bg1 = const Color(0xFF4C4F6B);
+  static Color bg2 = const Color(0xFF313248);
+  static Color bg3 = const Color(0xFF292A38);
+  static Color bg4 = const Color(0xFF191A23);
+  static Color bg5 = const Color(0xFF0B0C1B);
 
   //Text Colors
   static Color text1 = const Color(0xFFDBDCEF);
-  static Color text2 = const Color(0xFF858699);
+  static Color text2 = const Color(0xFFFAFAFA);
+
+  //Input Colors
+  static Color inputBg = const Color.fromRGBO(255, 255, 255, .07);
+  static Color inputBorder = const Color.fromRGBO(255, 255, 255, .13);
 
   // Neutral Colors
   static Color white = const Color(0xFFFFFFFF);

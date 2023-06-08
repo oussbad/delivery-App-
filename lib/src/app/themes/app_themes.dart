@@ -8,5 +8,14 @@ class AppThemes {
   static ThemeData dark = ThemeData(
     fontFamily: AppTypography.familyInter,
     primarySwatch: AppPalette.primarySwatch,
+    scaffoldBackgroundColor: AppPalette.bg4,
+    hintColor: AppPalette.inputBorder,
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: AppPalette.inputBg,
+      border: OutlineInputBorder(
+        borderSide: BorderSide(color: AppPalette.inputBorder),
+      ),
+    ),
   );
 }
