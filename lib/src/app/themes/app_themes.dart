@@ -6,7 +6,7 @@ class AppThemes {
   AppThemes._();
 
   static ThemeData dark = ThemeData(
-    fontFamily: AppTypography.familyInter,
+    // fontFamily: AppTypography.familyInter,
     primarySwatch: AppPalette.primarySwatch,
     scaffoldBackgroundColor: AppPalette.bg4,
     hintColor: AppPalette.inputBorder,
@@ -15,6 +15,12 @@ class AppThemes {
       fillColor: AppPalette.inputBg,
       border: OutlineInputBorder(
         borderSide: BorderSide(color: AppPalette.inputBorder),
+      ),
+    ),
+    checkboxTheme: CheckboxThemeData(
+      fillColor: MaterialStateProperty.all<Color>(AppPalette.primarySwatch),
+      side: BorderSide(
+        color: AppPalette.inputBorder,
       ),
     ),
   );

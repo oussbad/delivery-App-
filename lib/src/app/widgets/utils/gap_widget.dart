@@ -4,6 +4,11 @@ import 'package:flutter/material.dart';
 enum GapEnum { vertical, horizontal }
 
 class GapWidget extends StatelessWidget {
+  GapWidget.spacing8({
+    super.key,
+    this.axe = GapEnum.vertical,
+  }) : spacing = AppSpacing.s_8;
+
   GapWidget.spacing12({
     super.key,
     this.axe = GapEnum.vertical,
