@@ -1,0 +1,3 @@
+class AppSpacing {
+  AppSpacing._();
+}

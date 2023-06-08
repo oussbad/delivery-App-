@@ -1,0 +1,3 @@
+class AppTypograhy {
+  AppTypograhy._();
+}
