@@ -30,6 +30,7 @@ class AppPalette {
   //Text Colors
   static Color text1 = const Color(0xFFDBDCEF);
   static Color text2 = const Color(0xFFFAFAFA);
+  static Color text3 = const Color(0xFF828282);
 
   //Input Colors
   static Color inputBg = const Color.fromRGBO(255, 255, 255, .07);

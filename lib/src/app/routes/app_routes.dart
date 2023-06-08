@@ -5,6 +5,7 @@ abstract class _Paths {
   static const template = '/template';
   //--------------------------------------
   static const splash = '/splash';
+  static const onBoarding = '/onboarding';
 }
 
 abstract class AppRoutes {
@@ -13,4 +14,5 @@ abstract class AppRoutes {
   static const template = _Paths.template;
   //--------------------------------------
   static const splash = _Paths.splash;
+  static const onBoarding = _Paths.onBoarding;
 }

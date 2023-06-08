@@ -1,6 +1,8 @@
 import 'package:boxpend_flutter_android_app/src/presentation/template/binds/template_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/pages/template_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/welcome/binds/onboarding_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/binds/splash_bind.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/welcome/pages/onboarding_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/pages/splash_page.dart';
 import 'package:get/get.dart';
 
@@ -24,6 +26,12 @@ class AppPages {
       name: _Paths.splash,
       page: () => SplashPage(),
       binding: SplashBind(),
+    ),
+
+    GetPage(
+      name: _Paths.onBoarding,
+      page: () => const OnBoardingPage(),
+      binding: OnBoardingBind(),
     ),
   ];
 }

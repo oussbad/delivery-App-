@@ -14,7 +14,7 @@ class SplashController extends GetxController {
   Future<void> loadSplashScreen() async {
     Timer(
       const Duration(milliseconds: 5000),
-      () => Get.offAllNamed('/template'),
+      () => Get.offAllNamed('/onboarding'),
     );
   }
 }

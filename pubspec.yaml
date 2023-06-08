@@ -22,7 +22,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/logo.svg
-  #   - images/a_dot_ham.jpeg
+    - assets/images/onboarding1.svg
+    - assets/images/onboarding2.svg
   fonts:
     - family: Inter
       fonts:
