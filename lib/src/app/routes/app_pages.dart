@@ -1,3 +1,5 @@
+import 'package:boxpend_flutter_android_app/src/presentation/auth/binds/signup_bind.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signup_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/binds/template_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/pages/template_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/binds/onboarding_bind.dart';
@@ -11,7 +13,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = AppRoutes.splash;
+  static const initial = AppRoutes.signUp;
 
   static final pages = [
     // Just a simple template to copy from
@@ -22,6 +24,9 @@ class AppPages {
     ),
     //---------------------------------------
 
+    ///
+    /// Welcome Pages
+    ///
     GetPage(
       name: _Paths.splash,
       page: () => SplashPage(),
@@ -32,6 +37,15 @@ class AppPages {
       name: _Paths.onBoarding,
       page: () => const OnBoardingPage(),
       binding: OnBoardingBind(),
+    ),
+
+    ///
+    /// Auth Pages
+    ///
+    GetPage(
+      name: _Paths.signUp,
+      page: () => const SignUpPage(),
+      binding: SignUpBind(),
     ),
   ];
 }

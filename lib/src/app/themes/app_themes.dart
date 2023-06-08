@@ -18,9 +18,17 @@ class AppThemes {
       ),
     ),
     checkboxTheme: CheckboxThemeData(
-      fillColor: MaterialStateProperty.all<Color>(AppPalette.primarySwatch),
+      fillColor: MaterialStateProperty.all<Color>(
+        AppPalette.primarySwatch,
+      ),
       side: BorderSide(
         color: AppPalette.inputBorder,
+      ),
+    ),
+
+    radioTheme: RadioThemeData(
+      fillColor: MaterialStateProperty.all<Color>(
+        AppPalette.primarySwatch,
       ),
     ),
   );

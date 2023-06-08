@@ -5,10 +5,10 @@ import 'package:get/get.dart';
 class OnBoardingController extends GetxController {
   static OnBoardingController get to => Get.find();
 
-  final RxInt index = 0.obs;
+  final RxInt index = 1.obs;
   final int itemCount = 2;
   final PageController pageController = PageController(
-    initialPage: 0,
+    initialPage: 1,
   );
 
   void onPageChanged(int page) {
@@ -21,5 +21,5 @@ class OnBoardingController extends GetxController {
     update();
   }
 
-  void goToHomePage() => Get.offAllNamed(AppRoutes.template);
+  void goToHomePage() => Get.offAllNamed(AppRoutes.signUp);
 }
