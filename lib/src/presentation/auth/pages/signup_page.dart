@@ -39,7 +39,7 @@ class SignUpPage extends GetView<SignUpController> {
           textAlign: TextAlign.center,
         ),
         GapWidget.spacing24(),
-        ..._buildUserType(),
+        _buildUserType(),
         GapWidget.spacing24(),
         const TextFieldWidget(
           placeholder: StringsManager.fullName,
@@ -79,25 +79,31 @@ class SignUpPage extends GetView<SignUpController> {
     );
   }
 
-  List<Widget> _buildUserType() {
-    return [
-      Obx(
-        () => RadioWidget<UserType>(
-          label: StringsManager.provider,
-          value: UserType.provider,
-          groupValue: controller.userType.value,
-          onChanged: controller.onUserTypeChanged,
+  Widget _buildUserType() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Obx(
+          () => RadioWidget<UserType>(
+            label: StringsManager.provider,
+            value: UserType.provider,
+            groupValue: controller.userType.value,
+            onChanged: controller.onUserTypeChanged,
+          ),
         ),
-      ),
-      Obx(
-        () => RadioWidget<UserType>(
-          label: StringsManager.delivery,
-          value: UserType.delivery,
-          groupValue: controller.userType.value,
-          onChanged: controller.onUserTypeChanged,
+        GapWidget.spacing12(
+          axe: GapEnum.horizontal,
         ),
-      ),
-    ];
+        Obx(
+          () => RadioWidget<UserType>(
+            label: StringsManager.delivery,
+            value: UserType.delivery,
+            groupValue: controller.userType.value,
+            onChanged: controller.onUserTypeChanged,
+          ),
+        ),
+      ],
+    );
   }
 
   Widget _buildAfterSignUpButton() {
