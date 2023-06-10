@@ -1,3 +1,4 @@
+import 'package:boxpend_flutter_android_app/src/app/helpers/validators.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
@@ -17,6 +18,7 @@ class SignInPage extends GetView<SignInController> {
     return Scaffold(
       body: Center(
         child: Form(
+          key: controller.signinFormKey,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: AppSpacing.s_16),
             child: _buildColumn(),
@@ -36,13 +38,15 @@ class SignInPage extends GetView<SignInController> {
           textAlign: TextAlign.center,
         ),
         GapWidget.spacing24(),
-        const TextFieldWidget(
+        TextFieldWidget(
+          controller: controller.emailController,
           placeholder: StringsManager.email,
+          validator: Validator().required().isEmail().run,
         ),
         GapWidget.spacing24(),
         ButtonWidget(
           label: StringsManager.continueTo,
-          onPressed: () {},
+          onPressed: controller.signin,
         ),
         GapWidget.spacing12(),
         _buildAfterSignInButton(),

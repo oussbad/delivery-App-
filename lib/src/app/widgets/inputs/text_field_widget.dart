@@ -43,9 +43,13 @@ class TextFieldWidget extends StatelessWidget {
         ),
       ),
       isDense: true,
+      prefix: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: AppSpacing.s_12,
+        ),
+      ),
       contentPadding: EdgeInsets.symmetric(
         vertical: AppSpacing.s_20,
-        horizontal: AppSpacing.s_24,
       ),
       errorBorder: OutlineInputBorder(
         borderSide: BorderSide(

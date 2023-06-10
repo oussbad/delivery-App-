@@ -16,7 +16,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = AppRoutes.emailVerification;
+  static const initial = AppRoutes.signIn;
 
   static final pages = [
     // Just a simple template to copy from

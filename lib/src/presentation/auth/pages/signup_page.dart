@@ -1,3 +1,4 @@
+import 'package:boxpend_flutter_android_app/src/app/helpers/validators.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
@@ -20,6 +21,7 @@ class SignUpPage extends GetView<SignUpController> {
     return Scaffold(
       body: Center(
         child: Form(
+          key: controller.signupFormKey,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: AppSpacing.s_16),
             child: _buildColumn(),
@@ -41,11 +43,15 @@ class SignUpPage extends GetView<SignUpController> {
         GapWidget.spacing24(),
         _buildUserType(),
         GapWidget.spacing24(),
-        const TextFieldWidget(
+        TextFieldWidget(
+          controller: controller.fullNameController,
+          validator: Validator().required().run,
           placeholder: StringsManager.fullName,
         ),
         GapWidget.spacing20(),
-        const TextFieldWidget(
+        TextFieldWidget(
+          controller: controller.emailController,
+          validator: Validator().required().isEmail().run,
           placeholder: StringsManager.email,
         ),
         GapWidget.spacing12(),
@@ -53,7 +59,7 @@ class SignUpPage extends GetView<SignUpController> {
         GapWidget.spacing24(),
         ButtonWidget(
           label: StringsManager.createAccount,
-          onPressed: () {},
+          onPressed: controller.signup,
         ),
         GapWidget.spacing12(),
         _buildAfterSignUpButton(),
@@ -65,9 +71,11 @@ class SignUpPage extends GetView<SignUpController> {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Checkbox(
-          value: true,
-          onChanged: (value) {},
+        Obx(
+          () => Checkbox(
+            value: controller.isAccepted.value,
+            onChanged: controller.onIsAcceptedChanged,
+          ),
         ),
         GapWidget.spacing8(
           axe: GapEnum.horizontal,

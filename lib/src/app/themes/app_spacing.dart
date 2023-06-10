@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class AppSpacing {
   AppSpacing._();
 
@@ -21,6 +19,4 @@ class AppSpacing {
   static double s_64 = 64.0;
 
   static double r_7 = 7.0;
-
-  static Size mediaQuery(BuildContext context) => MediaQuery.of(context).size;
 }

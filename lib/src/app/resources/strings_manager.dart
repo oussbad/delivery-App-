@@ -34,4 +34,16 @@ class StringsManager {
   static const String emailSent = 'We have sent you an email';
   static const String emailSentDescription =
       'to login please open your email and click the link in it';
+
+  ///
+  /// Form Validation
+  ///
+  static const String requiredErrorMessage = "This field is required";
+  static const String usernameErrorMessage = "The username is not valid";
+  static const String emailErrorMessage = "The email is not valid";
+  static const String passwordErrorMessage =
+      "The field length should be greather or equal 8";
+  static const String confirmPasswordErrorMessage =
+      "The password confirmation does not match";
+  static const String phoneNumberErrorMessage = "The Phone number is not valid";
 }
