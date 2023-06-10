@@ -15,6 +15,7 @@ abstract class _Paths {
   /// Auth Pages
   ///
   static const signUp = '/signup';
+  static const signIn = '/signin';
 }
 
 abstract class AppRoutes {
@@ -33,4 +34,5 @@ abstract class AppRoutes {
   /// Auth Pages
   ///
   static const signUp = _Paths.signUp;
+  static const signIn = _Paths.signIn;
 }

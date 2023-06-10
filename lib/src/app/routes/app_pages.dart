@@ -1,4 +1,6 @@
+import 'package:boxpend_flutter_android_app/src/presentation/auth/binds/signin_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/binds/signup_bind.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signin_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signup_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/binds/template_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/pages/template_page.dart';
@@ -13,7 +15,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = AppRoutes.signUp;
+  static const initial = AppRoutes.signIn;
 
   static final pages = [
     // Just a simple template to copy from
@@ -46,6 +48,11 @@ class AppPages {
       name: _Paths.signUp,
       page: () => const SignUpPage(),
       binding: SignUpBind(),
+    ),
+    GetPage(
+      name: _Paths.signIn,
+      page: () => const SignInPage(),
+      binding: SignInBind(),
     ),
   ];
 }

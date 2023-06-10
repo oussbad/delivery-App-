@@ -14,5 +14,5 @@ class SignUpController extends GetxController {
 
   void goToPolicyPrivacyPage() => Get.offAllNamed(AppRoutes.template);
 
-  void goToSignInPage() => Get.offAllNamed(AppRoutes.template);
+  void goToSignInPage() => Get.offAllNamed(AppRoutes.signIn);
 }

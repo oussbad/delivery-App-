@@ -28,4 +28,7 @@ class StringsManager {
   static const String fullName = 'Full Name';
   static const String email = 'Email';
   static const String haveAnAccount = 'Have an account? Login';
+  static const String welcomeBack = 'Welcome Back';
+  static const String needAnAccount = 'Need an account? Signup';
+  static const String continueTo = 'Continue';
 }
