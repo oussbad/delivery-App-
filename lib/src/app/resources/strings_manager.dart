@@ -31,4 +31,7 @@ class StringsManager {
   static const String welcomeBack = 'Welcome Back';
   static const String needAnAccount = 'Need an account? Signup';
   static const String continueTo = 'Continue';
+  static const String emailSent = 'We have sent you an email';
+  static const String emailSentDescription =
+      'to login please open your email and click the link in it';
 }
