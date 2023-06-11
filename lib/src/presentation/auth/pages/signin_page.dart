@@ -33,19 +33,19 @@ class SignInPage extends GetView<SignInController> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         TextBlocKWidget.title(
-          StringsManager.welcomeBack,
+          StringsManager.welcomeBack.tr,
           color: AppPalette.white,
           textAlign: TextAlign.center,
         ),
         GapWidget.spacing24(),
         TextFieldWidget(
           controller: controller.emailController,
-          placeholder: StringsManager.email,
+          placeholder: StringsManager.email.tr,
           validator: Validator().required().isEmail().run,
         ),
         GapWidget.spacing24(),
         ButtonWidget(
-          label: StringsManager.continueTo,
+          label: StringsManager.continueTo.tr,
           onPressed: controller.signin,
         ),
         GapWidget.spacing12(),
@@ -58,7 +58,7 @@ class SignInPage extends GetView<SignInController> {
     return TextButton(
       onPressed: controller.goToSignUpPage,
       child: TextBlocKWidget.body(
-        StringsManager.needAnAccount,
+        StringsManager.needAnAccount.tr,
         textAlign: TextAlign.center,
       ),
     );

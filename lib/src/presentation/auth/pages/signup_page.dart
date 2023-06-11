@@ -36,7 +36,7 @@ class SignUpPage extends GetView<SignUpController> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         TextBlocKWidget.title(
-          StringsManager.welcomeToBoxpend,
+          StringsManager.welcomeToBoxpend.tr,
           color: AppPalette.white,
           textAlign: TextAlign.center,
         ),
@@ -46,19 +46,19 @@ class SignUpPage extends GetView<SignUpController> {
         TextFieldWidget(
           controller: controller.fullNameController,
           validator: Validator().required().run,
-          placeholder: StringsManager.fullName,
+          placeholder: StringsManager.fullName.tr,
         ),
         GapWidget.spacing20(),
         TextFieldWidget(
           controller: controller.emailController,
           validator: Validator().required().isEmail().run,
-          placeholder: StringsManager.email,
+          placeholder: StringsManager.email.tr,
         ),
         GapWidget.spacing12(),
         _buildCheckbox(),
         GapWidget.spacing24(),
         ButtonWidget(
-          label: StringsManager.createAccount,
+          label: StringsManager.createAccount.tr,
           onPressed: controller.signup,
         ),
         GapWidget.spacing12(),
@@ -93,7 +93,7 @@ class SignUpPage extends GetView<SignUpController> {
       children: [
         Obx(
           () => RadioWidget<UserType>(
-            label: StringsManager.provider,
+            label: StringsManager.provider.tr,
             value: UserType.provider,
             groupValue: controller.userType.value,
             onChanged: controller.onUserTypeChanged,
@@ -104,7 +104,7 @@ class SignUpPage extends GetView<SignUpController> {
         ),
         Obx(
           () => RadioWidget<UserType>(
-            label: StringsManager.delivery,
+            label: StringsManager.delivery.tr,
             value: UserType.delivery,
             groupValue: controller.userType.value,
             onChanged: controller.onUserTypeChanged,
@@ -118,7 +118,7 @@ class SignUpPage extends GetView<SignUpController> {
     return TextButton(
       onPressed: controller.goToSignInPage,
       child: TextBlocKWidget.body(
-        StringsManager.haveAnAccount,
+        StringsManager.haveAnAccount.tr,
         textAlign: TextAlign.center,
       ),
     );
@@ -127,13 +127,13 @@ class SignUpPage extends GetView<SignUpController> {
   Widget _buildBeforeSignUpButton() {
     return RichText(
       text: TextSpan(
-        text: StringsManager.beforeSigningUpAgreement,
+        text: StringsManager.beforeSigningUpAgreement.tr,
         style: AppTypography.body.copyWith(
           color: AppPalette.white,
         ),
         children: [
           TextSpan(
-            text: ' ${StringsManager.termsAndConditions}',
+            text: ' ${StringsManager.termsAndConditions.tr}',
             style: AppTypography.body.copyWith(
               color: AppPalette.primarySwatch,
             ),
@@ -141,13 +141,13 @@ class SignUpPage extends GetView<SignUpController> {
               ..onTap = () => controller.goToTermsAndConditionsPage(),
           ),
           TextSpan(
-            text: ' ${StringsManager.and}',
+            text: ' ${StringsManager.and.tr}',
             style: AppTypography.body.copyWith(
               color: AppPalette.white,
             ),
           ),
           TextSpan(
-            text: ' ${StringsManager.policyPrivacy}',
+            text: ' ${StringsManager.policyPrivacy.tr}',
             style: AppTypography.body.copyWith(
               color: AppPalette.primarySwatch,
             ),

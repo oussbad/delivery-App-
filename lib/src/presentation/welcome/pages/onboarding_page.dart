@@ -33,17 +33,17 @@ class OnBoardingPage extends GetView<OnBoardingController> {
       controller: controller.pageController,
       onPageChanged: controller.onPageChanged,
       children: [
-        const OnBoardingContentWidget(
+        OnBoardingContentWidget(
           image: AssetsManager.onBoarding1,
-          title: StringsManager.onBoardingTitle1,
-          subTitle: StringsManager.onBoardingSubTitle2,
+          title: StringsManager.onBoardingTitle1.tr,
+          subTitle: StringsManager.onBoardingSubTitle2.tr,
         ),
         OnBoardingContentWidget(
           image: AssetsManager.onBoarding2,
-          title: StringsManager.onBoardingTitle2,
-          subTitle: StringsManager.onBoardingSubTitle2,
+          title: StringsManager.onBoardingTitle2.tr,
+          subTitle: StringsManager.onBoardingSubTitle2.tr,
           child: ButtonWidget(
-            label: StringsManager.getStarted,
+            label: StringsManager.getStarted.tr,
             onPressed: controller.goToHomePage,
           ),
         ),
@@ -54,7 +54,7 @@ class OnBoardingPage extends GetView<OnBoardingController> {
   Widget _buildIndicator() {
     return Obx(
       () => Positioned(
-        bottom: 30.0,
+        bottom: AppSpacing.s_28,
         child: IndicatorWidget(
           itemCount: controller.itemCount,
           currentIndex: controller.index.value,

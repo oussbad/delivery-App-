@@ -22,7 +22,7 @@ class HomePage extends GetView<HomeController> {
       appBar: AppBar(
         title: Obx(
           () => TextBlocKWidget.subTitle(
-            controller.navigationItems[controller.currentIndex.value],
+            controller.navigationItems[controller.currentIndex.value].tr,
           ),
         ),
         leading: IconButton(
@@ -73,22 +73,22 @@ class HomePage extends GetView<HomeController> {
         currentIndex: controller.currentIndex.value,
         onTap: controller.changeScreen,
         iconSize: AppSpacing.s_28,
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: HeroIcon(HeroIcons.cube),
-            label: StringsManager.orders,
+            icon: const HeroIcon(HeroIcons.cube),
+            label: StringsManager.orders.tr,
           ),
           BottomNavigationBarItem(
-            icon: HeroIcon(HeroIcons.chartPie),
-            label: StringsManager.statistics,
+            icon: const HeroIcon(HeroIcons.chartPie),
+            label: StringsManager.statistics.tr,
           ),
           BottomNavigationBarItem(
-            icon: HeroIcon(HeroIcons.bell),
-            label: StringsManager.notifications,
+            icon: const HeroIcon(HeroIcons.bell),
+            label: StringsManager.notifications.tr,
           ),
           BottomNavigationBarItem(
-            icon: HeroIcon(HeroIcons.users),
-            label: StringsManager.connections,
+            icon: const HeroIcon(HeroIcons.users),
+            label: StringsManager.connections.tr,
           ),
         ],
       ),
