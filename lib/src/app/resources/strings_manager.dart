@@ -36,6 +36,23 @@ class StringsManager {
       'to login please open your email and click the link in it';
 
   ///
+  /// Home Pages
+  ///
+  static const String orders = 'Orders';
+  static const String statistics = 'Statistics';
+  static const String notifications = 'Notifications';
+  static const String connections = 'Connections';
+
+  ///
+  /// Drawer
+  ///
+  static const String editProfile = 'Edit Profile';
+  static const String darkMode = 'Dark Mode';
+  static const String settings = 'Settings';
+  static const String about = 'About';
+  static const String logout = 'Logout';
+
+  ///
   /// Form Validation
   ///
   static const String requiredErrorMessage = "This field is required";
