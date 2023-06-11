@@ -1,6 +1,6 @@
+import 'package:boxpend_flutter_android_app/src/app/resources/styles_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
-import 'package:boxpend_flutter_android_app/src/app/themes/app_typography.dart';
 import 'package:flutter/material.dart';
 
 class TextFieldWidget extends StatelessWidget {
@@ -26,7 +26,7 @@ class TextFieldWidget extends StatelessWidget {
       validator: validator,
       obscureText: isHidden!,
       keyboardType: type,
-      style: AppTypography.body.copyWith(
+      style: StylesManager.body.copyWith(
         color: AppPalette.white,
       ),
       decoration: _buildDecoration(),
@@ -36,7 +36,7 @@ class TextFieldWidget extends StatelessWidget {
   InputDecoration? _buildDecoration() {
     return InputDecoration(
       hintText: placeholder,
-      hintStyle: AppTypography.body,
+      hintStyle: StylesManager.body,
       border: OutlineInputBorder(
         borderRadius: BorderRadius.all(
           Radius.circular(AppSpacing.r_7),
@@ -56,7 +56,7 @@ class TextFieldWidget extends StatelessWidget {
           color: AppPalette.danger,
         ),
       ),
-      errorStyle: AppTypography.body.copyWith(
+      errorStyle: StylesManager.body.copyWith(
         color: AppPalette.danger,
       ),
     );

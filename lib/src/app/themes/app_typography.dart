@@ -17,38 +17,4 @@ class AppTypography {
   static const FontWeight regular = FontWeight.w400;
   static const FontWeight bold = FontWeight.w700;
   static const FontWeight semiBold = FontWeight.w600;
-
-  static const TextStyle h1 = TextStyle(
-    fontSize: sizeXXL,
-    fontWeight: regular,
-  );
-
-  static const TextStyle h2 = TextStyle(
-    fontSize: sizeLG,
-    fontWeight: semiBold,
-  );
-
-  static const TextStyle h3 = TextStyle(
-    fontSize: sizeMD,
-    fontWeight: semiBold,
-  );
-
-  static const TextStyle title = TextStyle(
-    fontSize: sizeXL,
-    fontWeight: bold,
-  );
-
-  static const TextStyle subTitle = TextStyle(
-    fontSize: sizeSL,
-    fontWeight: regular,
-  );
-  static const TextStyle body = TextStyle(
-    fontSize: sizeSM,
-    fontWeight: regular,
-  );
-
-  static const TextStyle caption = TextStyle(
-    fontSize: sizeXS,
-    fontWeight: regular,
-  );
 }

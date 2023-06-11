@@ -1,4 +1,4 @@
-import 'package:boxpend_flutter_android_app/src/app/themes/app_typography.dart';
+import 'package:boxpend_flutter_android_app/src/app/resources/styles_manager.dart';
 import 'package:flutter/material.dart';
 
 class TextBlocKWidget extends StatelessWidget {
@@ -7,7 +7,7 @@ class TextBlocKWidget extends StatelessWidget {
     super.key,
     this.color,
     this.textAlign,
-  }) : style = AppTypography.h1.copyWith(
+  }) : style = StylesManager.h1.copyWith(
           color: color,
         );
 
@@ -16,7 +16,7 @@ class TextBlocKWidget extends StatelessWidget {
     super.key,
     this.color,
     this.textAlign,
-  }) : style = AppTypography.h2.copyWith(
+  }) : style = StylesManager.h2.copyWith(
           color: color,
         );
 
@@ -25,7 +25,7 @@ class TextBlocKWidget extends StatelessWidget {
     super.key,
     this.color,
     this.textAlign,
-  }) : style = AppTypography.h3.copyWith(
+  }) : style = StylesManager.h3.copyWith(
           color: color,
         );
 
@@ -34,7 +34,7 @@ class TextBlocKWidget extends StatelessWidget {
     super.key,
     this.color,
     this.textAlign,
-  }) : style = AppTypography.title.copyWith(
+  }) : style = StylesManager.title.copyWith(
           color: color,
         );
 
@@ -43,7 +43,7 @@ class TextBlocKWidget extends StatelessWidget {
     super.key,
     this.color,
     this.textAlign,
-  }) : style = AppTypography.subTitle.copyWith(
+  }) : style = StylesManager.subTitle.copyWith(
           color: color,
         );
 
@@ -52,7 +52,7 @@ class TextBlocKWidget extends StatelessWidget {
     super.key,
     this.color,
     this.textAlign,
-  }) : style = AppTypography.body.copyWith(
+  }) : style = StylesManager.body.copyWith(
           color: color,
         );
 
@@ -61,7 +61,7 @@ class TextBlocKWidget extends StatelessWidget {
     super.key,
     this.color,
     this.textAlign,
-  }) : style = AppTypography.caption.copyWith(
+  }) : style = StylesManager.caption.copyWith(
           color: color,
         );
 

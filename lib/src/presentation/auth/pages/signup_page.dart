@@ -1,8 +1,8 @@
 import 'package:boxpend_flutter_android_app/src/app/helpers/validators.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
+import 'package:boxpend_flutter_android_app/src/app/resources/styles_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
-import 'package:boxpend_flutter_android_app/src/app/themes/app_typography.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/buttons/button_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/inputs/radio_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/inputs/text_field_widget.dart';
@@ -128,13 +128,13 @@ class SignUpPage extends GetView<SignUpController> {
     return RichText(
       text: TextSpan(
         text: StringsManager.beforeSigningUpAgreement.tr,
-        style: AppTypography.body.copyWith(
+        style: StylesManager.body.copyWith(
           color: AppPalette.white,
         ),
         children: [
           TextSpan(
             text: ' ${StringsManager.termsAndConditions.tr}',
-            style: AppTypography.body.copyWith(
+            style: StylesManager.body.copyWith(
               color: AppPalette.primarySwatch,
             ),
             recognizer: TapGestureRecognizer()
@@ -142,13 +142,13 @@ class SignUpPage extends GetView<SignUpController> {
           ),
           TextSpan(
             text: ' ${StringsManager.and.tr}',
-            style: AppTypography.body.copyWith(
+            style: StylesManager.body.copyWith(
               color: AppPalette.white,
             ),
           ),
           TextSpan(
             text: ' ${StringsManager.policyPrivacy.tr}',
-            style: AppTypography.body.copyWith(
+            style: StylesManager.body.copyWith(
               color: AppPalette.primarySwatch,
             ),
             recognizer: TapGestureRecognizer()
