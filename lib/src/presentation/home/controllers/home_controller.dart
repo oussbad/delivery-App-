@@ -12,6 +12,7 @@ class HomeController extends GetxController {
     StringsManager.statistics,
     StringsManager.notifications,
     StringsManager.connections,
+    StringsManager.search,
   ];
   final RxInt currentIndex = 0.obs;
 
