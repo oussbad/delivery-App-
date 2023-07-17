@@ -28,7 +28,7 @@ To use Boxpend, follow these steps:
 
 ## Dependencies
 
-- [Flutter](https://pub.dev/packages/get): A powerful state management solution that simplifies development with Flutter.
+- [GetX](https://pub.dev/packages/get): A powerful state management solution that simplifies development with Flutter.
 
 ## Contributing
 
