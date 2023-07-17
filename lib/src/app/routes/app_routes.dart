@@ -22,18 +22,11 @@ abstract class _Paths {
   /// Home Pages
   ///
   static const home = '/home';
-<<<<<<< HEAD
 
-  ///
-  /// Settings Pages
-  ///
-  static const settings = '/settings';
-=======
   ///
   /// Search Pages
   ///
   static const search = '/search';
->>>>>>> 1d6819959c8225450da26354f95f25a1fc5576ed
 }
 
 abstract class AppRoutes {
@@ -59,16 +52,9 @@ abstract class AppRoutes {
   /// Home Pages
   ///
   static const home = _Paths.home;
-<<<<<<< HEAD
 
-  ///
-  /// Settings Pages
-  ///
-  static const settings = _Paths.settings;
-=======
   ///
   /// search Pages
   ///
   static const search = _Paths.search;
->>>>>>> 1d6819959c8225450da26354f95f25a1fc5576ed
 }
