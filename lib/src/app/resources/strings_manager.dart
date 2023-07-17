@@ -42,6 +42,7 @@ class StringsManager {
   static const String statistics = 'Statistics';
   static const String notifications = 'Notifications';
   static const String connections = 'Connections';
+  static const String search = 'Search';
 
   ///
   /// Drawer
