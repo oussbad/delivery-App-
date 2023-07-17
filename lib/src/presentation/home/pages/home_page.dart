@@ -90,10 +90,6 @@ class HomePage extends GetView<HomeController> {
             icon: const HeroIcon(HeroIcons.users),
             label: StringsManager.connections.tr,
           ),
-           BottomNavigationBarItem(
-            icon: const HeroIcon(HeroIcons.magnifyingGlass),
-            label: StringsManager.connections.tr,
-          ),
         ],
       ),
     );

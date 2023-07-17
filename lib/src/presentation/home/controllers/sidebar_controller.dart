@@ -5,7 +5,7 @@ class SidebarController extends GetxController {
   static SidebarController get to => Get.find();
 
   final String avatar = '/avatar';
-  final String username = 'Jhon Doeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee';
+  final String username = 'Jhon Doe';
   final String email = 'jhon.doe@gmail.com';
   final RxBool isDarkMode = false.obs;
 
