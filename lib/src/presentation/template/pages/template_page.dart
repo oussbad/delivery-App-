@@ -11,12 +11,14 @@ class Template extends GetView<TemplateController> {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: AppSpacing.s_16),
-        child: Column(
+        child: Center(
+          child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
             Text('Template'),
           ],
         ),
+      ),
       ),
     );
   }
