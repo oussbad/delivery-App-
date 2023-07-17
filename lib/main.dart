@@ -6,7 +6,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
     DevicePreview(
-      enabled: true,
+      enabled: false,
       isToolbarVisible: false,
       defaultDevice: DevicePreview.defaultDevices.firstWhere(
         (device) => device.name == "Small",

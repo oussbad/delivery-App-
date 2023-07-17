@@ -16,7 +16,10 @@ class SignInController extends GetxController {
     super.onClose();
   }
 
-  void signin() async {
+  void signin() => Get.offAllNamed(AppRoutes.home);
+
+
+  void signinn() async {
     if (signinFormKey.currentState!.validate()) {
       Get.showOverlay(
         opacity: .8,
@@ -32,6 +35,7 @@ class SignInController extends GetxController {
                   message: 'message',
                   icon: Icons.info,
                 );
+                Get.offAllNamed(AppRoutes.home);
               } else {
                 AppHelpers.snackbar(
                   title: 'title',
