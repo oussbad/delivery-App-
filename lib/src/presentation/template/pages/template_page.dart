@@ -8,14 +8,13 @@ class Template extends GetView<TemplateController> {
 
   @override
   Widget build(BuildContext context) {
-    TemplateController controller = Get.put(TemplateController());
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: AppSpacing.s_16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            Text('Template'), 
+            Text('Template'),
           ],
         ),
       ),
