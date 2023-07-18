@@ -54,20 +54,6 @@ class StringsManager {
   static const String logout = 'Logout';
 
   ///
-  /// Settings Pages
-  ///
-  static const String languages = 'Languages';
-  static const String arabic = 'Arabic';
-  static const String english = 'English';
-  static const String french = 'French';
-  static const String theme = 'Theme';
-  static const String dark = 'Dark';
-  static const String light = 'Light';
-  static const String isOn = 'On';
-  static const String isOff = 'Off';
-  static const String defaultView = 'Default View';
-
-  ///
   /// Form Validation
   ///
   static const String requiredErrorMessage = "This field is required";
@@ -78,4 +64,14 @@ class StringsManager {
   static const String confirmPasswordErrorMessage =
       "The password confirmation does not match";
   static const String phoneNumberErrorMessage = "The Phone number is not valid";
+
+  ///
+  /// Image Picker Validation
+  ///
+  static const String camera = "Camera";
+  static const String gallery = "Gallery";
+  static const String imageRequired = "Image required";
+  static const String imageNotAllowed = "The image you selected is not allowed";
+  static const String imageMaxSize =
+      "The selected image size exceeds the maximum allowed size (5mb)";
 }
