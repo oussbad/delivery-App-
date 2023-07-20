@@ -25,7 +25,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
   late File _image;
   final ImagePicker _imagePicker = ImagePicker();
 
-  void _validtaePickedImage(XFile? image) async {
+  void _validatePickedImage(XFile? image) async {
     final imageSize = await image!.length();
 
     if (GetUtils.isNull(image)) {
@@ -55,7 +55,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
 
   void _upload(ImageSource source) async {
     final picked = await _imagePicker.pickImage(source: source);
-    _validtaePickedImage(picked);
+    _validatePickedImage(picked);
     final File uploaded = File(picked!.path);
 
     setState(() {
