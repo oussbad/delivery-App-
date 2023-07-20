@@ -1,7 +1,9 @@
+import 'package:boxpend_flutter_android_app/src/app/core/error/failures.dart';
 import 'package:boxpend_flutter_android_app/src/app/core/usecases/no_param_usecase.dart';
 import 'package:boxpend_flutter_android_app/src/app/core/usecases/usecase.dart';
-import 'package:boxpend_flutter_android_app/src/domain/template/entities/template_entitiy.dart';
-import 'package:boxpend_flutter_android_app/src/domain/template/repositories/template_repository.dart';
+import 'package:boxpend_flutter_android_app/src/domain/entities/template_entitiy.dart';
+import 'package:boxpend_flutter_android_app/src/domain/repositories/template_repository.dart';
+import 'package:dartz/dartz.dart';
 
 class GetTemplatesUsecase extends Usecase<List<Template>, NoParams> {
   final TemplateRepository repository;
@@ -11,6 +13,6 @@ class GetTemplatesUsecase extends Usecase<List<Template>, NoParams> {
   });
 
   @override
-  Future<List<Template>> call(NoParams params) async =>
+  Future<Either<Failure, List<Template>>> call(NoParams params) async =>
       await repository.getTemplates();
 }
