@@ -4,8 +4,6 @@ import 'package:get/get.dart';
 class TemplateBind extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<TemplateController>(
-      () => TemplateController(),
-    );
+    Get.lazyPut<TemplateController>(() => TemplateController(Get.find()));
   }
 }

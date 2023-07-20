@@ -9,9 +9,9 @@ class TemplateRepositoryImpl extends TemplateRepository {
 
   TemplateRepositoryImpl({required this.datasource});
   @override
-  Future<Either<Failure, List<Template>>> getTemplates() async {
+  Future<Either<Failure, Template>> getTemplate() async {
     try {
-      final data = await datasource.getTemplates();
+      final data = await datasource.getTemplate();
       return Right(data);
     } on Failure catch (e) {
       return Left(e);

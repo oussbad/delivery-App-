@@ -3,5 +3,5 @@ import 'package:boxpend_flutter_android_app/src/domain/entities/template_entitiy
 import 'package:dartz/dartz.dart';
 
 abstract class TemplateRepository {
-  Future<Either<Failure, List<Template>>> getTemplates();
+  Future<Either<Failure, Template>> getTemplate();
 }
