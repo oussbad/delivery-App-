@@ -14,8 +14,9 @@ class TemplatePage extends GetView<TemplateController> {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text('Template'),
+            children: [
+              Text(controller.template.id.toString()),
+              Text(controller.template.name),
             ],
           ),
         ),
