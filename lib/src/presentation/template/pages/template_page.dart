@@ -15,8 +15,8 @@ class TemplatePage extends GetView<TemplateController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(controller.template.id.toString()),
-              Text(controller.template.name),
+              Obx(() => Text(controller.template.id.toString())),
+              Obx(() => Text(controller.template.name)),
             ],
           ),
         ),

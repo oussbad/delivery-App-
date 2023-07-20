@@ -6,13 +6,11 @@ import 'package:boxpend_flutter_android_app/src/domain/repositories/template_rep
 import 'package:dartz/dartz.dart';
 
 class GetTemplateUsecase extends Usecase<Template, NoParams> {
-  final TemplateRepository repository;
+  final TemplateRepository _repository;
 
-  GetTemplateUsecase({
-    required this.repository,
-  });
+  GetTemplateUsecase(this._repository);
 
   @override
   Future<Either<Failure, Template>> call(NoParams params) async =>
-      await repository.getTemplate();
+      await _repository.getTemplate();
 }

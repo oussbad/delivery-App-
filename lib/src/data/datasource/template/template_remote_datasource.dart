@@ -6,8 +6,8 @@ class TemplateRemoteDatasourceImpl extends TemplateRemoteDatasource {
   Future<TemplateModel> getTemplate() {
     try {
       const template = TemplateModel(
-        id: 1,
-        name: "Boxpend",
+        id: 10,
+        name: "Boxpend ok",
       );
       return Future.value(template);
     } catch (e) {

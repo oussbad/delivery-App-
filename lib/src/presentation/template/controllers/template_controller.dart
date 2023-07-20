@@ -15,7 +15,7 @@ class TemplateController extends GetxController {
 
   @override
   void onInit() {
-    loadTemplate;
+    loadTemplate();
     super.onInit();
   }
 
