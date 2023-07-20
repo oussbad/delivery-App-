@@ -1,7 +1,7 @@
-import 'package:boxpend_flutter_android_app/src/app/core/contracts/local_storage.dart';
+import 'package:boxpend_flutter_android_app/src/app/core/services/local_storage_service.dart';
 import 'package:get_storage/get_storage.dart';
 
-class LocalStorageService extends LocalStorage {
+class LocalStorageServiceImpl extends LocalStorageService {
   final GetStorage _box = GetStorage();
 
   Future<dynamic> init() async {
