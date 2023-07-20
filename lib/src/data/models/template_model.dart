@@ -1,4 +1,4 @@
-import '../../domain/template/entities/template_entitiy.dart';
+import 'package:boxpend_flutter_android_app/src/domain/entities/template_entitiy.dart';
 
 class TemplateModel extends Template {
   const TemplateModel({
