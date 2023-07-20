@@ -1,10 +1,10 @@
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/template_controller.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/example_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TemplatePage extends GetView<TemplateController> {
-  const TemplatePage({super.key});
+class ExamplePage extends GetView<ExampleController> {
+  const ExamplePage({super.key});
 
   @override
   Widget build(BuildContext context) {
