@@ -1,4 +1,3 @@
-import 'package:boxpend_flutter_android_app/src/presentation/home/controllers/search_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:heroicons/heroicons.dart';
