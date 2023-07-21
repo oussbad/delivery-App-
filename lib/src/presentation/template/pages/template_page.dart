@@ -1,3 +1,4 @@
+import 'package:boxpend_flutter_android_app/src/app/core/error/failures.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/template_controller.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +16,20 @@ class TemplatePage extends GetView<TemplateController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Obx(() => Text(controller.template.id.toString())),
-              Obx(() => Text(controller.template.name)),
+              Obx(
+                () => controller.template.value.fold(
+                  (failure) {
+                    if (failure is NetworkFailure) {
+                      return const Text('erorr networ');
+                    } else if (failure is ServerFailure) {
+                      return const Text('erorr server');
+                    } else {
+                      return const Text('erorr networ');
+                    }
+                  },
+                  (template) => Text(template.name),
+                ),
+              ),
             ],
           ),
         ),

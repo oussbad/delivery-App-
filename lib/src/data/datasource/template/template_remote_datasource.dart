@@ -1,17 +1,5 @@
-import 'package:boxpend_flutter_android_app/src/data/datasource/template/template_remote_datasource_impl.dart';
 import 'package:boxpend_flutter_android_app/src/data/models/template_model.dart';
 
-class TemplateRemoteDatasourceImpl extends TemplateRemoteDatasource {
-  @override
-  Future<TemplateModel> getTemplate() {
-    try {
-      const template = TemplateModel(
-        id: 10,
-        name: "Boxpend ok",
-      );
-      return Future.value(template);
-    } catch (e) {
-      throw UnimplementedError(e.toString());
-    }
-  }
+abstract class TemplateRemoteDatasource {
+  Future<TemplateModel> getTemplate();
 }
