@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:heroicons/heroicons.dart';
 
 class SearchWidget extends SearchDelegate {
-  final SearchController _searchController = Get.find<SearchController>();
-
   @override
   List<Widget> buildActions(BuildContext context) {
     return [
