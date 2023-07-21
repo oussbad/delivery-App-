@@ -1,6 +1,5 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:get/get.dart';
-
 import '../../presentation/home/pages/notifications_page.dart';
 
 // Get instance From FirebaseMessaging
@@ -33,16 +32,15 @@ void onMessage() {
 void onMessageOpenedApp() {
   FirebaseMessaging.onMessageOpenedApp.listen((message) {
     print('Message clicked!');
+    // when Clike the Message Navigat to  =>
     Get.to(arguments: "${message.messageId}",()=>NotificationsPage());
   });
 }
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  // you need to initialize firebase first
-
-  print("Handling a background message: ${message.data}");
+    print("Handling a background message: ${message.data}");
 }
-// App terminat
+// BackgroundMessage
 Future<void> onBackgroundMessage() async {
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
 
