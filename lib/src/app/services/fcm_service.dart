@@ -2,7 +2,7 @@ import 'package:boxpend_flutter_android_app/src/app/core/contracts/notification.
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
-class NotificationService extends Notification {
+class FCMService extends Notification {
   final FirebaseMessaging _fcm = FirebaseMessaging.instance;
 
   @override
