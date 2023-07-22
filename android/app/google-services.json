@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "162950639776",
+    "project_id": "boxpend-7079f",
+    "storage_bucket": "boxpend-7079f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162950639776:android:98edc9ac0f8b24b1b699c5",
+        "android_client_info": {
+          "package_name": "com.example.boxpend_flutter_android_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162950639776-rpmb27icie38oqmshco2teub6omnvnmp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcx2ci8kLqriDxSnkYGZBpN45A5K5g4Ss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "162950639776-rpmb27icie38oqmshco2teub6omnvnmp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
