@@ -48,7 +48,7 @@ class HomePage extends GetView<HomeController> {
         child: Obx(
           () => IndexedStack(
             index: controller.currentIndex.value,
-            children:  [
+            children: const [
               OrdersPage(),
               StatisticsPage(),
               NotificationsPage(),
