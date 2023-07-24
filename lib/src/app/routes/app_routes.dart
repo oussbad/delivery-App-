@@ -12,6 +12,12 @@ abstract class _Paths {
   static const onBoarding = '/onboarding';
 
   ///
+  /// Legal Pages
+  ///
+  static const terms = '/terms';
+  static const policy = '/policy';
+
+  ///
   /// Auth Pages
   ///
   static const signUp = '/signup';
@@ -40,6 +46,12 @@ abstract class AppRoutes {
   ///
   static const splash = _Paths.splash;
   static const onBoarding = _Paths.onBoarding;
+
+  ///
+  /// Legal Pages
+  ///
+  static const terms = _Paths.terms;
+  static const policy = _Paths.policy;
 
   ///
   /// Auth Pages

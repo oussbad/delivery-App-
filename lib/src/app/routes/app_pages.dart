@@ -13,6 +13,11 @@ import 'package:boxpend_flutter_android_app/src/presentation/welcome/pages/onboa
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/pages/splash_page.dart';
 import 'package:get/get.dart';
 
+import '../../presentation/legal/Binds/policy_bind.dart';
+import '../../presentation/legal/Binds/terms_bind.dart';
+import '../../presentation/legal/Pages/policy_page.dart';
+import '../../presentation/legal/Pages/terms_page.dart';
+
 part 'app_routes.dart';
 
 class AppPages {
@@ -42,6 +47,20 @@ class AppPages {
       name: _Paths.onBoarding,
       page: () => const OnBoardingPage(),
       binding: OnBoardingBind(),
+    ),
+
+    ///
+    /// Legal Pages
+    ///
+    GetPage(
+      name: _Paths.terms,
+      page: () => const TermsPage(),
+      binding: TermsBind(),
+    ),
+    GetPage(
+      name: _Paths.policy,
+      page: () => const PolicyPage(),
+      binding: PolicyBind(),
     ),
 
     ///
