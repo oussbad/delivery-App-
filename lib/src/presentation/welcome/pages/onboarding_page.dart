@@ -45,7 +45,9 @@ class OnBoardingPage extends GetView<OnBoardingController> {
           subTitle: StringsManager.onBoardingSubTitle2.tr,
           child: ButtonWidget(
             label: StringsManager.getStarted.tr,
-            onPressed: controller.goToHomePage,
+            onPressed: () {
+              controller.onSkip();
+            },
           ),
         ),
       ],

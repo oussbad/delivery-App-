@@ -5,3 +5,5 @@ abstract class LocalStorage extends GetxService {
   dynamic get(String key);
   Future<void> remove(String key);
 }
+
+
