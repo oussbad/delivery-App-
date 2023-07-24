@@ -14,6 +14,16 @@ class URLLauncherService implements URLLauncher {
     }
   }
 }
+
+Future<void> _launchWebURL(String message) async {
+  final whatsappUrl = "https://wa.me/?text=${Uri.parse(message)}";
+  if (await canLaunch(whatsappUrl)) {
+    await launch(whatsappUrl);
+  } else {
+    print('Could not launch WhatsApp');
+  }
+}
+/*
 Future<void> _launchWebURL(String url) async {
   if (!await launchUrl(
     Uri(
@@ -25,7 +35,21 @@ Future<void> _launchWebURL(String url) async {
   )) {
     throw Exception('Could not launch $url');
   }
+}*/
+Future<void>  _makePhoneCall(String phoneNumber) async {
+  if (await canLaunch('$phoneNumber')) {
+    await launch('$phoneNumber');
+  } else {
+    print('Could not launch $phoneNumber');
+  }
 }
+
+
+
+
+
+
+/*
 Future<void> _makePhoneCall(String phoneNumber) async {
   final Uri launchUri = Uri(
     scheme: 'tel',
@@ -33,4 +57,4 @@ Future<void> _makePhoneCall(String phoneNumber) async {
 
   );
   await launchUrl(launchUri);
-}
+}*/
