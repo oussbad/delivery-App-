@@ -21,5 +21,5 @@ class OnBoardingController extends GetxController {
     update();
   }
 
-  void goToHomePage() => Get.offAllNamed(AppRoutes.home);
+  void goToHomePage() => Get.toNamed(AppRoutes.terms);
 }

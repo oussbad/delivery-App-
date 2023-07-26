@@ -54,12 +54,12 @@ class AppPages {
     ///
     GetPage(
       name: _Paths.terms,
-      page: () => const TermsPage(),
+      page: () =>  TermsPage(),
       binding: TermsBind(),
     ),
     GetPage(
       name: _Paths.policy,
-      page: () => const PolicyPage(),
+      page: () =>  PolicyPage(),
       binding: PolicyBind(),
     ),
 
