@@ -1,4 +1,4 @@
-import 'package:boxpend_flutter_android_app/src/app/helpers/app_helpers.dart';
+import 'package:boxpend_flutter_android_app/src/app/helpers/app_snackbar.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
@@ -29,21 +29,21 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
     final imageSize = await image!.length();
 
     if (GetUtils.isNull(image)) {
-      AppHelpers.snackbar(
+      AppSnackbar.snackbar(
         title: 'title',
         message: StringsManager.imageRequired,
         icon: Icons.info,
       );
     }
     if (GetUtils.isImage(image.path)) {
-      AppHelpers.snackbar(
+      AppSnackbar.snackbar(
         title: 'title',
         message: StringsManager.imageNotAllowed,
         icon: Icons.info,
       );
     }
     if (GetUtils.isGreaterThan(imageSize, ConstantsManager.maxImageSize)) {
-      AppHelpers.snackbar(
+      AppSnackbar.snackbar(
         title: 'title',
         message: StringsManager.imageMaxSize,
         icon: Icons.info,
