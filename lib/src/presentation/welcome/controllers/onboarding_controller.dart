@@ -10,6 +10,9 @@ class OnBoardingController extends GetxController {
   final PageController pageController = PageController(
     initialPage: 1,
   );
+  void onSkip() {
+    Get.offAllNamed(AppRoutes.home);
+  }
 
   void onPageChanged(int page) {
     index(page);
