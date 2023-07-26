@@ -13,12 +13,12 @@ class Template extends GetView<TemplateController> {
         padding: EdgeInsets.symmetric(horizontal: AppSpacing.s_16),
         child: Center(
           child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text('Template'),
-          ],
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text('Template'),
+            ],
+          ),
         ),
-      ),
       ),
     );
   }
