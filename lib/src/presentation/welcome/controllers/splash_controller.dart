@@ -1,12 +1,13 @@
 import 'dart:async';
 
+import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/routes/app_pages.dart';
 import 'package:boxpend_flutter_android_app/src/app/services/local_storage_service.dart';
 import 'package:get/get.dart';
 
 class SplashController extends GetxController {
   static SplashController get to => Get.find();
-  final LocalStorageService _localStorageService = Get.find();
+  final LocalStorageService _localStorage = Get.find();
 
   @override
   void onReady() {
@@ -14,25 +15,26 @@ class SplashController extends GetxController {
     loadSplashScreen();
   }
 
-  // check if user is logged in for the first time
   void checkFirstSeen() async {
-    bool _seen = (_localStorageService.get('seen') ?? false);
-    if (_seen) {
-      Get.offAllNamed(AppRoutes.home);
-    } else {
-      _localStorageService.save('seen', true);
+    final isFirstTimeUser = _localStorage.get(
+      ConstantsManager.isFirstTimeUser,
+    );
 
-      Get.offAllNamed('/onboarding');
+    if (GetUtils.isNull(isFirstTimeUser)) {
+      _localStorage.save(
+        ConstantsManager.isFirstTimeUser,
+        true,
+      );
+      Get.offAllNamed(AppRoutes.onBoarding);
+    } else {
+      Get.offAllNamed(AppRoutes.home);
     }
   }
 
   Future<void> loadSplashScreen() async {
-    Timer(const Duration(milliseconds: 5000), () {
-      // check if user seen the onboarding screen
-      // if yes, go to home page
-      // if no, go to onboarding page
-
-      checkFirstSeen();
-    });
+    Timer(
+      const Duration(milliseconds: 5000),
+      () => checkFirstSeen(),
+    );
   }
 }
