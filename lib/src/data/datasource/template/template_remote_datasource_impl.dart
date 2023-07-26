@@ -4,10 +4,13 @@ import 'package:boxpend_flutter_android_app/src/data/models/template_model.dart'
 class TemplateRemoteDatasourceImpl extends TemplateRemoteDatasource {
   @override
   Future<TemplateModel> getTemplate() {
-    const template = TemplateModel(
-      id: 10,
-      name: "Boxpend ok",
+    final template = TemplateModel(
+      id: 1,
+      name: "Boxpend",
     );
-    return Future.value(template);
+    return Future.delayed(
+      const Duration(milliseconds: 800),
+      () async => Future.value(template),
+    );
   }
 }

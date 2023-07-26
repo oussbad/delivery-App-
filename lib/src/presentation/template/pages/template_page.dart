@@ -1,5 +1,7 @@
 import 'package:boxpend_flutter_android_app/src/app/core/error/failures.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/utils/loader_widget.dart';
+import 'package:boxpend_flutter_android_app/src/domain/entities/template_entitiy.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/template_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,20 +18,17 @@ class TemplatePage extends GetView<TemplateController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Obx(
-                () => controller.template.value.fold(
-                  (failure) {
-                    if (failure is NetworkFailure) {
-                      return const Text('erorr networ');
-                    } else if (failure is ServerFailure) {
-                      return const Text('erorr server');
-                    } else {
-                      return const Text('erorr networ');
-                    }
-                  },
-                  (template) => Text(template.name),
-                ),
-              ),
+              Obx(() {
+                if (controller.isLoading.value) {
+                  return const LoaderWidget();
+                } else {
+                  if (controller.error.value.isEmpty) {
+                    return Text(controller.template.value.name);
+                  } else {
+                    return Text(controller.error.value);
+                  }
+                }
+              }),
             ],
           ),
         ),

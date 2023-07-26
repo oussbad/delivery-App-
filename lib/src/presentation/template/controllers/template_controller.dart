@@ -1,8 +1,8 @@
 import 'package:boxpend_flutter_android_app/src/app/core/error/failures.dart';
 import 'package:boxpend_flutter_android_app/src/app/core/usecases/no_param_usecase.dart';
+import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/domain/entities/template_entitiy.dart';
 import 'package:boxpend_flutter_android_app/src/domain/usecases/template/get_template_usecase.dart';
-import 'package:dartz/dartz.dart';
 import 'package:get/get.dart';
 
 class TemplateController extends GetxController {
@@ -12,11 +12,9 @@ class TemplateController extends GetxController {
 
   final GetTemplateUsecase _getTemplateUsecase;
 
-  final Rx<Either<Failure, Template>> template = Rx<Either<Failure, Template>>(
-    Right(
-      Template.init(),
-    ),
-  );
+  final Rx<Template> template = Template.init().obs;
+  final Rx<String> error = ''.obs;
+  final RxBool isLoading = false.obs;
 
   @override
   void onInit() {
@@ -24,8 +22,29 @@ class TemplateController extends GetxController {
     super.onInit();
   }
 
-  Future<Either<Failure, Template>> loadTemplate() async {
+  void loadTemplate() async {
+    isLoading(true);
     final result = await _getTemplateUsecase.call(NoParams());
-    return template(result);
+    result.fold(
+      (failure) {
+        isLoading(false);
+        final errorMsg = _handleFailures(failure);
+        return error(errorMsg);
+      },
+      (data) {
+        isLoading(false);
+        return template(data);
+      },
+    );
+  }
+
+  String _handleFailures(Failure failure) {
+    if (failure is NetworkFailure) {
+      return StringsManager.networkError;
+    } else if (failure is ServerFailure) {
+      return StringsManager.templateLoadedError;
+    } else {
+      return StringsManager.unexpectedError;
+    }
   }
 }
