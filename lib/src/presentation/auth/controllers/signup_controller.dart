@@ -1,4 +1,4 @@
-import 'package:boxpend_flutter_android_app/src/app/helpers/app_helpers.dart';
+import 'package:boxpend_flutter_android_app/src/app/helpers/app_snackbar.dart';
 import 'package:boxpend_flutter_android_app/src/app/routes/app_pages.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/utils/loader_widget.dart';
 import 'package:flutter/material.dart';
@@ -33,13 +33,13 @@ class SignUpController extends GetxController {
             () {
               if (1 != 1) {
                 Get.back();
-                AppHelpers.snackbar(
+                AppSnackbar.snackbar(
                   title: 'title',
                   message: 'message',
                   icon: Icons.info,
                 );
               } else {
-                AppHelpers.snackbar(
+                AppSnackbar.snackbar(
                   title: 'title',
                   message: 'message',
                   status: SnackBarStatus.failure,

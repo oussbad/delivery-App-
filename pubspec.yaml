@@ -17,7 +17,7 @@ dependencies:
   heroicons: ^0.7.0
   image_picker: ^1.0.1
   internet_connection_checker: ^1.0.0+1
-  url_launcher: ^6.1.12
+  url_launcher: ^6.1.11
 
 dev_dependencies:
   flutter_lints: ^2.0.0
