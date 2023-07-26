@@ -1,42 +1,46 @@
 import 'package:flutter/material.dart';
 
 class TabsWidget extends StatelessWidget {
-  
-  late int length;
-  List<Widget>? page = [];
-  List<Widget>? tabs = [];
-  
-
-  TabsWidget({
+  const TabsWidget({
     super.key,
-    required this.length,
-    required this.page,
     required this.tabs,
+    required this.tabViews,
   });
 
-
+  final List<String> tabs;
+  final List<Widget> tabViews;
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: length,
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text(" Tabbar test "),
-          centerTitle: true,
-        ),
-        body: Column(
-          children:  [
-            TabBar(
-              tabs: tabs!,      
-            ),
-            Expanded(
-              child: TabBarView(
-                children: page!,
-              ),
-            ),
+    return Material(
+      child: DefaultTabController(
+        length: tabs.length,
+        child: Column(
+          children: [
+            _buildTabs(),
+            _buildTabViews(),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildTabs() {
+    return TabBar(
+      tabs: tabs
+          .map(
+            (tab) => Tab(
+              text: tab,
+            ),
+          )
+          .toList(),
+    );
+  }
+
+  Widget _buildTabViews() {
+    return Expanded(
+      child: TabBarView(
+        children: tabViews,
       ),
     );
   }
