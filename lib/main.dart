@@ -9,7 +9,7 @@ void main() async {
   Get.put(LocalStorageService());
   runApp(
     DevicePreview(
-      enabled: true,
+      enabled: false,
       isToolbarVisible: false,
       defaultDevice: DevicePreview.defaultDevices.firstWhere(
         (device) => device.name == "Small",
