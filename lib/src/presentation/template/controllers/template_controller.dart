@@ -12,8 +12,8 @@ class TemplateController extends GetxController {
 
   final GetTemplateUsecase _getTemplateUsecase;
 
-  final Rx<Template> template = Template.init().obs;
-  final Rx<String> error = ''.obs;
+  Rx<Template> template = Template.init().obs;
+  final failure = ''.obs;
   final RxBool isLoading = false.obs;
 
   @override
@@ -26,10 +26,10 @@ class TemplateController extends GetxController {
     isLoading(true);
     final result = await _getTemplateUsecase.call(NoParams());
     result.fold(
-      (failure) {
+      (error) {
         isLoading(false);
-        final errorMsg = _handleFailures(failure);
-        return error(errorMsg);
+        final errorMsg = _handleFailures(error);
+        return failure(errorMsg);
       },
       (data) {
         isLoading(false);

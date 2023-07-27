@@ -6,7 +6,7 @@ import 'package:boxpend_flutter_android_app/src/domain/entities/template_entitiy
 import 'package:boxpend_flutter_android_app/src/domain/repositories/template_repository.dart';
 import 'package:dartz/dartz.dart';
 
-class TemplateRepositoryImpl extends TemplateRepository {
+class TemplateRepositoryImpl implements TemplateRepository {
   final TemplateRemoteDatasource datasource;
   final NetworkService netwrok;
 

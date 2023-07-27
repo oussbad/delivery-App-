@@ -8,7 +8,6 @@ environment:
 dependencies:
   dartz: ^0.10.1
   device_preview: ^1.1.0
-  equatable: ^2.0.5
   flutter:
     sdk: flutter
   flutter_svg: ^1.1.6

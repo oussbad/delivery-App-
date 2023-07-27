@@ -5,7 +5,7 @@ import 'package:boxpend_flutter_android_app/src/domain/entities/template_entitiy
 import 'package:boxpend_flutter_android_app/src/domain/repositories/template_repository.dart';
 import 'package:dartz/dartz.dart';
 
-class GetTemplateUsecase extends Usecase<Template, NoParams> {
+class GetTemplateUsecase implements Usecase<Template, NoParams> {
   final TemplateRepository _repository;
 
   GetTemplateUsecase(this._repository);
