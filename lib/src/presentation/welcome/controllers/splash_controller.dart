@@ -1,8 +1,8 @@
 import 'dart:async';
 
+import 'package:boxpend_flutter_android_app/src/app/core/services/local_storage_service.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/routes/app_pages.dart';
-import 'package:boxpend_flutter_android_app/src/app/services/local_storage_service.dart';
 import 'package:get/get.dart';
 
 class SplashController extends GetxController {

@@ -3,6 +3,8 @@ part of 'app_pages.dart';
 abstract class _Paths {
   // Just a simple template to copy from
   static const template = '/template';
+  static const example = '/example';
+
   //--------------------------------------
 
   ///
@@ -22,17 +24,14 @@ abstract class _Paths {
   /// Home Pages
   ///
   static const home = '/home';
-
-  ///
-  /// Search Pages
-  ///
-  static const search = '/search';
 }
 
 abstract class AppRoutes {
   AppRoutes._();
   // Just a simple template to copy from
   static const template = _Paths.template;
+  static const example = _Paths.template;
+
   //--------------------------------------
 
   ///
@@ -52,9 +51,4 @@ abstract class AppRoutes {
   /// Home Pages
   ///
   static const home = _Paths.home;
-
-  ///
-  /// search Pages
-  ///
-  static const search = _Paths.search;
 }

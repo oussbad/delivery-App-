@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
 
-abstract class URLLauncher extends GetxService {
+abstract class URLLauncherService extends GetxService {
   Future<void> launchURL(String url);
 }

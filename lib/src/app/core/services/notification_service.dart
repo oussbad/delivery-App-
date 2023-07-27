@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-abstract class Notification extends GetxService {
+abstract class NotificationService extends GetxService {
   Future<void> init();
   void onMessageTapped(dynamic handler);
 }

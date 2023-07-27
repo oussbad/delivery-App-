@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
 
-abstract class Network extends GetxService {
+abstract class NetworkService extends GetxService {
   Future<bool> isConnected();
 }

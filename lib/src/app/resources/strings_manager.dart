@@ -74,4 +74,12 @@ class StringsManager {
   static const String imageNotAllowed = "The image you selected is not allowed";
   static const String imageMaxSize =
       "The selected image size exceeds the maximum allowed size (5mb)";
+
+  ///
+  /// Error Handling
+  ///
+  static const String templateLoadedError =
+      "Server Error: Failed to load template";
+  static const String networkError = "Unable to connect to the internet";
+  static const String unexpectedError = "An unexpected error has occurred";
 }
