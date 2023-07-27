@@ -5,9 +5,9 @@ import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signin_p
 import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signup_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/binds/home_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/pages/home_page.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/template/binds/example_bind.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/template/binds/test_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/binds/template_bind.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/template/pages/example_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/template/pages/test_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/pages/template_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/binds/onboarding_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/binds/splash_bind.dart';
@@ -20,19 +20,21 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = AppRoutes.splash;
+  static const initial = AppRoutes.template;
 
   static final pages = [
-    // Just a simple template to copy from
+    ///
+    /// Just a example to copy from
+    ///
     GetPage(
       name: _Paths.template,
       page: () => const TemplatePage(),
       binding: TemplateBind(),
     ),
     GetPage(
-      name: _Paths.example,
-      page: () => const ExamplePage(),
-      binding: ExampleBind(),
+      name: _Paths.test,
+      page: () => const TestPage(),
+      binding: TestBind(),
     ),
     //---------------------------------------
 

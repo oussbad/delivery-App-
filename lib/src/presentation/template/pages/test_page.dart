@@ -1,10 +1,10 @@
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/example_controller.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/test_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ExamplePage extends GetView<ExampleController> {
-  const ExamplePage({super.key});
+class TestPage extends GetView<TestController> {
+  const TestPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class ExamplePage extends GetView<ExampleController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              Text('Template'),
+              Text('Test'),
             ],
           ),
         ),
