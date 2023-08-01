@@ -1,5 +1,6 @@
 import 'package:boxpend_flutter_android_app/src/app/core/services/local_storage_service.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 class LocalStorageServiceImpl extends LocalStorageService {
@@ -30,7 +31,7 @@ class LocalStorageServiceImpl extends LocalStorageService {
     return _box.remove(key);
   }
   @override
-  Future<void> saveThemeData(bool isDarkMode) async {
+  Future<void> SaveThemeData(bool isDarkMode) async {
     _getStorage.write(_darkThemeKey, isDarkMode);
   }
 
@@ -40,4 +41,9 @@ class LocalStorageServiceImpl extends LocalStorageService {
   ThemeMode getThemeMode(){
     return isSavedDarkMode() ? ThemeMode.dark : ThemeMode.light;
   }
+ void changeTheme(){
+    Get.changeThemeMode(isSavedDarkMode() ? ThemeMode.light:ThemeMode.dark);
+        SaveThemeData(!isSavedDarkMode());
+ }
+
 }

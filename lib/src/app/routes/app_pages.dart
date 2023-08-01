@@ -15,6 +15,9 @@ import 'package:boxpend_flutter_android_app/src/presentation/welcome/pages/onboa
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/pages/splash_page.dart';
 import 'package:get/get.dart';
 
+import '../../presentation/settings/binds/settings_bind.dart';
+import '../../presentation/settings/pages/settings_page.dart';
+
 part 'app_routes.dart';
 
 class AppPages {
@@ -78,6 +81,15 @@ class AppPages {
       name: _Paths.home,
       page: () => const HomePage(),
       binding: HomeBind(),
+    ),
+
+    ///
+    /// Settings pages
+    ///
+    GetPage(
+      name: _Paths.settings ,
+      page: () => SettingsPage(),
+      binding: SettingsBind(),
     ),
   ];
 }
