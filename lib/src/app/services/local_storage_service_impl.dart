@@ -5,16 +5,11 @@ import 'package:get_storage/get_storage.dart';
 
 class LocalStorageServiceImpl extends LocalStorageService {
   final GetStorage _box = GetStorage();
-  final _getStorage = GetStorage();
-  final _darkThemeKey = 'isDarkTheme';
 
   Future<dynamic> init() async {
     return _box.initStorage;
   }
 
-  Future<dynamic> initDarkTheme() async {
-    return _getStorage.initStorage;
-  }
 
   @override
   Future<void> save(String key, dynamic value) {
@@ -30,6 +25,14 @@ class LocalStorageServiceImpl extends LocalStorageService {
   Future<void> remove(String key) {
     return _box.remove(key);
   }
+ /*
+  final _getStorage = GetStorage();
+
+  final _darkThemeKey = 'isDarkTheme';
+
+  Future<dynamic> initDarkTheme() async {
+    return _getStorage.initStorage;
+  }
   @override
   Future<void> SaveThemeData(bool isDarkMode) async {
     _getStorage.write(_darkThemeKey, isDarkMode);
@@ -44,6 +47,6 @@ class LocalStorageServiceImpl extends LocalStorageService {
  void changeTheme(){
     Get.changeThemeMode(isSavedDarkMode() ? ThemeMode.light:ThemeMode.dark);
         SaveThemeData(!isSavedDarkMode());
- }
+ }*/
 
 }
