@@ -17,11 +17,11 @@ class SettingsPage extends GetView<SettingsController> {
             RadioListTile(
                 value: AppThemes.light,
                 groupValue: settingsController,
-                onChanged: (value) => {}),
+                onChanged: (value) => {SettingsController().changeTheme()}),
             RadioListTile(
-                value: AppThemes.light,
+                value: AppThemes.dark,
                 groupValue: settingsController,
-                onChanged: (value) => {})
+                onChanged: (value) => {SettingsController().changeTheme()})
           ],
         ),
       ),
