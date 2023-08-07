@@ -1,10 +1,8 @@
-import 'package:boxpend_flutter_android_app/src/app/helpers/app_snackbar.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
+import 'package:boxpend_flutter_android_app/src/app/utils/app_snackbar.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/template_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../../app/extensions/app_snackbar.dart';
 
 class Template extends GetView<TemplateController> {
   const Template({Key? key}) : super(key: key);
@@ -21,10 +19,10 @@ class Template extends GetView<TemplateController> {
               const Text('Template'),
               ElevatedButton(
                 onPressed: () {
-                  AppSnackbarExtension.showAppSnackbar(
-                    title: "done ",
-                    message: " your action is done ",
-                    icon: Icons.check,
+                  AppSnackbar.show(
+                    title: 'title',
+                    message: 'message',
+                    icon: Icons.home,
                   );
                   // AppSnackbarExtension.showAppSnackbarWithAction(
                   //   title: "done ",
@@ -39,7 +37,6 @@ class Template extends GetView<TemplateController> {
                   //     );
                   //   },
                   // );
-
                 },
                 child: const Text("open snackbar"),
               ),
