@@ -2,7 +2,7 @@ import 'package:boxpend_flutter_android_app/src/app/helpers/app_helpers.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/utils/text_block_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:heroicons/heroicons.dart';

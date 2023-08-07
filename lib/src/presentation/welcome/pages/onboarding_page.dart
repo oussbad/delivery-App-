@@ -1,7 +1,7 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/buttons/button_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/button_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/controllers/onboarding_controller.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/widgets/indicator_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/widgets/onboarding_content_widget.dart';

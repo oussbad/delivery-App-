@@ -1,20 +1,20 @@
 import 'dart:convert';
+import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/legal/models/legal_model.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:get/get.dart';
 
 class PolicyController extends GetxController {
-  var  title = "".obs;
- List<dynamic>  description = [].obs;
-  @override
-  void onInit() {
-    super.onInit();
-    loadYourData();
-  }
+  static PolicyController get to => Get.find();
 
-  Future<void> loadYourData() async {
-    final String response = await rootBundle.loadString('assets/JSON/policy.json');
-    final data = await json.decode(response);
-   title.value = data["title"];
-   description = data["description"];
+  Future<List<LegalModel>> loadPolicyData() async {
+    final jsonData = await rootBundle.loadString(AssetsManager.policy);
+    final List<dynamic> data = await json.decode(jsonData);
+    List<LegalModel> legalList = data
+        .map(
+          (item) => LegalModel.fromJson(item),
+        )
+        .toList();
+    return legalList;
   }
 }

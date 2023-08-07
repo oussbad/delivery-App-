@@ -1,6 +1,6 @@
 import 'package:boxpend_flutter_android_app/src/app/helpers/app_helpers.dart';
 import 'package:boxpend_flutter_android_app/src/app/routes/app_pages.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/utils/loader_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/loader_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

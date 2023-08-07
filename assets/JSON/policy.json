@@ -1,30 +1,48 @@
-{
+[
+  {
     "title": "Boxpend Privacy Policy",
-    "description": [
-      "Boxpend is an order delivery management tool that helps businesses track and manage their orders. We collect information from our users to help us improve our product and provide better service.",
-      "Information We Collect",
-      "We collect the following information from our users:",
+    "description": "Boxpend is an order delivery management tool that helps businesses track and manage their orders. We collect information from our users to help us improve our product and provide better service."
+  },
+  {
+    "title": "Information We Collect",
+    "description": "We collect the following information from our users:",
+    "bulleted": [
       "Name",
       "Email address",
       "Contact information",
       "Order information",
-      "Usage data",
-      "How We Use Your Information",
-      "We use the information we collect from our users to:",
+      "Usage data"
+    ]
+  },
+  {
+    "title": "How We Use Your Information",
+    "description": "We use the information we collect from our users to:",
+    "bulleted": [
       "Provide and improve our product",
       "Communicate with our users",
       "Send marketing and promotional materials",
       "Analyze user behavior",
-      "Comply with applicable laws and regulations",
-      "How We Share Your Information",
-      "We do not share your information with third parties.",
-      "Your Choices",
-      "You can choose to limit the amount of information you share with us. You can also opt out of receiving marketing and promotional materials from us. To do so, please contact us at privacy@boxpend.com",
-      "Security",
-      "We take security seriously and have implemented measures to protect your information from unauthorized access, use, disclosure, alteration, or destruction.",
-      "Changes to This Policy",
-      "We may update this policy from time to time. If we make any material changes, we will notify you by email or through a prominent notice on our website.",
-      "Contact Us",
-      "If you have any questions about this policy, please contact us at privacy@boxpend.com"
+      "Comply with applicable laws and regulations"
     ]
+  },
+  {
+    "title": "How We Share Your Information",
+    "description": "We do not share your information with third parties."
+  },
+  {
+    "title": "Your Choices",
+    "description": "You can choose to limit the amount of information you share with us. You can also opt out of receiving marketing and promotional materials from us. To do so, please contact us at privacy@boxpend.com"
+  },
+  {
+    "title": "Security",
+    "description": "We take security seriously and have implemented measures to protect your information from unauthorized access, use, disclosure, alteration, or destruction."
+  },
+  {
+    "title": "Changes to This Policy",
+    "description": "We may update this policy from time to time. If we make any material changes, we will notify you by email or through a prominent notice on our website."
+  },
+  {
+    "title": "Contact Us",
+    "description": "If you have any questions about this policy, please contact us at privacy@boxpend.com"
   }
+]

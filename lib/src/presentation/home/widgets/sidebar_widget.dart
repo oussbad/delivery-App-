@@ -1,7 +1,7 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/utils/gap_widget.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/utils/text_block_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/controllers/sidebar_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

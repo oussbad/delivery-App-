@@ -29,8 +29,8 @@ flutter:
     - assets/images/logo.svg
     - assets/images/onboarding1.svg
     - assets/images/onboarding2.svg
-    - assets/JSON/policy.json
-    - assets/JSON/terms.json
+    - assets/json/policy.json
+    - assets/json/terms.json
   fonts:
     - family: Inter
       fonts:

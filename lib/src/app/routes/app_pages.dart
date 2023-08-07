@@ -23,7 +23,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = AppRoutes.splash;
+  static const initial = AppRoutes.terms;
 
   static final pages = [
     // Just a simple template to copy from
@@ -54,12 +54,12 @@ class AppPages {
     ///
     GetPage(
       name: _Paths.terms,
-      page: () =>  TermsPage(),
+      page: () => const TermsPage(),
       binding: TermsBind(),
     ),
     GetPage(
       name: _Paths.policy,
-      page: () =>  PolicyPage(),
+      page: () => const PolicyPage(),
       binding: PolicyBind(),
     ),
 
