@@ -1,6 +1,6 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/utils/text_block_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/controllers/home_controller.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/pages/connections_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/pages/notifications_page.dart';

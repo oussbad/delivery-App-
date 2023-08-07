@@ -1,0 +1,20 @@
+import 'dart:convert';
+import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/legal/models/legal_model.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:get/get.dart';
+
+class TermsController extends GetxController {
+  static TermsController get to => Get.find();
+
+  Future<List<LegalModel>> loadTermsData() async {
+    final jsonData = await rootBundle.loadString(AssetsManager.terms);
+    final List<dynamic> data = await json.decode(jsonData);
+    List<LegalModel> legalList = data
+        .map(
+          (item) => LegalModel.fromJson(item),
+        )
+        .toList();
+    return legalList;
+  }
+}

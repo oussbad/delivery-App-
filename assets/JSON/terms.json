@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Boxpend Terms of Service",
+    "description": "Welcome to Boxpend, an order delivery management tool that helps businesses track and manage their orders. By using Boxpend, you agree to these terms of service."
+  },
+  {
+    "title": "Eligibility",
+    "description": "Boxpend is available to businesses of all sizes. To create an account, you must be at least 18 years old and have a valid email address."
+  },
+  {
+    "title": "Services",
+    "description": "Boxpend provides businesses with the ability to track and manage their orders. This includes the ability to create orders, track order status, and communicate with customers."
+  },
+  {
+    "title": "Free Plan",
+    "description": "Boxpend is going to be free during the Beta Testing Stage"
+  },
+  {
+    "title": "Account Termination",
+    "description": "Boxpend may terminate your account for any reason, including but not limited to:",
+    "bulleted": [
+      "Breach of these terms of service",
+      "Non-payment of fees",
+      "Suspected fraud"
+    ]
+  },
+  {
+    "title": "Ownership",
+    "description": "All content on Boxpend, including but not limited to text, images, and code, is owned by Boxpend. You may not use any content on Boxpend without the express permission of Boxpend."
+  },
+  {
+    "title": "Ownership",
+    "description": "All content on Boxpend, including but not limited to text, images, and code, is owned by Boxpend. You may not use any content on Boxpend without the express permission of Boxpend."
+  },
+  {
+    "title": "Indemnification",
+    "description": "You agree to indemnify and hold Boxpend harmless from any and all claims, damages, losses, liabilities, and expenses (including reasonable attorneys fees) arising out of or in connection with your use of Boxpend."
+  },
+  {
+    "title": "Governing Law",
+    "description": "These terms of service are governed by the laws of the State of California. Any dispute arising out of or in connection with these terms of service will be resolved by binding arbitration in San Francisco, California."
+  },
+  {
+    "title": "Entire Agreement",
+    "description": "These terms of service constitute the entire agreement between you and Boxpend with respect to your use of Boxpend. These terms of service supersede any prior or contemporaneous communications, representations, or agreements, whether oral or written.",
+    "bulleted": [
+      "If you have any questions about these terms of service, please contact us at privacy@boxpend.com."
+    ]
+  }
+]

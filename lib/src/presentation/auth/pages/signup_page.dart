@@ -3,11 +3,11 @@ import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.da
 import 'package:boxpend_flutter_android_app/src/app/resources/styles_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/buttons/button_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/button_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/inputs/radio_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/inputs/text_field_widget.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/utils/gap_widget.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/utils/text_block_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/controllers/signup_controller.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
