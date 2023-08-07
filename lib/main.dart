@@ -9,7 +9,7 @@ void main() async {
 
   runApp(
     DevicePreview(
-      enabled: false,
+      enabled: true,
       isToolbarVisible: false,
       defaultDevice: DevicePreview.defaultDevices.firstWhere(
         (device) => device.name == "Small",
@@ -18,7 +18,7 @@ void main() async {
       tools: const [
         ...DevicePreview.defaultTools,
       ],
-      builder: (_) => const Boxpend(),
+      builder: (_) => Boxpend(),
     ),
   );
 }

@@ -1,11 +1,10 @@
 class StringsManager {
   StringsManager._();
 
-  static const String app = 'APP';
-
   ///
   /// Welcome Pages
   ///
+  static const String appTitle = "Boxpend Android App";
   static const String onBoardingTitle1 = 'Your Delivery Management Tool';
   static const String onBoardingSubTitle1 =
       'Welcome to Boxpend, the cutting-edge delivery management platform designed to simplify your logistics and revolutionize your business';

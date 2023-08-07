@@ -59,21 +59,20 @@ class AppThemes {
     ),
   );
 
-  // Light theme
   static ThemeData light = ThemeData(
-    //fontFamily: AppTypography.familyInter,
+    // fontFamily: AppTypography.familyInter,
     primarySwatch: AppPalette.primarySwatch,
-    scaffoldBackgroundColor: Colors.white, // Set the background color for light theme
+    scaffoldBackgroundColor: AppPalette.white,
     hintColor: AppPalette.inputBorder,
     textTheme: TextTheme(
       bodyMedium: TextStyle(
-        color: Colors.black, // Set the text color for light theme
+        color: AppPalette.black,
       ),
       bodyLarge: TextStyle(
-        color: Colors.black, // Set the text color for light theme
+        color: AppPalette.black,
       ),
       bodySmall: TextStyle(
-        color: Colors.black, // Set the text color for light theme
+        color: AppPalette.black,
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
@@ -91,6 +90,7 @@ class AppThemes {
         color: AppPalette.inputBorder,
       ),
     ),
+
     radioTheme: RadioThemeData(
       fillColor: MaterialStateProperty.all<Color>(
         AppPalette.primarySwatch,
@@ -100,11 +100,12 @@ class AppThemes {
       backgroundColor: AppPalette.inputBorder,
     ),
     drawerTheme: DrawerThemeData(
-      backgroundColor: AppPalette.bg4,
+      backgroundColor: AppPalette.white,
     ),
+
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       elevation: 2,
-      selectedItemColor: Colors.black, // Set the selected item color for light theme
+      selectedItemColor: AppPalette.white,
       unselectedItemColor: AppPalette.primarySwatch,
       showSelectedLabels: false,
       showUnselectedLabels: false,

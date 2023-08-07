@@ -1,27 +1,39 @@
+import 'package:boxpend_flutter_android_app/src/app/core/services/local_storage_service.dart';
+import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../app/services/local_storage_service_impl.dart';
-import '../../../app/themes/app_themes.dart';
-
 class SettingsController extends GetxController {
   static SettingsController get to => Get.find();
-  final _darkThemeKey = 'isDarkTheme';
-  LocalStorageServiceImpl localStorageService = LocalStorageServiceImpl();
+  final LocalStorageService _localStorage = Get.find();
 
-  Future<void> SaveThemeData(bool isDarkMode) async {
-    localStorageService.save(_darkThemeKey, isDarkMode);
+  final RxBool isDarkMode = true.obs;
+
+  @override
+  void onInit() {
+    _loadTheme;
+    super.onInit();
   }
 
-  bool isSavedDarkMode() {
-    return localStorageService.get(_darkThemeKey) ?? false;
+  ThemeMode _setThemeMode(bool themeMode) =>
+      themeMode ? ThemeMode.dark : ThemeMode.light;
+
+  ThemeMode _loadTheme() {
+    final stored = _localStorage.get(ConstantsManager.isDarkMode);
+    if (GetUtils.isNullOrBlank(stored)!) {
+      isDarkMode(isDarkMode.value);
+    } else {
+      isDarkMode(stored);
+    }
+    return _setThemeMode(isDarkMode.value);
   }
 
-  ThemeMode getThemeMode(){
-    return isSavedDarkMode() ? ThemeMode.dark : ThemeMode.light;
-  }
-  void changeTheme(){
-    Get.changeThemeMode(isSavedDarkMode() ? ThemeMode.light:ThemeMode.dark);
-    SaveThemeData(!isSavedDarkMode());
+  void _saveTheme(bool isDarkMode) =>
+      _localStorage.save(ConstantsManager.isDarkMode, isDarkMode);
+
+  onThemeChanged(bool? selected) {
+    isDarkMode(selected);
+    _saveTheme(isDarkMode.value);
+    return Get.changeThemeMode(_setThemeMode(isDarkMode.value));
   }
 }

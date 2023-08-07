@@ -1,52 +1,15 @@
 import 'package:boxpend_flutter_android_app/src/app/core/services/local_storage_service.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 class LocalStorageServiceImpl extends LocalStorageService {
   final GetStorage _box = GetStorage();
 
-  Future<dynamic> init() async {
-    return _box.initStorage;
-  }
-
+  @override
+  Future<void> save(String key, dynamic value) => _box.write(key, value);
 
   @override
-  Future<void> save(String key, dynamic value) {
-    return _box.writeIfNull(key, value);
-  }
+  dynamic get(String key) => _box.read(key);
 
   @override
-  dynamic get(String key) {
-    return _box.read(key);
-  }
-
-  @override
-  Future<void> remove(String key) {
-    return _box.remove(key);
-  }
- /*
-  final _getStorage = GetStorage();
-
-  final _darkThemeKey = 'isDarkTheme';
-
-  Future<dynamic> initDarkTheme() async {
-    return _getStorage.initStorage;
-  }
-  @override
-  Future<void> SaveThemeData(bool isDarkMode) async {
-    _getStorage.write(_darkThemeKey, isDarkMode);
-  }
-
-  bool isSavedDarkMode(){
-    return _getStorage.read(_darkThemeKey)?? false;
-  }
-  ThemeMode getThemeMode(){
-    return isSavedDarkMode() ? ThemeMode.dark : ThemeMode.light;
-  }
- void changeTheme(){
-    Get.changeThemeMode(isSavedDarkMode() ? ThemeMode.light:ThemeMode.dark);
-        SaveThemeData(!isSavedDarkMode());
- }*/
-
+  Future<void> remove(String key) => _box.remove(key);
 }

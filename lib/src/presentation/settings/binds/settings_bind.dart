@@ -5,5 +5,4 @@ class SettingsBind extends Bindings{
   void dependencies() {
     Get.lazyPut<SettingsController>(() => SettingsController());
   }
-
 }

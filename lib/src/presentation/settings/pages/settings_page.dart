@@ -1,29 +1,28 @@
+import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/inputs/radio_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/utils/text_block_widget.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/settings/controllers/settings_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../app/themes/app_themes.dart';
-import '../controllers/settings_controller.dart';
-
 class SettingsPage extends GetView<SettingsController> {
+  const SettingsPage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    final SettingsController settingsController = Get.find();
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            RadioListTile(
-                value: AppThemes.light,
-                groupValue: settingsController,
-                onChanged: (value) => {SettingsController().changeTheme()}),
-            RadioListTile(
-                value: AppThemes.dark,
-                groupValue: settingsController,
-                onChanged: (value) => {SettingsController().changeTheme()})
-          ],
-        ),
+      body: Column(
+        children: [
+          Obx(
+            () => SwitchListTile(
+              title: TextBlocKWidget.body(
+                StringsManager.darkMode,
+              ),
+              value: controller.isDarkMode.value,
+              onChanged: controller.onThemeChanged,
+            ),
+          ),
+        ],
       ),
     );
   }

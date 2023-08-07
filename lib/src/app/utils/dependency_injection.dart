@@ -2,12 +2,14 @@ import 'package:boxpend_flutter_android_app/src/app/core/services/local_storage_
 import 'package:boxpend_flutter_android_app/src/app/core/services/network_service.dart';
 import 'package:boxpend_flutter_android_app/src/app/services/local_storage_service_impl.dart';
 import 'package:boxpend_flutter_android_app/src/app/services/network_service_impl.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/welcome/controllers/app_controller.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:boxpend_flutter_android_app/src/data/datasource/template/template_remote_datasource.dart';
 import 'package:boxpend_flutter_android_app/src/data/datasource/template/template_remote_datasource_impl.dart';
 import 'package:boxpend_flutter_android_app/src/data/repositories/template_repository_impl.dart';
 import 'package:boxpend_flutter_android_app/src/domain/repositories/template_repository.dart';
+import 'package:get_storage/get_storage.dart';
 
 class DenpendencyInjection {
   static Future<void> init() async {
@@ -15,6 +17,7 @@ class DenpendencyInjection {
     /// Ensures that the WidgetsFlutterBinding is fully initialized
     ///
     WidgetsFlutterBinding.ensureInitialized();
+    await GetStorage().initStorage;
 
     ///
     /// Register App Services
