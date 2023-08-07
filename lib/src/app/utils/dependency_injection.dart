@@ -17,6 +17,10 @@ class DenpendencyInjection {
     /// Ensures that the WidgetsFlutterBinding is fully initialized
     ///
     WidgetsFlutterBinding.ensureInitialized();
+
+    ///
+    /// Init Dependencies
+    ///
     await GetStorage().initStorage;
 
     ///
