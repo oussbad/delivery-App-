@@ -31,7 +31,6 @@ class RadioWidget<T> extends StatelessWidget {
         ),
         TextBlocKWidget.body(
           label,
-          color: AppPalette.white,
         ),
       ],
     );

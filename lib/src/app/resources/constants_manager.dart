@@ -10,4 +10,5 @@ class ConstantsManager {
   /// Local Storage
   ///
   static const String isFirstTimeUser = 'is_first_time_user';
+  static const String isDarkMode = 'isDarkMode';
 }

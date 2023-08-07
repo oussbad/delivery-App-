@@ -5,6 +5,8 @@ import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signin_p
 import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signup_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/binds/home_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/pages/home_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/settings/binds/settings_bind.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/settings/pages/settings_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/binds/test_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/binds/template_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/pages/test_page.dart';
@@ -20,7 +22,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = AppRoutes.template;
+  static const initial = AppRoutes.settings;
 
   static final pages = [
     ///
@@ -78,6 +80,15 @@ class AppPages {
       name: _Paths.home,
       page: () => const HomePage(),
       binding: HomeBind(),
+    ),
+
+    ///
+    /// Settings pages
+    ///
+    GetPage(
+      name: _Paths.settings,
+      page: () => const SettingsPage(),
+      binding: SettingsBind(),
     ),
   ];
 }

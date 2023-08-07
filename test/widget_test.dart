@@ -3,6 +3,6 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   testWidgets('Boxpend test', (WidgetTester tester) async {
-    await tester.pumpWidget(const Boxpend());
+    await tester.pumpWidget(Boxpend());
   });
 }
