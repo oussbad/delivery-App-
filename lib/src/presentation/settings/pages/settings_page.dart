@@ -1,5 +1,4 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/inputs/radio_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/settings/controllers/settings_controller.dart';
 import 'package:flutter/material.dart';
