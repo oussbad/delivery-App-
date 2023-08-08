@@ -1,5 +1,5 @@
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/utils/loader_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/loader_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/template_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
