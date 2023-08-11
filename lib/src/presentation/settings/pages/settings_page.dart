@@ -22,6 +22,24 @@ class SettingsPage extends GetView<SettingsController> {
               onChanged: controller.onThemeChanged,
             ),
           ),
+          Obx(() => RadioListTile(
+            title: Text('Arabic'),
+            value: 'ar',
+            groupValue: controller.selectedLanguage.value,
+            onChanged: (value) => controller.changeLanguage(value!),
+          )),
+          Obx(() => RadioListTile(
+            title: Text('English'),
+            value: 'en',
+            groupValue:controller.selectedLanguage.value,
+            onChanged: (value) => controller.changeLanguage(value!),
+          )),
+          Obx(() => RadioListTile(
+            title: Text('French'),
+            value: 'fr',
+            groupValue: controller.selectedLanguage.value,
+            onChanged: (value) => controller.changeLanguage(value!),
+          )),
         ],
       ),
     );
