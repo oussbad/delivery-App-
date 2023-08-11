@@ -63,7 +63,8 @@ class HomePage extends GetView<HomeController> {
   }
 
   Widget _buildFAB() => FloatingActionButton(
-        onPressed: controller.goToAddNewOrderPage,
+        // onPressed: controller.goToAddNewOrderPage,
+        onPressed: () => Get.toNamed('/test'),
         child: const HeroIcon(HeroIcons.plus),
       );
 

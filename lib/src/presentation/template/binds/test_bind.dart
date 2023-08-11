@@ -6,6 +6,6 @@ class TestBind extends Bindings {
   void dependencies() {
     Get.lazyPut<TestController>(
       () => TestController(),
-    );
+    ); 
   }
 }

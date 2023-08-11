@@ -5,19 +5,13 @@ import 'package:get/get.dart';
 
 class TestPage extends GetView<TestController> {
   const TestPage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: AppSpacing.s_16),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text('Test'),
-            ],
-          ),
+        child: const Center(
+          child: Text('Test Api'),
         ),
       ),
     );
