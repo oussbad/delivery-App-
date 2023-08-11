@@ -3,15 +3,21 @@ import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../app/localization/app_localization.dart';
+
 class SettingsController extends GetxController {
   static SettingsController get to => Get.find();
   final LocalStorageService _localStorage = Get.find();
 
   final RxBool isDarkMode = true.obs;
+  final RxString selectedLanguage = 'en'.obs; // Default language code
+
 
   @override
   void onInit() {
+
     _loadTheme;
+
     super.onInit();
   }
 
@@ -35,5 +41,19 @@ class SettingsController extends GetxController {
     isDarkMode(selected);
     _saveTheme(isDarkMode.value);
     return Get.changeThemeMode(_setThemeMode(isDarkMode.value));
+  }
+
+
+
+  void changeLanguage(String languageCode) {
+    selectedLanguage.value = languageCode;
+    final locale = AppLocalization.supportedLanguages[languageCode];
+    if (locale != null) {
+      Get.updateLocale(locale);
+      _saveLanguagePreference(languageCode);
+    }
+  }
+  void _saveLanguagePreference(String languageCode) {
+    _localStorage.save('language', languageCode); // Save language preference using LocalStorageService
   }
 }
