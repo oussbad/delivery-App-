@@ -12,7 +12,7 @@ import 'package:boxpend_flutter_android_app/src/domain/repositories/template_rep
 import 'package:get_storage/get_storage.dart';
 
 import '../core/services/api_service.dart';
-import '../services/api_service_impl.dart';
+import '../services/dio_service_impl.dart';
 
 class DenpendencyInjection {
   static Future<void> init() async {
@@ -31,14 +31,8 @@ class DenpendencyInjection {
     ///
     await Get.putAsync<NetworkService>(() async => NetworkServiceImpl());
     await Get.putAsync<LocalStorageService>(
-      () async => LocalStorageServiceImpl(),
-    );
-
-    ///
-    ///Api Service
-    ///
-    Get.lazyPut(() => Dio()); 
-    await Get.putAsync<ApiService>(() async => ApiServiceImpl(Get.find()));
+        () async => LocalStorageServiceImpl());
+    await Get.putAsync<ApiService>(() async => DioServiceImpl(Get.find()));
 
     ///
     /// register Template Dependencies

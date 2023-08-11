@@ -15,6 +15,9 @@ class ConstantsManager {
   ///
   /// API URLs
   ///
-  static const String apiKey = ''; 
+  static const String apiKey = '';
   static const String baseUrl = '';
+  static const Duration connectTimeout = Duration(microseconds: 15000);
+  static const Duration receiveTimeout = Duration(microseconds: 15000);
+  static const Duration sendTimeout = Duration(microseconds: 15000);
 }
