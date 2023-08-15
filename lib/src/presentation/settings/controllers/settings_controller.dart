@@ -1,22 +1,22 @@
 import 'package:boxpend_flutter_android_app/src/app/core/services/local_storage_service.dart';
+import 'package:boxpend_flutter_android_app/src/app/localization/app_localization.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../app/localization/app_localization.dart';
+enum AppLang { ar, en, fr }
 
 class SettingsController extends GetxController {
   static SettingsController get to => Get.find();
   final LocalStorageService _localStorage = Get.find();
 
   final RxBool isDarkMode = true.obs;
-  final RxString selectedLanguage = 'en'.obs; // Default language code
-
+  final Rx<AppLang> lang = AppLang.en.obs;
 
   @override
   void onInit() {
-
     _loadTheme;
+    _loadLang;
 
     super.onInit();
   }
@@ -43,17 +43,25 @@ class SettingsController extends GetxController {
     return Get.changeThemeMode(_setThemeMode(isDarkMode.value));
   }
 
-
-
-  void changeLanguage(String languageCode) {
-    selectedLanguage.value = languageCode;
-    final locale = AppLocalization.supportedLanguages[languageCode];
-    if (locale != null) {
-      Get.updateLocale(locale);
-      _saveLanguagePreference(languageCode);
+  AppLang _loadLang() {
+    final stored = _localStorage.get(ConstantsManager.langCode);
+    if (GetUtils.isNullOrBlank(stored)!) {
+      return lang(lang.value);
+    } else {
+      return lang(stored);
     }
   }
-  void _saveLanguagePreference(String languageCode) {
-    _localStorage.save('language', languageCode); // Save language preference using LocalStorageService
+
+  void _saveLang(AppLang lang) {
+    _localStorage.save(ConstantsManager.langCode, lang);
+  }
+
+  void onLangChanged(AppLang? selectedLang) {
+    lang(selectedLang);
+    final locale = AppLocalization.supportedLanguages[selectedLang];
+    if (locale != null) {
+      Get.updateLocale(locale);
+      _saveLang(selectedLang!);
+    }
   }
 }

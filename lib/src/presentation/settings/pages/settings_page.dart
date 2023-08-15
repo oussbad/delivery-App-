@@ -1,5 +1,4 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/inputs/radio_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/settings/controllers/settings_controller.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +10,9 @@ class SettingsPage extends GetView<SettingsController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: TextBlocKWidget.title('APP'.tr),
+      ),
       body: Column(
         children: [
           Obx(
@@ -22,24 +24,30 @@ class SettingsPage extends GetView<SettingsController> {
               onChanged: controller.onThemeChanged,
             ),
           ),
-          Obx(() => RadioListTile(
-            title: Text('Arabic'),
-            value: 'ar',
-            groupValue: controller.selectedLanguage.value,
-            onChanged: (value) => controller.changeLanguage(value!),
-          )),
-          Obx(() => RadioListTile(
-            title: Text('English'),
-            value: 'en',
-            groupValue:controller.selectedLanguage.value,
-            onChanged: (value) => controller.changeLanguage(value!),
-          )),
-          Obx(() => RadioListTile(
-            title: Text('French'),
-            value: 'fr',
-            groupValue: controller.selectedLanguage.value,
-            onChanged: (value) => controller.changeLanguage(value!),
-          )),
+          Obx(() => RadioListTile<AppLang>(
+                title: TextBlocKWidget.body(
+                  StringsManager.ar,
+                ),
+                value: AppLang.ar,
+                groupValue: controller.lang.value,
+                onChanged: controller.onLangChanged,
+              )),
+          Obx(() => RadioListTile<AppLang>(
+                title: TextBlocKWidget.body(
+                  StringsManager.en,
+                ),
+                value: AppLang.en,
+                groupValue: controller.lang.value,
+                onChanged: controller.onLangChanged,
+              )),
+          Obx(() => RadioListTile<AppLang>(
+                title: TextBlocKWidget.body(
+                  StringsManager.fr,
+                ),
+                value: AppLang.fr,
+                groupValue: controller.lang.value,
+                onChanged: controller.onLangChanged,
+              )),
         ],
       ),
     );
