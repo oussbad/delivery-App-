@@ -7,11 +7,34 @@ class TestPage extends GetView<TestController> {
   const TestPage({super.key});
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(TestController());
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: AppSpacing.s_16),
-        child: const Center(
-          child: Text('Test Api'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Test Page',
+              style: Theme.of(context).textTheme.headline6,
+            ),
+            SizedBox(height: AppSpacing.s_16),
+            ElevatedButton(
+              onPressed: () async {
+                final responce = {
+                  "message":"success!",
+                };
+                String url = 'https://jsonplaceholder.typicode.com/posts/1';
+                final data = await controller.fetchMockData(url, responce);
+                // show data in dialog
+                Get.defaultDialog(
+                  title: 'Mock Data',
+                  content: Text(data.toString()),
+                );
+              },
+              child: const Text('Get Mock Data'),
+            ),
+          ],
         ),
       ),
     );
