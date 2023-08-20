@@ -16,8 +16,15 @@ class ConstantsManager {
   /// API URLs
   ///
   static const String apiKey = '';
-  static const String baseUrl = '';
+  static const String baseUrl =
+      'https://1a02e1e1-a6a1-426d-83ca-156489879dbc.mock.pstmn.io';
   static const Duration connectTimeout = Duration(microseconds: 15000);
   static const Duration receiveTimeout = Duration(microseconds: 15000);
   static const Duration sendTimeout = Duration(microseconds: 15000);
+  static const int apiSucces = 200;
+
+  ///
+  /// API Endpoints
+  ///
+  static const String getTemplateEndpoint = '/template';
 }

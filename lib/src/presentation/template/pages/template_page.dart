@@ -25,7 +25,13 @@ class TemplatePage extends GetView<TemplateController> {
         if (controller.isLoading.value) {
           return const LoaderWidget();
         } else if (controller.failure.value.isEmpty) {
-          return Text(controller.template.value.name!);
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(controller.template.value.id.toString()),
+              Text(controller.template.value.name!),
+            ],
+          );
         } else {
           return Text(controller.failure.value);
         }

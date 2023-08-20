@@ -10,8 +10,11 @@ class TestPage extends GetView<TestController> {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: AppSpacing.s_16),
-        child: const Center(
-          child: Text('Test Api'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Text('Test Page'),
+          ],
         ),
       ),
     );

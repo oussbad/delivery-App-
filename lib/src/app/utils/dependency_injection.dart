@@ -33,12 +33,14 @@ class DenpendencyInjection {
     await Get.putAsync<NetworkService>(() async => NetworkServiceImpl());
     await Get.putAsync<LocalStorageService>(
         () async => LocalStorageServiceImpl());
+    Get.put<Dio>(Dio());
     await Get.putAsync<ApiService>(() async => DioServiceImpl(Get.find()));
 
     ///
     /// register Template Dependencies
     ///
-    Get.lazyPut<TemplateRemoteDatasource>(() => TemplateRemoteDatasourceImpl());
+    Get.lazyPut<TemplateRemoteDatasource>(
+        () => TemplateRemoteDatasourceImpl(api: Get.find()));
     Get.lazyPut<TemplateRepository>(
       () => TemplateRepositoryImpl(datasource: Get.find(), netwrok: Get.find()),
     );
