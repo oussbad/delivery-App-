@@ -6,10 +6,9 @@ import 'package:boxpend_flutter_android_app/src/app/utils/dependency_injection.d
 void main() async {
   await DenpendencyInjection.init();  
 
-  print(Moc)
   runApp(
     DevicePreview(
-      enabled: true,
+      enabled: false,
       isToolbarVisible: false,
       defaultDevice: DevicePreview.defaultDevices.firstWhere(
         (device) => device.name == "Small",
