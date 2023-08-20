@@ -6,9 +6,9 @@ class DioServiceImpl extends ApiService {
   DioServiceImpl(this._dio) {
     _dio.options = BaseOptions(
       baseUrl: ConstantsManager.baseUrl,
-      connectTimeout: ConstantsManager.connectTimeout,
-      receiveTimeout: ConstantsManager.receiveTimeout,
-      sendTimeout: ConstantsManager.sendTimeout,
+      //  connectTimeout: ConstantsManager.connectTimeout,
+      // receiveTimeout: ConstantsManager.receiveTimeout,
+      // sendTimeout: ConstantsManager.sendTimeout,
       responseType: ResponseType.json,
     );
   }

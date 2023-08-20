@@ -5,7 +5,6 @@ import 'src/app/utils/dependency_injection.dart';
 
 void main() async {
   await DenpendencyInjection.init();
-  
 
   runApp(
     DevicePreview(
