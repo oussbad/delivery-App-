@@ -2,6 +2,7 @@ import 'package:boxpend_flutter_android_app/src/app/core/services/local_storage_
 import 'package:boxpend_flutter_android_app/src/app/core/services/network_service.dart';
 import 'package:boxpend_flutter_android_app/src/app/services/local_storage_service_impl.dart';
 import 'package:boxpend_flutter_android_app/src/app/services/network_service_impl.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:boxpend_flutter_android_app/src/data/datasource/template/template_remote_datasource.dart';
@@ -24,6 +25,7 @@ class DenpendencyInjection {
     /// Init Dependencies
     ///
     await GetStorage().initStorage;
+    Get.put(Dio());
 
     ///
     /// Register App Services
@@ -31,12 +33,14 @@ class DenpendencyInjection {
     await Get.putAsync<NetworkService>(() async => NetworkServiceImpl());
     await Get.putAsync<LocalStorageService>(
         () async => LocalStorageServiceImpl());
+    Get.put<Dio>(Dio());
     await Get.putAsync<ApiService>(() async => DioServiceImpl(Get.find()));
 
     ///
     /// register Template Dependencies
     ///
-    Get.lazyPut<TemplateRemoteDatasource>(() => TemplateRemoteDatasourceImpl());
+    Get.lazyPut<TemplateRemoteDatasource>(
+        () => TemplateRemoteDatasourceImpl(api: Get.find()));
     Get.lazyPut<TemplateRepository>(
       () => TemplateRepositoryImpl(datasource: Get.find(), netwrok: Get.find()),
     );
