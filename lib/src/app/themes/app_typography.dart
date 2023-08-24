@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 class AppTypography {
   AppTypography._();
 
-  static const String familyInter = 'Inter';
+  static const String familyRoboto = 'Roboto';
 
   static const double sizeXXS = 8;
   static const double sizeXS = 12;
@@ -13,6 +13,9 @@ class AppTypography {
   static const double sizeLG = 28;
   static const double sizeXL = 30;
   static const double sizeXXL = 34;
+  //------- figma ui text size --------//
+  
+
 
   static const FontWeight regular = FontWeight.w400;
   static const FontWeight bold = FontWeight.w700;

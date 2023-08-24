@@ -45,4 +45,17 @@ class AppPalette {
   static Color success = const Color(0xFF27AE60);
   static Color warning = const Color(0xFFF2C94C);
   static Color danger = const Color(0xFFEB5757);
+
+
+  //------------- template ui colors --------------// 
+  static Color primary = const Color(0xFF7B68EE);
+  static Color text_1 = const Color(0xFFFFFFFF);
+  static Color text_2 = const Color(0xFF1E272E99); 
+
+  static Color orange = const Color(0xFFFCAC4E) ; 
+  static Color green = const Color(0xFF36C545) ; 
+  static Color red = const Color(0xFFEA5829) ; 
+
+
+
 }
