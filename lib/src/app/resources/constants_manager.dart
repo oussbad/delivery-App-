@@ -11,6 +11,7 @@ class ConstantsManager {
   ///
   static const String isFirstTimeUser = 'is_first_time_user';
   static const String isDarkMode = 'isDarkMode';
+  static const String langCode = 'lang_code';
 
   ///
   /// API URLs

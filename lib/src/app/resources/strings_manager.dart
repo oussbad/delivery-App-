@@ -53,6 +53,13 @@ class StringsManager {
   static const String logout = 'Logout';
 
   ///
+  /// Settings Pages
+  ///
+  static const String ar = 'Arabic';
+  static const String fr = 'French';
+  static const String en = 'English';
+
+  ///
   /// Form Validation
   ///
   static const String requiredErrorMessage = "This field is required";

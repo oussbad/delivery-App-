@@ -4,6 +4,8 @@ import 'package:boxpend_flutter_android_app/src/app/localization/translations/fr
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+enum AppLang { ar, en, fr }
+
 class AppLocalization extends Translations {
   AppLocalization._();
 
