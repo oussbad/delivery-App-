@@ -4,8 +4,6 @@ import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-enum AppLang { ar, en, fr }
-
 class SettingsController extends GetxController {
   static SettingsController get to => Get.find();
   final LocalStorageService _localStorage = Get.find();
@@ -15,9 +13,8 @@ class SettingsController extends GetxController {
 
   @override
   void onInit() {
-    _loadTheme;
-    _loadLang;
-
+    _loadTheme();
+    loadLang();
     super.onInit();
   }
 
@@ -43,22 +40,22 @@ class SettingsController extends GetxController {
     return Get.changeThemeMode(_setThemeMode(isDarkMode.value));
   }
 
-  AppLang _loadLang() {
+  void loadLang() {
     final stored = _localStorage.get(ConstantsManager.langCode);
-    if (GetUtils.isNullOrBlank(stored)!) {
-      return lang(lang.value);
+    if (!GetUtils.isNullOrBlank(stored)!) {
+      lang(AppLang.values.byName(stored));
     } else {
-      return lang(stored);
+      lang(lang.value);
     }
   }
 
   void _saveLang(AppLang lang) {
-    _localStorage.save(ConstantsManager.langCode, lang);
+    _localStorage.save(ConstantsManager.langCode, lang.name);
   }
 
   void onLangChanged(AppLang? selectedLang) {
     lang(selectedLang);
-    final locale = AppLocalization.supportedLanguages[selectedLang];
+    final locale = AppLocalization.supportedLanguages[lang.value.name];
     if (locale != null) {
       Get.updateLocale(locale);
       _saveLang(selectedLang!);

@@ -1,3 +1,4 @@
+import 'package:boxpend_flutter_android_app/src/app/localization/app_localization.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/settings/controllers/settings_controller.dart';

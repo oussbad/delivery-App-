@@ -19,7 +19,7 @@ class Boxpend extends GetView<AppController> {
       initialRoute: AppPages.initial,
       initialBinding: AppBind(),
       getPages: AppPages.pages,
-      locale: AppLocalization.defaultLanguage,
+      locale: controller.loadLang(),
       translations: AppLocalization.getInstance(),
       theme: AppThemes.light,
       darkTheme: AppThemes.dark,
