@@ -5,6 +5,8 @@ import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signin_p
 import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signup_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/binds/home_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/pages/home_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/policy_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/terms_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/settings/binds/settings_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/settings/pages/settings_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/binds/test_bind.dart';
@@ -16,11 +18,6 @@ import 'package:boxpend_flutter_android_app/src/presentation/welcome/binds/splas
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/pages/onboarding_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/pages/splash_page.dart';
 import 'package:get/get.dart';
-
-import '../../presentation/legal/Binds/policy_bind.dart';
-import '../../presentation/legal/Binds/terms_bind.dart';
-import '../../presentation/legal/Pages/policy_page.dart';
-import '../../presentation/legal/Pages/terms_page.dart';
 
 part 'app_routes.dart';
 
@@ -65,13 +62,11 @@ class AppPages {
     ///
     GetPage(
       name: _Paths.terms,
-      page: () => const TermsPage(),
-      binding: TermsBind(),
+      page: () => TermsPage(),
     ),
     GetPage(
       name: _Paths.policy,
-      page: () => const PolicyPage(),
-      binding: PolicyBind(),
+      page: () => PolicyPage(),
     ),
 
     ///

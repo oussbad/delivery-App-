@@ -17,9 +17,9 @@ class SidebarController extends GetxController {
 
   void goToAboutPage() => Get.offAllNamed(AppRoutes.template);
 
-  void goToTermsAndConditionsPage() => Get.offAllNamed(AppRoutes.template);
+  void goToTermsAndConditionsPage() => Get.offAllNamed(AppRoutes.terms);
 
-  void goToPolicyPrivacyPage() => Get.offAllNamed(AppRoutes.template);
+  void goToPolicyPrivacyPage() => Get.offAllNamed(AppRoutes.policy);
 
   void signout() => Get.offAllNamed(AppRoutes.template);
 }
