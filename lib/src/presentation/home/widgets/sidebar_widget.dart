@@ -49,7 +49,7 @@ class SidebarWidget extends GetView<SidebarController> {
             label: StringsManager.logout,
             icon: HeroIcons.arrowRightOnRectangle,
             onTaped: controller.signout,
-            color: AppPalette.danger,
+            // color: AppPalette.danger,
           ),
         ],
       ),

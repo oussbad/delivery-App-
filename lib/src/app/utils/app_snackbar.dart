@@ -40,7 +40,6 @@ class AppSnackbar {
       snackPosition: SnackPosition.BOTTOM,
       borderRadius: AppSpacing.r_7,
       duration: const Duration(seconds: 2),
-      backgroundColor: AppPalette.inputBg,
       padding: EdgeInsets.all(AppSpacing.s_8),
       margin: EdgeInsets.all(AppSpacing.s_12),
     );

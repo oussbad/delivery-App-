@@ -9,53 +9,50 @@ class AppThemes {
     fontFamily: AppTypography.familyRoboto,
     primarySwatch: AppPalette.primarySwatch,
     scaffoldBackgroundColor: AppPalette.bg4,
-    hintColor: AppPalette.inputBorder,
     textTheme: TextTheme(
       bodyMedium: TextStyle(
-        color: AppPalette.white,
-      ),
+          // color: AppPalette.white,
+          ),
       bodyLarge: TextStyle(
-        color: AppPalette.white,
-      ),
+          // color: AppPalette.white,
+          ),
       bodySmall: TextStyle(
-        color: AppPalette.white,
-      ),
+          // color: AppPalette.white,
+          ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: AppPalette.inputBg,
+      //fillColor: AppPalette.inputBg,
       border: OutlineInputBorder(
-        borderSide: BorderSide(color: AppPalette.inputBorder),
-      ),
+          //  borderSide: BorderSide(color: AppPalette.inputBorder),
+          ),
     ),
     checkboxTheme: CheckboxThemeData(
       fillColor: MaterialStateProperty.all<Color>(
         AppPalette.primarySwatch,
       ),
       side: BorderSide(
-        color: AppPalette.inputBorder,
-      ),
+          // color: AppPalette.inputBorder,
+          ),
     ),
-
     radioTheme: RadioThemeData(
       fillColor: MaterialStateProperty.all<Color>(
         AppPalette.primarySwatch,
       ),
     ),
     appBarTheme: AppBarTheme(
-      backgroundColor: AppPalette.inputBorder,
-    ),
+        // backgroundColor: AppPalette.inputBorder,
+        ),
     drawerTheme: DrawerThemeData(
       backgroundColor: AppPalette.bg4,
     ),
-
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       elevation: 2,
       selectedItemColor: AppPalette.white,
       unselectedItemColor: AppPalette.primarySwatch,
       showSelectedLabels: false,
       showUnselectedLabels: false,
-      backgroundColor: AppPalette.inputBorder,
+      // backgroundColor: AppPalette.inputBorder,
       type: BottomNavigationBarType.fixed,
     ),
   );
@@ -64,23 +61,24 @@ class AppThemes {
     // fontFamily: AppTypography.familyInter,
     primarySwatch: AppPalette.primarySwatch,
     scaffoldBackgroundColor: AppPalette.white,
-    hintColor: AppPalette.inputBorder,
     textTheme: TextTheme(
       bodyMedium: TextStyle(
-        color: AppPalette.black,
-      ),
+          // color: AppPalette.black,
+          ),
       bodyLarge: TextStyle(
-        color: AppPalette.black,
-      ),
+          // color: AppPalette.black,
+          ),
       bodySmall: TextStyle(
-        color: AppPalette.black,
-      ),
+          // color: AppPalette.black,
+          ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: AppPalette.inputBg,
+      //  fillColor: AppPalette.inputBg,
       border: OutlineInputBorder(
-        borderSide: BorderSide(color: AppPalette.inputBorder),
+        borderSide: BorderSide(
+            //color: AppPalette.inputBorder,
+            ),
       ),
     ),
     checkboxTheme: CheckboxThemeData(
@@ -88,8 +86,8 @@ class AppThemes {
         AppPalette.primarySwatch,
       ),
       side: BorderSide(
-        color: AppPalette.inputBorder,
-      ),
+          // color: AppPalette.inputBorder,
+          ),
     ),
 
     radioTheme: RadioThemeData(
@@ -98,8 +96,8 @@ class AppThemes {
       ),
     ),
     appBarTheme: AppBarTheme(
-      backgroundColor: AppPalette.inputBorder,
-    ),
+        //backgroundColor: AppPalette.inputBorder,
+        ),
     drawerTheme: DrawerThemeData(
       backgroundColor: AppPalette.white,
     ),
@@ -110,7 +108,7 @@ class AppThemes {
       unselectedItemColor: AppPalette.primarySwatch,
       showSelectedLabels: false,
       showUnselectedLabels: false,
-      backgroundColor: AppPalette.inputBorder,
+      // backgroundColor: AppPalette.inputBorder,
       type: BottomNavigationBarType.fixed,
     ),
   );

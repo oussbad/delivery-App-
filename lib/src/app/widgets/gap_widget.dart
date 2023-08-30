@@ -24,16 +24,6 @@ class GapWidget extends StatelessWidget {
     this.axe = GapEnum.vertical,
   }) : spacing = AppSpacing.s_24;
 
-  GapWidget.spacing28({
-    super.key,
-    this.axe = GapEnum.vertical,
-  }) : spacing = AppSpacing.s_28;
-
-  GapWidget.spacing32({
-    super.key,
-    this.axe = GapEnum.vertical,
-  }) : spacing = AppSpacing.s_32;
-
   final double spacing;
   final GapEnum axe;
 

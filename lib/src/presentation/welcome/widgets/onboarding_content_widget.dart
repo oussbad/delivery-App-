@@ -30,7 +30,7 @@ class OnBoardingContentWidget extends StatelessWidget {
             height: AppSpacing.s_64 * 2.5,
             width: AppSpacing.s_64 * 2.5,
           ),
-          GapWidget.spacing28(),
+          GapWidget.spacing24(),
           TextBlocKWidget.subTitle(
             title,
             color: AppPalette.white,
@@ -42,7 +42,7 @@ class OnBoardingContentWidget extends StatelessWidget {
             color: AppPalette.text3,
             textAlign: TextAlign.center,
           ),
-          GapWidget.spacing28(),
+          GapWidget.spacing24(),
           child ?? const SizedBox.shrink()
         ],
       ),
