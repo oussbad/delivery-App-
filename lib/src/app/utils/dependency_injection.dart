@@ -25,6 +25,7 @@ class DenpendencyInjection {
     /// Init Dependencies
     ///
     await GetStorage().initStorage;
+    Get.lazyPut(() => Dio());
 
     ///
     /// Register App Services

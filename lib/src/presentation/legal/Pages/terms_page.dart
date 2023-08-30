@@ -1,14 +1,17 @@
+import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/loader_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/legal/Controllers/terms_controller.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/legal/Controllers/legal_controller.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/legal/models/legal_model.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/legal/widgets/legal_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TermsPage extends GetView<TermsController> {
-  const TermsPage({super.key});
+class TermsPage extends StatelessWidget {
+  TermsPage({super.key});
+
+  final controller = Get.put(LegalController());
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +22,7 @@ class TermsPage extends GetView<TermsController> {
         ),
       ),
       body: FutureBuilder<List<LegalModel>>(
-        future: controller.loadTermsData(),
+        future: controller.loadLegalData(AssetsManager.terms),
         builder: (context, future) {
           if (future.connectionState == ConnectionState.waiting) {
             return _buildLoaderWidget();
