@@ -37,7 +37,7 @@ flutter:
 
 
   fonts:
-    - family: Inter
+    - family: Roboto
       fonts:
-        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Roboto-Regular.ttf
           weight: 700

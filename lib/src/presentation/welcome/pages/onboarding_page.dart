@@ -56,7 +56,7 @@ class OnBoardingPage extends GetView<OnBoardingController> {
   Widget _buildIndicator() {
     return Obx(
       () => Positioned(
-        bottom: AppSpacing.s_28,
+        bottom: AppSpacing.s_24,
         child: IndicatorWidget(
           itemCount: controller.itemCount,
           currentIndex: controller.index.value,

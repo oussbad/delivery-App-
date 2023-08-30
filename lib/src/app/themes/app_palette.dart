@@ -20,29 +20,30 @@ class AppPalette {
     },
   );
 
-  //BG Colors
-  static Color bg1 = const Color(0xFF4C4F6B);
-  static Color bg2 = const Color(0xFF313248);
-  static Color bg3 = const Color(0xFF292A38);
-  static Color bg4 = const Color(0xFF191A23);
-  static Color bg5 = const Color(0xFF0B0C1B);
-
-  //Text Colors
-  static Color text1 = const Color(0xFFDBDCEF);
-  static Color text2 = const Color(0xFFFAFAFA);
-  static Color text3 = const Color(0xFF828282);
-
-  //Input Colors
-  static Color inputBg = const Color.fromRGBO(255, 255, 255, .07);
-  static Color inputBorder = const Color.fromRGBO(255, 255, 255, .13);
-
   // Neutral Colors
   static Color white = const Color(0xFFFFFFFF);
   static Color black = const Color(0xFF000000);
 
   //Semantic colors
-  static Color info = const Color(0xFF4EA7FC);
-  static Color success = const Color(0xFF27AE60);
-  static Color warning = const Color(0xFFF2C94C);
-  static Color danger = const Color(0xFFEB5757);
+  static Color info = const Color(0xFF7B68EE);
+  static Color success = const Color(0xFF36C545);
+  static Color warning = const Color(0xFFFCAC4E);
+  static Color danger = const Color(0xFFEA5829);
+
+  //BG Colors
+  static Color bg1 = const Color(0xFF2B343B);
+  static Color bg2 = const Color(0xFF4D5061).withOpacity(.24);
+  static Color bg3 = white.withOpacity(.02);
+  static Color bg4 = warning.withOpacity(.6);
+  static Color bg5 = const Color(0xFF716D88).withOpacity(.20);
+
+  // Btn Colors
+  static Color button = const Color(0xFFC2C1FF);
+  static Color dropdown = const Color(0xFFD0BCFF).withOpacity(.8);
+
+  // Text Colors
+  static Color text1 = const Color(0xFF1E272E).withOpacity(.8);
+  static Color text2 = const Color(0xFF381E72);
+  static Color text3 = white.withOpacity(.6);
+  static Color text4 = const Color(0xFF1E272E).withOpacity(.6);
 }

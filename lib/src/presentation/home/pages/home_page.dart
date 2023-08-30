@@ -73,7 +73,7 @@ class HomePage extends GetView<HomeController> {
       () => BottomNavigationBar(
         currentIndex: controller.currentIndex.value,
         onTap: controller.changeScreen,
-        iconSize: AppSpacing.s_28,
+        iconSize: AppSpacing.s_36,
         items: [
           BottomNavigationBarItem(
             icon: const HeroIcon(HeroIcons.cube),

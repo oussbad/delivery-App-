@@ -53,12 +53,12 @@ class TextFieldWidget extends StatelessWidget {
       ),
       errorBorder: OutlineInputBorder(
         borderSide: BorderSide(
-          color: AppPalette.danger,
-        ),
+            //color: AppPalette.danger,
+            ),
       ),
       errorStyle: StylesManager.body.copyWith(
-        color: AppPalette.danger,
-      ),
+          //color: AppPalette.danger,
+          ),
     );
   }
 }
