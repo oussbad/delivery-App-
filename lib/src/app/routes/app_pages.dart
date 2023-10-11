@@ -24,7 +24,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = AppRoutes.template;
+  static const initial = AppRoutes.test;
 
   static final pages = [
     ///
