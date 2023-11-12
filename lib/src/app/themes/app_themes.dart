@@ -9,17 +9,6 @@ class AppThemes {
     fontFamily: AppTypography.familyRoboto,
     primarySwatch: AppPalette.primarySwatch,
     scaffoldBackgroundColor: AppPalette.bg1,
-    textTheme: TextTheme(
-      bodyMedium: TextStyle(
-          // color: AppPalette.white,
-          ),
-      bodyLarge: TextStyle(
-          // color: AppPalette.white,
-          ),
-      bodySmall: TextStyle(
-          // color: AppPalette.white,
-          ),
-    ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       //fillColor: AppPalette.inputBg,
@@ -40,10 +29,6 @@ class AppThemes {
         AppPalette.primarySwatch,
       ),
     ),
-    appBarTheme: AppBarTheme(
-        // backgroundColor: AppPalette.inputBorder,
-        ),
-    drawerTheme: DrawerThemeData(),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       elevation: 2,
       selectedItemColor: AppPalette.white,

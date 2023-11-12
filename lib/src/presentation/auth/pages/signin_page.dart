@@ -3,7 +3,7 @@ import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.da
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/button_widget.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/inputs/text_field_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/text_field_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/controllers/signin_controller.dart';

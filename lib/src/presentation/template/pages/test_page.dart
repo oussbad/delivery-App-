@@ -1,9 +1,12 @@
+import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
+import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/button_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/drop_down_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/test_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../../app/widgets/inputs/drop_down_widget.dart';
 
 class TestPage extends GetView<TestController> {
   const TestPage({super.key});
@@ -17,15 +20,52 @@ class TestPage extends GetView<TestController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Obx(
-                () {
-                  return DropdownWidget(
-                    value: controller.v.value,
-                    onChanged: (p0) => controller.v(p0),
-                    items: ['Arabic', 'English', 'French'],
-                    type: ButtonType.primary,
-                  );
-                },
+              ButtonWidget(
+                label: 'Submit',
+                onPressed: () {},
+              ),
+              GapWidget.s16(),
+              ButtonWidget(
+                type: ButtonType.secondary,
+                label: 'Submit',
+                onPressed: () {},
+              ),
+              GapWidget.s16(),
+              ButtonWidget(
+                type: ButtonType.outline,
+                label: 'Submit',
+                onPressed: () {},
+              ),
+              GapWidget.s16(),
+              ButtonWidget(
+                type: ButtonType.text,
+                label: 'Submit',
+                onPressed: () {},
+              ),
+              GapWidget.s16(),
+              ButtonWidget(
+                type: ButtonType.danger,
+                label: 'Submit',
+                onPressed: () {},
+              ),
+              GapWidget.s16(),
+              DropdownWidget(
+                value: 'Arabic',
+                items: ['Arabic'],
+                onChanged: (v) {},
+              ),
+              GapWidget.s16(),
+              ButtonWidget(
+                icon: AssetsManager.plusIcon,
+                label: 'Submit',
+                onPressed: () {},
+              ),
+              GapWidget.s16(),
+              ButtonWidget(
+                isLarge: true,
+                type: ButtonType.danger,
+                label: 'Submit',
+                onPressed: () {},
               ),
               // GapWidget.s16(),
               // const DropdownWidget(
