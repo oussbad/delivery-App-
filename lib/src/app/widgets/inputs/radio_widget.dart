@@ -25,12 +25,12 @@ class RadioWidget<T> extends StatelessWidget {
           groupValue: groupValue,
           onChanged: onChanged,
         ),
-        GapWidget.spacing8(
+        GapWidget.s8(
           axe: GapEnum.horizontal,
         ),
-        TextBlocKWidget.body(
-          label,
-        ),
+        // TextBlocKWidget.body(
+        //   label,
+        // ),
       ],
     );
   }

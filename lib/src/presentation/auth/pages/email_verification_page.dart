@@ -17,7 +17,7 @@ class EmailVerificationPage extends StatelessWidget {
       body: Center(
         child: Form(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: AppSpacing.s_16),
+            padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
             child: _buildColumn(),
           ),
         ),
@@ -32,18 +32,16 @@ class EmailVerificationPage extends StatelessWidget {
         HeroIcon(
           HeroIcons.envelope,
           color: AppPalette.primarySwatch,
-          size: AppTypography.sizeXXL * 2,
         ),
-        GapWidget.spacing20(),
-        TextBlocKWidget.subTitle(
+        GapWidget.s24(),
+        TextBlocKWidget.t14(
           StringsManager.emailSent.tr,
           color: AppPalette.white,
           textAlign: TextAlign.center,
         ),
-        GapWidget.spacing8(),
-        TextBlocKWidget.caption(
+        GapWidget.s8(),
+        TextBlocKWidget.t14(
           StringsManager.emailSentDescription.tr,
-          color: AppPalette.text3,
           textAlign: TextAlign.center,
         ),
       ],

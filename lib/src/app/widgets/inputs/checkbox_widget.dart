@@ -23,13 +23,13 @@ class CheckboxWidget extends StatelessWidget {
           value: value,
           onChanged: onChanged,
         ),
-        GapWidget.spacing8(
+        GapWidget.s8(
           axe: GapEnum.horizontal,
         ),
-        TextBlocKWidget.body(
-          label,
-          color: AppPalette.white,
-        ),
+        // TextBlocKWidget.body(
+        //   label,
+        //   color: AppPalette.white,
+        // ),
       ],
     );
   }

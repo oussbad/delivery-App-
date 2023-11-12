@@ -11,7 +11,7 @@ class TemplatePage extends GetView<TemplateController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: AppSpacing.s_16),
+        padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
         child: Center(
           child: _buildTemplate(),
         ),

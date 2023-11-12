@@ -22,26 +22,22 @@ class AppSnackbar {
       message,
       icon: Icon(
         icon,
-        size: AppTypography.sizeXL,
-        color: status == SnackBarStatus.success
-            ? AppPalette.success
-            : AppPalette.danger,
+        size: AppTypography.t14,
+        color: status == SnackBarStatus.success ? AppPalette.success : AppPalette.danger,
       ),
-      titleText: TextBlocKWidget.body(
+      titleText: TextBlocKWidget.t18(
         title,
-        color: status == SnackBarStatus.success
-            ? AppPalette.success
-            : AppPalette.danger,
+        color: status == SnackBarStatus.success ? AppPalette.success : AppPalette.danger,
       ),
-      messageText: TextBlocKWidget.caption(
+      messageText: TextBlocKWidget.t18(
         message,
         color: AppPalette.white,
       ),
       snackPosition: SnackPosition.BOTTOM,
-      borderRadius: AppSpacing.r_7,
+      borderRadius: AppSpacing.r7,
       duration: const Duration(seconds: 2),
-      padding: EdgeInsets.all(AppSpacing.s_8),
-      margin: EdgeInsets.all(AppSpacing.s_12),
+      padding: EdgeInsets.all(AppSpacing.s8),
+      margin: EdgeInsets.all(AppSpacing.s14),
     );
   }
 }

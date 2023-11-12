@@ -8,30 +8,59 @@ import '../../../app/widgets/inputs/drop_down_widget.dart';
 class TestPage extends GetView<TestController> {
   const TestPage({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: AppSpacing.s_16),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children:  [
-            Text('Test Page'),
-            DropdownWidget(
-
-              items: [
-                DropdownMenuItem(value: 'Option 1', child: Text('Option 1')),
-                DropdownMenuItem(value: 'Option 2', child: Text('Option 2')),
-                DropdownMenuItem(value: 'Option 3', child: Text('Option 3')),
-                // Add more items as needed
-              ],
-               onChanged: (String? value) {
-        print('Selected value: $value');
-
-        },
-            ),
-          ],
+        padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Obx(
+                () {
+                  return DropdownWidget(
+                    value: controller.v.value,
+                    onChanged: (p0) => controller.v(p0),
+                    items: ['Arabic', 'English', 'French'],
+                    type: ButtonType.primary,
+                  );
+                },
+              ),
+              // GapWidget.s16(),
+              // const DropdownWidget(
+              //   type: ButtonType.secondary,
+              // ),
+              // GapWidget.s16(),
+              // const DropdownWidget(
+              //   type: ButtonType.outline,
+              // ),
+              // GapWidget.s16(),
+              // const DropdownWidget(
+              //   type: ButtonType.text,
+              // ),
+              // GapWidget.s24(),
+              // const DropdownWidget(
+              //   type: ButtonType.primary,
+              //   isDisabled: true,
+              // ),
+              // GapWidget.s16(),
+              // const DropdownWidget(
+              //   type: ButtonType.secondary,
+              //   isDisabled: true,
+              // ),
+              // GapWidget.s16(),
+              // const DropdownWidget(
+              //   type: ButtonType.outline,
+              //   isDisabled: true,
+              // ),
+              // GapWidget.s16(),
+              // const DropdownWidget(
+              //   type: ButtonType.text,
+              //   isDisabled: true,
+              // ),
+            ],
+          ),
         ),
       ),
     );

@@ -1,4 +1,3 @@
-import 'package:boxpend_flutter_android_app/src/app/resources/styles_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:flutter/material.dart';
@@ -26,9 +25,9 @@ class TextFieldWidget extends StatelessWidget {
       validator: validator,
       obscureText: isHidden!,
       keyboardType: type,
-      style: StylesManager.body.copyWith(
-        color: AppPalette.white,
-      ),
+      // style: StylesManager.body.copyWith(
+      //   color: AppPalette.white,
+      // ),
       decoration: _buildDecoration(),
     );
   }
@@ -36,29 +35,29 @@ class TextFieldWidget extends StatelessWidget {
   InputDecoration? _buildDecoration() {
     return InputDecoration(
       hintText: placeholder,
-      hintStyle: StylesManager.body,
+      // hintStyle: StylesManager.body,
       border: OutlineInputBorder(
         borderRadius: BorderRadius.all(
-          Radius.circular(AppSpacing.r_7),
+          Radius.circular(AppSpacing.r7),
         ),
       ),
       isDense: true,
       prefix: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: AppSpacing.s_12,
+          horizontal: AppSpacing.s14,
         ),
       ),
       contentPadding: EdgeInsets.symmetric(
-        vertical: AppSpacing.s_20,
+        vertical: AppSpacing.s20,
       ),
       errorBorder: OutlineInputBorder(
         borderSide: BorderSide(
             //color: AppPalette.danger,
             ),
       ),
-      errorStyle: StylesManager.body.copyWith(
-          //color: AppPalette.danger,
-          ),
+      // errorStyle: StylesManager.body.copyWith(
+      //     //color: AppPalette.danger,
+      //     ),
     );
   }
 }

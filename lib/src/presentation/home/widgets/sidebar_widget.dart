@@ -28,7 +28,7 @@ class SidebarWidget extends GetView<SidebarController> {
             icon: HeroIcons.cog8Tooth,
             onTaped: controller.goToSettingsPage,
           ),
-          GapWidget.spacing24(),
+          GapWidget.s8(),
           _buildListTile(
             label: StringsManager.about,
             icon: HeroIcons.informationCircle,
@@ -44,7 +44,7 @@ class SidebarWidget extends GetView<SidebarController> {
             icon: HeroIcons.documentCheck,
             onTaped: controller.goToPolicyPrivacyPage,
           ),
-          GapWidget.spacing24(),
+          GapWidget.s8(),
           _buildListTile(
             label: StringsManager.logout,
             icon: HeroIcons.arrowRightOnRectangle,
@@ -58,21 +58,19 @@ class SidebarWidget extends GetView<SidebarController> {
 
   Widget _userAccountsDrawerHeader() {
     return UserAccountsDrawerHeader(
-      decoration: BoxDecoration(
-        color: AppPalette.bg4,
-      ),
+      decoration: BoxDecoration(),
       currentAccountPicture: CircleAvatar(
         //backgroundImage: NetworkImage(controller.avatar),
         backgroundColor: AppPalette.primarySwatch,
       ),
-      accountName: TextBlocKWidget.subTitle(controller.username),
-      accountEmail: TextBlocKWidget.body(controller.email),
+      accountName: TextBlocKWidget.t14(controller.username),
+      accountEmail: TextBlocKWidget.t14(controller.email),
     );
   }
 
   Widget _buildSwitch() {
     return ListTile(
-      title: TextBlocKWidget.body(StringsManager.darkMode),
+      title: TextBlocKWidget.t14(StringsManager.darkMode),
       leading: HeroIcon(
         HeroIcons.moon,
         color: AppPalette.white,
@@ -91,7 +89,7 @@ class SidebarWidget extends GetView<SidebarController> {
     Color? color,
   }) {
     return ListTile(
-      title: TextBlocKWidget.body(
+      title: TextBlocKWidget.t14(
         label,
         color: color ?? AppPalette.white,
       ),

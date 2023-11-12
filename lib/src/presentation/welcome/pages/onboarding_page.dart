@@ -15,7 +15,7 @@ class OnBoardingPage extends GetView<OnBoardingController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(AppSpacing.s_20),
+        padding: EdgeInsets.all(AppSpacing.s20),
         child: Stack(
           alignment: Alignment.center,
           children: [
@@ -56,7 +56,7 @@ class OnBoardingPage extends GetView<OnBoardingController> {
   Widget _buildIndicator() {
     return Obx(
       () => Positioned(
-        bottom: AppSpacing.s_24,
+        bottom: AppSpacing.s24,
         child: IndicatorWidget(
           itemCount: controller.itemCount,
           currentIndex: controller.index.value,

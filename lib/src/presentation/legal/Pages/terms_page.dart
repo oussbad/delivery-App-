@@ -17,7 +17,7 @@ class TermsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: TextBlocKWidget.subTitle(
+        title: TextBlocKWidget.t14(
           StringsManager.termsAndConditions,
         ),
       ),
@@ -44,7 +44,7 @@ class TermsPage extends StatelessWidget {
 
   Widget _buildErrorWidget() {
     return Center(
-      child: TextBlocKWidget.title(StringsManager.unexpectedError),
+      child: TextBlocKWidget.t14(StringsManager.unexpectedError),
     );
   }
 

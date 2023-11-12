@@ -24,8 +24,8 @@ class ButtonWidget extends StatelessWidget {
       child: Container(
         width: double.infinity,
         alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(vertical: AppSpacing.s_16),
-        child: TextBlocKWidget.body(label),
+        padding: EdgeInsets.symmetric(vertical: AppSpacing.s16),
+        child: TextBlocKWidget.t14(label),
       ),
     );
   }

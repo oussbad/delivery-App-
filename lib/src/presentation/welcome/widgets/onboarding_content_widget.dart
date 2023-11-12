@@ -27,22 +27,21 @@ class OnBoardingContentWidget extends StatelessWidget {
         children: [
           SvgPicture.asset(
             image,
-            height: AppSpacing.s_64 * 2.5,
-            width: AppSpacing.s_64 * 2.5,
+            height: AppSpacing.s64 * 2.5,
+            width: AppSpacing.s64 * 2.5,
           ),
-          GapWidget.spacing24(),
-          TextBlocKWidget.subTitle(
+          GapWidget.s8(),
+          TextBlocKWidget.t14(
             title,
             color: AppPalette.white,
             textAlign: TextAlign.center,
           ),
-          GapWidget.spacing12(),
-          TextBlocKWidget.caption(
+          GapWidget.s8(),
+          TextBlocKWidget.t14(
             subTitle,
-            color: AppPalette.text3,
             textAlign: TextAlign.center,
           ),
-          GapWidget.spacing24(),
+          GapWidget.s8(),
           child ?? const SizedBox.shrink()
         ],
       ),
