@@ -42,4 +42,5 @@ class AppPalette {
 
   //BG Colors
   static Color bg1 = const Color.fromRGBO(113, 109, 136, 0.2);
+  static Color bg2 = const Color.fromRGBO(113, 109, 136, 1);
 }

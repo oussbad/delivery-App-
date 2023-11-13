@@ -35,10 +35,7 @@ class IconButtonWidget extends StatelessWidget {
             AppSpacing.r7,
           ),
         ),
-        child: SvgPicture.asset(
-          icon,
-          color: AppPalette.btnColor1,
-        ),
+        child: _buildIcon(),
       ),
     );
   }
@@ -48,23 +45,23 @@ class IconButtonWidget extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          //radius: AppSpacing.r7,
           onTap: onPressed,
           child: Container(
             padding: EdgeInsets.all(AppSpacing.s16),
             decoration: BoxDecoration(
               color: AppPalette.btnColor5,
-              // borderRadius: BorderRadius.circular(
-              //   AppSpacing.r7,
-              // ),
             ),
-            child: SvgPicture.asset(
-              icon,
-              color: AppPalette.btnColor1,
-            ),
+            child: _buildIcon(),
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildIcon() {
+    return SvgPicture.asset(
+      icon,
+      color: AppPalette.btnColor1,
     );
   }
 }
