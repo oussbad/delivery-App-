@@ -1,3 +1,4 @@
+import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:flutter/material.dart';
@@ -12,15 +13,18 @@ class RadioWidget<T> extends StatelessWidget {
   });
 
   final String label;
-  final T value;
-  final T groupValue;
-  final void Function(T?) onChanged;
+  final String value;
+  final String groupValue;
+  final void Function(String?) onChanged;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Radio<T>(
+        Radio<String>(
+          fillColor: MaterialStateProperty.all<Color>(
+            AppPalette.btnColor1,
+          ),
           value: value,
           groupValue: groupValue,
           onChanged: onChanged,
@@ -28,9 +32,10 @@ class RadioWidget<T> extends StatelessWidget {
         GapWidget.s8(
           axe: GapEnum.horizontal,
         ),
-        // TextBlocKWidget.body(
-        //   label,
-        // ),
+        TextBlocKWidget.t16(
+          label,
+          color: AppPalette.white,
+        ),
       ],
     );
   }

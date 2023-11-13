@@ -90,25 +90,25 @@ class SignUpPage extends GetView<SignUpController> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Obx(
-          () => RadioWidget<UserType>(
-            label: StringsManager.provider.tr,
-            value: UserType.provider,
-            groupValue: controller.userType.value,
-            onChanged: controller.onUserTypeChanged,
-          ),
-        ),
-        GapWidget.s8(
-          axe: GapEnum.horizontal,
-        ),
-        Obx(
-          () => RadioWidget<UserType>(
-            label: StringsManager.delivery.tr,
-            value: UserType.delivery,
-            groupValue: controller.userType.value,
-            onChanged: controller.onUserTypeChanged,
-          ),
-        ),
+        // Obx(
+        //   () => RadioWidget<UserType>(
+        //     label: StringsManager.provider.tr,
+        //     value: UserType.provider,
+        //     groupValue: controller.userType.value,
+        //     onChanged: controller.onUserTypeChanged,
+        //   ),
+        // ),
+        // GapWidget.s8(
+        //   axe: GapEnum.horizontal,
+        // ),
+        // Obx(
+        //   () => RadioWidget<UserType>(
+        //     label: StringsManager.delivery.tr,
+        //     value: UserType.delivery,
+        //     groupValue: controller.userType.value,
+        //     onChanged: controller.onUserTypeChanged,
+        //   ),
+        // ),
       ],
     );
   }

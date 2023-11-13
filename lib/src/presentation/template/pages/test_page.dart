@@ -6,6 +6,7 @@ import 'package:boxpend_flutter_android_app/src/app/widgets/checkbox_widget.dart
 import 'package:boxpend_flutter_android_app/src/app/widgets/drop_down_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/icon_button_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/radio_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/state_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_field_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/test_controller.dart';
@@ -24,15 +25,7 @@ class TestPage extends GetView<TestController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CheckboxWidget(
-                label: 'Email',
-                value: true,
-              ),
               GapWidget.s16(),
-              CheckboxWidget(
-                label: 'Email',
-                value: false,
-              ),
             ],
           ),
         ),
