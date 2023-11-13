@@ -6,17 +6,14 @@ class AppTypography {
   static const String familyRoboto = 'Roboto';
 
   // Font Size
-  static const double sizeXXS = 8;
-  static const double sizeXS = 12;
-  static const double sizeSM = 16;
-  static const double sizeSL = 20;
-  static const double sizeMD = 24;
-  static const double sizeLG = 28;
-  static const double sizeXL = 30;
-  static const double sizeXXL = 34;
+  static const double t14 = 14;
+  static const double t16 = 16;
+  static const double t18 = 18;
+  static const double t24 = 24;
 
   // Font Weight
-  static const FontWeight regular = FontWeight.w400;
-  static const FontWeight bold = FontWeight.w700;
-  static const FontWeight semiBold = FontWeight.w600;
+  static const FontWeight w400 = FontWeight.w400;
+  static const FontWeight w500 = FontWeight.w500;
+  static const FontWeight w600 = FontWeight.w600;
+  static const FontWeight w700 = FontWeight.w700;
 }

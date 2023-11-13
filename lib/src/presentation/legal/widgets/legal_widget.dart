@@ -19,15 +19,12 @@ class LegalWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        TextBlocKWidget.h3(title),
-        GapWidget.spacing8(),
-        TextBlocKWidget.body(description),
-        GapWidget.spacing8(),
-        if (bulleted.isEmpty)
-          const SizedBox.shrink()
-        else
-          ..._buildBulleted(bulleted),
-        GapWidget.spacing8(),
+        TextBlocKWidget.t14(title),
+        GapWidget.s8(),
+        TextBlocKWidget.t14(description),
+        GapWidget.s8(),
+        if (bulleted.isEmpty) const SizedBox.shrink() else ..._buildBulleted(bulleted),
+        GapWidget.s8(),
       ],
     );
   }
@@ -35,7 +32,7 @@ class LegalWidget extends StatelessWidget {
   List<Widget> _buildBulleted(List<String> bulleted) {
     return bulleted
         .map(
-          (item) => TextBlocKWidget.body(item),
+          (item) => TextBlocKWidget.t14(item),
         )
         .toList();
   }

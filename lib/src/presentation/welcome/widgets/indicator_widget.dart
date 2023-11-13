@@ -26,13 +26,12 @@ class IndicatorWidget extends StatelessWidget {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
       curve: Curves.ease,
-      width: index == currentIndex ? AppSpacing.s_16 : AppSpacing.s_8,
-      height: AppSpacing.s_8,
-      margin: EdgeInsets.all(AppSpacing.s_4),
+      width: index == currentIndex ? AppSpacing.s16 : AppSpacing.s8,
+      height: AppSpacing.s8,
+      margin: EdgeInsets.all(AppSpacing.s4),
       decoration: BoxDecoration(
-        color:
-            index == currentIndex ? AppPalette.primarySwatch : AppPalette.white,
-        borderRadius: BorderRadius.circular(AppSpacing.r_7),
+        color: index == currentIndex ? AppPalette.primarySwatch : AppPalette.white,
+        borderRadius: BorderRadius.circular(AppSpacing.r7),
       ),
     );
   }

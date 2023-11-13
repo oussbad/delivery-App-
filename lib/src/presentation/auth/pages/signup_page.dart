@@ -1,11 +1,10 @@
 import 'package:boxpend_flutter_android_app/src/app/helpers/validators.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
-import 'package:boxpend_flutter_android_app/src/app/resources/styles_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/button_widget.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/inputs/radio_widget.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/inputs/text_field_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/radio_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/text_field_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/controllers/signup_controller.dart';
@@ -23,7 +22,7 @@ class SignUpPage extends GetView<SignUpController> {
         child: Form(
           key: controller.signupFormKey,
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: AppSpacing.s_16),
+            padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
             child: _buildColumn(),
           ),
         ),
@@ -35,33 +34,33 @@ class SignUpPage extends GetView<SignUpController> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        TextBlocKWidget.title(
+        TextBlocKWidget.t14(
           StringsManager.welcomeToBoxpend.tr,
           color: AppPalette.white,
           textAlign: TextAlign.center,
         ),
-        GapWidget.spacing24(),
+        GapWidget.s8(),
         _buildUserType(),
-        GapWidget.spacing24(),
+        GapWidget.s8(),
         TextFieldWidget(
           controller: controller.fullNameController,
           validator: Validator().required().run,
           placeholder: StringsManager.fullName.tr,
         ),
-        GapWidget.spacing20(),
+        GapWidget.s8(),
         TextFieldWidget(
           controller: controller.emailController,
           validator: Validator().required().isEmail().run,
           placeholder: StringsManager.email.tr,
         ),
-        GapWidget.spacing12(),
+        GapWidget.s8(),
         _buildCheckbox(),
-        GapWidget.spacing24(),
+        GapWidget.s8(),
         ButtonWidget(
           label: StringsManager.createAccount.tr,
           onPressed: controller.signup,
         ),
-        GapWidget.spacing12(),
+        GapWidget.s8(),
         _buildAfterSignUpButton(),
       ],
     );
@@ -77,7 +76,7 @@ class SignUpPage extends GetView<SignUpController> {
             onChanged: controller.onIsAcceptedChanged,
           ),
         ),
-        GapWidget.spacing8(
+        GapWidget.s8(
           axe: GapEnum.horizontal,
         ),
         Expanded(
@@ -99,7 +98,7 @@ class SignUpPage extends GetView<SignUpController> {
             onChanged: controller.onUserTypeChanged,
           ),
         ),
-        GapWidget.spacing12(
+        GapWidget.s8(
           axe: GapEnum.horizontal,
         ),
         Obx(
@@ -117,7 +116,7 @@ class SignUpPage extends GetView<SignUpController> {
   Widget _buildAfterSignUpButton() {
     return TextButton(
       onPressed: controller.goToSignInPage,
-      child: TextBlocKWidget.body(
+      child: TextBlocKWidget.t14(
         StringsManager.haveAnAccount.tr,
         textAlign: TextAlign.center,
       ),
@@ -128,31 +127,29 @@ class SignUpPage extends GetView<SignUpController> {
     return RichText(
       text: TextSpan(
         text: StringsManager.beforeSigningUpAgreement.tr,
-        style: StylesManager.body.copyWith(
-          color: AppPalette.white,
-        ),
+        // style: StylesManager.t14.copyWith(
+        //   color: AppPalette.white,
+        // ),
         children: [
           TextSpan(
             text: ' ${StringsManager.termsAndConditions.tr}',
-            style: StylesManager.body.copyWith(
-              color: AppPalette.primarySwatch,
-            ),
-            recognizer: TapGestureRecognizer()
-              ..onTap = () => controller.goToTermsAndConditionsPage(),
+            // style: StylesManager.t14.copyWith(
+            //   color: AppPalette.primarySwatch,
+            // ),
+            recognizer: TapGestureRecognizer()..onTap = () => controller.goToTermsAndConditionsPage(),
           ),
           TextSpan(
             text: ' ${StringsManager.and.tr}',
-            style: StylesManager.body.copyWith(
-              color: AppPalette.white,
-            ),
+            // style: StylesManager.t14.copyWith(
+            //   color: AppPalette.white,
+            // ),
           ),
           TextSpan(
             text: ' ${StringsManager.policyPrivacy.tr}',
-            style: StylesManager.body.copyWith(
-              color: AppPalette.primarySwatch,
-            ),
-            recognizer: TapGestureRecognizer()
-              ..onTap = () => controller.goToPolicyPrivacyPage(),
+            // style: StylesManager.t14.copyWith(
+            //   color: AppPalette.primarySwatch,
+            // ),
+            recognizer: TapGestureRecognizer()..onTap = () => controller.goToPolicyPrivacyPage(),
           ),
         ],
       ),

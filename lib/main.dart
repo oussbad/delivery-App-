@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:boxpend_flutter_android_app/src/app/utils/dependency_injection.dart';
 
 void main() async {
-  await DenpendencyInjection.init();  
+  await DenpendencyInjection.init();
 
   runApp(
     DevicePreview(
-      enabled: false,
+      enabled: true,
       isToolbarVisible: false,
       defaultDevice: DevicePreview.defaultDevices.firstWhere(
         (device) => device.name == "Small",

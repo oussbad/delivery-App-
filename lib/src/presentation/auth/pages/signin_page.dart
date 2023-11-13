@@ -3,7 +3,7 @@ import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.da
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/button_widget.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/inputs/text_field_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/text_field_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/controllers/signin_controller.dart';
@@ -20,7 +20,7 @@ class SignInPage extends GetView<SignInController> {
         child: Form(
           key: controller.signinFormKey,
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: AppSpacing.s_16),
+            padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
             child: _buildColumn(),
           ),
         ),
@@ -32,23 +32,23 @@ class SignInPage extends GetView<SignInController> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        TextBlocKWidget.title(
+        TextBlocKWidget.t14(
           StringsManager.welcomeBack.tr,
           color: AppPalette.white,
           textAlign: TextAlign.center,
         ),
-        GapWidget.spacing24(),
+        GapWidget.s8(),
         TextFieldWidget(
           controller: controller.emailController,
           placeholder: StringsManager.email.tr,
           validator: Validator().required().isEmail().run,
         ),
-        GapWidget.spacing24(),
+        GapWidget.s8(),
         ButtonWidget(
           label: StringsManager.continueTo.tr,
           onPressed: controller.signin,
         ),
-        GapWidget.spacing12(),
+        GapWidget.s8(),
         _buildAfterSignInButton(),
       ],
     );
@@ -57,7 +57,7 @@ class SignInPage extends GetView<SignInController> {
   Widget _buildAfterSignInButton() {
     return TextButton(
       onPressed: controller.goToSignUpPage,
-      child: TextBlocKWidget.body(
+      child: TextBlocKWidget.t14(
         StringsManager.needAnAccount.tr,
         textAlign: TextAlign.center,
       ),

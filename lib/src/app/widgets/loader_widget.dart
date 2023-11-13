@@ -9,8 +9,8 @@ class LoaderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-        width: AppSpacing.s_12,
-        height: AppSpacing.s_12,
+        width: AppSpacing.s14,
+        height: AppSpacing.s14,
         child: CircularProgressIndicator(
           strokeWidth: 2.0,
           color: AppPalette.white,

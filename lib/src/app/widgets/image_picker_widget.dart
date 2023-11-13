@@ -98,7 +98,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
     Color? color,
   }) {
     return ListTile(
-      title: TextBlocKWidget.body(
+      title: TextBlocKWidget.t14(
         label,
         color: color ?? AppPalette.white,
       ),

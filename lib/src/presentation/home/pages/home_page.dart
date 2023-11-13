@@ -21,7 +21,7 @@ class HomePage extends GetView<HomeController> {
       key: controller.scaffoldKey,
       appBar: AppBar(
         title: Obx(
-          () => TextBlocKWidget.subTitle(
+          () => TextBlocKWidget.t14(
             controller.navigationItems[controller.currentIndex.value].tr,
           ),
         ),
@@ -42,8 +42,8 @@ class HomePage extends GetView<HomeController> {
       drawer: const SidebarWidget(),
       body: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: AppSpacing.s_16,
-          vertical: AppSpacing.s_8,
+          horizontal: AppSpacing.s16,
+          vertical: AppSpacing.s8,
         ),
         child: Obx(
           () => IndexedStack(
@@ -73,7 +73,7 @@ class HomePage extends GetView<HomeController> {
       () => BottomNavigationBar(
         currentIndex: controller.currentIndex.value,
         onTap: controller.changeScreen,
-        iconSize: AppSpacing.s_36,
+        iconSize: AppSpacing.s36,
         items: [
           BottomNavigationBarItem(
             icon: const HeroIcon(HeroIcons.cube),

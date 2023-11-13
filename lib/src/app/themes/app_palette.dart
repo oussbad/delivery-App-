@@ -7,16 +7,17 @@ class AppPalette {
   static MaterialColor primarySwatch = const MaterialColor(
     0xFF575BC7,
     {
-      50: Color.fromRGBO(87, 91, 199, .1),
-      100: Color.fromRGBO(87, 91, 199, .2),
-      200: Color.fromRGBO(87, 91, 199, .3),
-      300: Color.fromRGBO(87, 91, 199, .4),
-      400: Color.fromRGBO(87, 91, 199, .5),
-      500: Color.fromRGBO(87, 91, 199, .6),
-      600: Color.fromRGBO(87, 91, 199, .7),
-      700: Color.fromRGBO(87, 91, 199, .8),
-      800: Color.fromRGBO(87, 91, 199, .9),
-      900: Color.fromRGBO(87, 91, 199, 1),
+      50: Color(0xFFf2f3fc),
+      100: Color(0xFFe2e5f7),
+      200: Color(0xFFccd2f1),
+      300: Color(0xFFa8b4e8),
+      400: Color(0xFF7f8edb),
+      500: Color(0xFF606cd1),
+      600: Color(0xFF575bc7),
+      700: Color(0xFF4342b3),
+      800: Color(0xFF3f3b92),
+      900: Color(0xFF363474),
+      950: Color(0xFF242348),
     },
   );
 
@@ -30,20 +31,16 @@ class AppPalette {
   static Color warning = const Color(0xFFFCAC4E);
   static Color danger = const Color(0xFFEA5829);
 
+  //Button colors
+  static Color btnColor1 = const Color(0xFFC2C1FF);
+  static Color btnColor2 = const Color(0xFF381E72);
+  static Color btnColor3 = const Color(0xFFD0BCFF).withOpacity(.08);
+  static Color btnColor4 = const Color(0xFF938F99);
+  static Color btnColor5 = const Color(0xFF716D88).withOpacity(.2);
+  static Color disabledBtn1 = const Color(0xFFE6E1E5).withOpacity(.12);
+  static Color disabledBtn2 = const Color(0xFFC8C5CA);
+
   //BG Colors
-  static Color bg1 = const Color(0xFF2B343B);
-  static Color bg2 = const Color(0xFF4D5061).withOpacity(.24);
-  static Color bg3 = white.withOpacity(.02);
-  static Color bg4 = warning.withOpacity(.6);
-  static Color bg5 = const Color(0xFF716D88).withOpacity(.20);
-
-  // Btn Colors
-  static Color button = const Color(0xFFC2C1FF);
-  static Color dropdown = const Color(0xFFD0BCFF).withOpacity(.8);
-
-  // Text Colors
-  static Color text1 = const Color(0xFF1E272E).withOpacity(.8);
-  static Color text2 = const Color(0xFF381E72);
-  static Color text3 = white.withOpacity(.6);
-  static Color text4 = const Color(0xFF1E272E).withOpacity(.6);
+  static Color bg1 = const Color.fromRGBO(113, 109, 136, 0.2);
+  static Color bg2 = const Color.fromRGBO(113, 109, 136, 1);
 }

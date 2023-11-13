@@ -12,13 +12,13 @@ class SettingsPage extends GetView<SettingsController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: TextBlocKWidget.title('APP'.tr),
+        title: TextBlocKWidget.t14('APP'.tr),
       ),
       body: Column(
         children: [
           Obx(
             () => SwitchListTile(
-              title: TextBlocKWidget.body(
+              title: TextBlocKWidget.t14(
                 StringsManager.darkMode,
               ),
               value: controller.isDarkMode.value,
@@ -26,7 +26,7 @@ class SettingsPage extends GetView<SettingsController> {
             ),
           ),
           Obx(() => RadioListTile<AppLang>(
-                title: TextBlocKWidget.body(
+                title: TextBlocKWidget.t14(
                   StringsManager.ar,
                 ),
                 value: AppLang.ar,
@@ -34,7 +34,7 @@ class SettingsPage extends GetView<SettingsController> {
                 onChanged: controller.onLangChanged,
               )),
           Obx(() => RadioListTile<AppLang>(
-                title: TextBlocKWidget.body(
+                title: TextBlocKWidget.t14(
                   StringsManager.en,
                 ),
                 value: AppLang.en,
@@ -42,7 +42,7 @@ class SettingsPage extends GetView<SettingsController> {
                 onChanged: controller.onLangChanged,
               )),
           Obx(() => RadioListTile<AppLang>(
-                title: TextBlocKWidget.body(
+                title: TextBlocKWidget.t14(
                   StringsManager.fr,
                 ),
                 value: AppLang.fr,

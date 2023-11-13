@@ -21,7 +21,7 @@ class Boxpend extends GetView<AppController> {
       getPages: AppPages.pages,
       locale: controller.loadLang(),
       translations: AppLocalization.getInstance(),
-      theme: AppThemes.light,
+      theme: AppThemes.dark,
       darkTheme: AppThemes.dark,
       themeMode: controller.loadThemeMode(),
     );
