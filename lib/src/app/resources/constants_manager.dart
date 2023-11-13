@@ -12,13 +12,13 @@ class ConstantsManager {
   static const String isFirstTimeUser = 'is_first_time_user';
   static const String isDarkMode = 'isDarkMode';
   static const String langCode = 'lang_code';
+  static const String token = 'token';
 
   ///
   /// API URLs
   ///
   static const String apiKey = '';
-  static const String baseUrl =
-      'https://1a02e1e1-a6a1-426d-83ca-156489879dbc.mock.pstmn.io';
+  static const String baseUrl = 'https://1a02e1e1-a6a1-426d-83ca-156489879dbc.mock.pstmn.io';
   static const Duration connectTimeout = Duration(microseconds: 15000);
   static const Duration receiveTimeout = Duration(microseconds: 15000);
   static const Duration sendTimeout = Duration(microseconds: 15000);

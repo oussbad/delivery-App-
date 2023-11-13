@@ -13,6 +13,7 @@ dependencies:
   firebase_messaging: ^14.6.5
   flutter:
     sdk: flutter
+  flutter_secure_storage: ^8.1.0
   flutter_svg: ^1.1.6
   get: ^4.6.5
   get_storage: ^2.1.1
