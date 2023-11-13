@@ -36,6 +36,7 @@ class AppPalette {
   static Color btnColor2 = const Color(0xFF381E72);
   static Color btnColor3 = const Color(0xFFD0BCFF).withOpacity(.08);
   static Color btnColor4 = const Color(0xFF938F99);
+  static Color btnColor5 = const Color(0xFF716D88).withOpacity(.2);
   static Color disabledBtn1 = const Color(0xFFE6E1E5).withOpacity(.12);
   static Color disabledBtn2 = const Color(0xFFC8C5CA);
 
