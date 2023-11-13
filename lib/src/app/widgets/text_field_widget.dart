@@ -1,5 +1,6 @@
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
+import 'package:boxpend_flutter_android_app/src/app/themes/app_typography.dart';
 import 'package:flutter/material.dart';
 
 class TextFieldWidget extends StatelessWidget {
@@ -25,9 +26,10 @@ class TextFieldWidget extends StatelessWidget {
       validator: validator,
       obscureText: isHidden!,
       keyboardType: type,
-      // style: StylesManager.body.copyWith(
-      //   color: AppPalette.white,
-      // ),
+      style: TextStyle(
+        color: AppPalette.white,
+        fontSize: AppTypography.t16,
+      ),
       decoration: _buildDecoration(),
     );
   }
@@ -35,12 +37,15 @@ class TextFieldWidget extends StatelessWidget {
   InputDecoration? _buildDecoration() {
     return InputDecoration(
       hintText: placeholder,
-      // hintStyle: StylesManager.body,
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(AppSpacing.r7),
-        ),
+      hintStyle: TextStyle(
+        color: AppPalette.white,
+        fontSize: AppTypography.t16,
       ),
+      filled: true,
+      fillColor: AppPalette.white5,
+      border: _setInputBorder(AppPalette.white5),
+      enabledBorder: _setInputBorder(AppPalette.white5),
+      errorBorder: _setInputBorder(AppPalette.danger),
       isDense: true,
       prefix: Padding(
         padding: EdgeInsets.symmetric(
@@ -50,14 +55,15 @@ class TextFieldWidget extends StatelessWidget {
       contentPadding: EdgeInsets.symmetric(
         vertical: AppSpacing.s20,
       ),
-      errorBorder: OutlineInputBorder(
-        borderSide: BorderSide(
-            //color: AppPalette.danger,
-            ),
+    );
+  }
+
+  InputBorder? _setInputBorder(Color color) {
+    return OutlineInputBorder(
+      borderSide: BorderSide(color: color),
+      borderRadius: BorderRadius.all(
+        Radius.circular(AppSpacing.r7),
       ),
-      // errorStyle: StylesManager.body.copyWith(
-      //     //color: AppPalette.danger,
-      //     ),
     );
   }
 }

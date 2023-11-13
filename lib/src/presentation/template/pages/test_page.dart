@@ -6,6 +6,7 @@ import 'package:boxpend_flutter_android_app/src/app/widgets/drop_down_widget.dar
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/icon_button_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/state_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/text_field_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/test_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,16 +23,8 @@ class TestPage extends GetView<TestController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              StateWidget(
-                state: StateType.success,
-              ),
-              GapWidget.s16(),
-              StateWidget(
-                state: StateType.warning,
-              ),
-              GapWidget.s16(),
-              StateWidget(
-                state: StateType.danger,
+              TextFieldWidget(
+                placeholder: 'Email',
               ),
               GapWidget.s16(),
             ],
