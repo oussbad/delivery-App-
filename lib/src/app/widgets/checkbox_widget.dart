@@ -20,16 +20,20 @@ class CheckboxWidget extends StatelessWidget {
     return Row(
       children: [
         Checkbox(
+          checkColor: AppPalette.btnColor2,
+          fillColor: MaterialStateProperty.all<Color>(
+            AppPalette.btnColor1,
+          ),
           value: value,
           onChanged: onChanged,
         ),
         GapWidget.s8(
           axe: GapEnum.horizontal,
         ),
-        // TextBlocKWidget.body(
-        //   label,
-        //   color: AppPalette.white,
-        // ),
+        TextBlocKWidget.t14(
+          label,
+          color: AppPalette.white,
+        ),
       ],
     );
   }

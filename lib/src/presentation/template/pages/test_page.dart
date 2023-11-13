@@ -2,6 +2,7 @@ import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart'
 import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/button_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/checkbox_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/drop_down_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/icon_button_widget.dart';
@@ -23,10 +24,15 @@ class TestPage extends GetView<TestController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextFieldWidget(
-                placeholder: 'Email',
+              CheckboxWidget(
+                label: 'Email',
+                value: true,
               ),
               GapWidget.s16(),
+              CheckboxWidget(
+                label: 'Email',
+                value: false,
+              ),
             ],
           ),
         ),
