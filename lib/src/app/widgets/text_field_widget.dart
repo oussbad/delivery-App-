@@ -9,12 +9,14 @@ class TextFieldWidget extends StatelessWidget {
     required this.placeholder,
     this.type,
     this.controller,
+    this.initialValue,
     this.validator,
     this.isHidden = false,
   });
 
   final String placeholder;
   final TextInputType? type;
+  final String? initialValue;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
   final bool? isHidden;
@@ -22,6 +24,7 @@ class TextFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      initialValue: initialValue,
       controller: controller,
       validator: validator,
       obscureText: isHidden!,
@@ -38,7 +41,7 @@ class TextFieldWidget extends StatelessWidget {
     return InputDecoration(
       hintText: placeholder,
       hintStyle: TextStyle(
-        color: AppPalette.white,
+        color: AppPalette.disabledBtn1,
         fontSize: AppTypography.t16,
       ),
       filled: true,
@@ -49,7 +52,7 @@ class TextFieldWidget extends StatelessWidget {
       isDense: true,
       prefix: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: AppSpacing.s14,
+          horizontal: AppSpacing.s8,
         ),
       ),
       contentPadding: EdgeInsets.symmetric(
@@ -62,7 +65,7 @@ class TextFieldWidget extends StatelessWidget {
     return OutlineInputBorder(
       borderSide: BorderSide(color: color),
       borderRadius: BorderRadius.all(
-        Radius.circular(AppSpacing.r7),
+        Radius.circular(AppSpacing.r4),
       ),
     );
   }

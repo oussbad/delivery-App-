@@ -6,8 +6,7 @@ class StringsManager {
   ///
   static const String appTitle = "Boxpend Android App";
   static const String onBoardingTitle1 = 'Your Delivery Management Tool';
-  static const String onBoardingSubTitle1 =
-      'Welcome to Boxpend, the cutting-edge delivery management platform designed to simplify your logistics and revolutionize your business';
+  static const String onBoardingSubTitle1 = 'Welcome to Boxpend, the cutting-edge delivery management platform designed to simplify your logistics and revolutionize your business';
   static const String onBoardingTitle2 = 'Become a Part of Boxpend Today!';
   static const String onBoardingSubTitle2 =
       'As an MVP in beta stage, Boxpend offers a solid foundation for optimizing your delivery operations while continuously improving based on your valuable feedback';
@@ -31,8 +30,7 @@ class StringsManager {
   static const String needAnAccount = 'Need an account? Signup';
   static const String continueTo = 'Continue';
   static const String emailSent = 'We have sent you an email';
-  static const String emailSentDescription =
-      'to login please open your email and click the link in it';
+  static const String emailSentDescription = 'to login please open your email and click the link in it';
 
   ///
   /// Home Pages
@@ -60,16 +58,28 @@ class StringsManager {
   static const String en = 'English';
 
   ///
+  /// Order Pages
+  ///
+  static const String receiverName = 'Receiver name';
+  static const String price = 'Price';
+  static const String phoneNumber1 = 'Phone number 1';
+  static const String phoneNumber2 = 'Phone number 2';
+  static const String address = 'Address';
+  static const String mapsLink = 'Maps Link';
+  static const String notes = 'Notes';
+  static const String submit = 'Submit';
+  static const String allowopenPackageBeforePayment = 'Allow open package before payment';
+
+  ///
   /// Form Validation
   ///
   static const String requiredErrorMessage = "This field is required";
   static const String usernameErrorMessage = "The username is not valid";
   static const String emailErrorMessage = "The email is not valid";
-  static const String passwordErrorMessage =
-      "The field length should be greather or equal 8";
-  static const String confirmPasswordErrorMessage =
-      "The password confirmation does not match";
-  static const String phoneNumberErrorMessage = "The Phone number is not valid";
+  static const String passwordErrorMessage = "The field length should be greather or equal 8";
+  static const String confirmPasswordErrorMessage = "The password confirmation does not match";
+  static const String phoneNumberErrorMessage = "The phone number is not valid";
+  static const String priceErrorMessage = "The price is not valid";
 
   ///
   /// Image Picker Validation
@@ -78,14 +88,12 @@ class StringsManager {
   static const String gallery = "Gallery";
   static const String imageRequired = "Image required";
   static const String imageNotAllowed = "The image you selected is not allowed";
-  static const String imageMaxSize =
-      "The selected image size exceeds the maximum allowed size (5mb)";
+  static const String imageMaxSize = "The selected image size exceeds the maximum allowed size (5mb)";
 
   ///
   /// Error Handling
   ///
-  static const String templateLoadedError =
-      "Server Error: Failed to load template";
+  static const String templateLoadedError = "Server Error: Failed to load template";
   static const String networkError = "Unable to connect to the internet";
   static const String unexpectedError = "An unexpected error has occurred";
 }

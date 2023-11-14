@@ -10,7 +10,9 @@ import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/policy_
 import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/terms_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/notification/binds/notifcations_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/notification/pages/notifications_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/order/binds/create_order_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/binds/orders_bind.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/order/pages/create_order_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/settings/binds/settings_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/settings/pages/settings_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/binds/test_bind.dart';
@@ -28,7 +30,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = AppRoutes.test;
+  static const initial = AppRoutes.createOrder;
 
   static final pages = [
     ///
@@ -116,6 +118,11 @@ class AppPages {
       name: _Paths.orders,
       page: () => const OrdersPage(),
       binding: OrdersBind(),
+    ),
+    GetPage(
+      name: _Paths.createOrder,
+      page: () => CreateOrderPage(),
+      binding: CreateOrderBind(),
     ),
 
     ///
