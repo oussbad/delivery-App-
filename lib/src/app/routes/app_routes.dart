@@ -35,6 +35,16 @@ abstract class _Paths {
   ///  Settings Pages
   ///
   static const settings = '/settings';
+
+  ///
+  /// Order Pages
+  ///
+  static const orders = '/orders';
+
+  ///
+  /// Notification Pages
+  ///
+  static const notifications = '/notifications';
 }
 
 abstract class AppRoutes {
@@ -71,8 +81,19 @@ abstract class AppRoutes {
   /// Home Pages
   ///
   static const home = _Paths.home;
+
   ///
   ///  Settings Pages
   ///
   static const settings = _Paths.settings;
+
+  ///
+  /// Order Pages
+  ///
+  static const orders = _Paths.orders;
+
+  ///
+  /// Notification Pages
+  ///
+  static const notifications = _Paths.notifications;
 }
