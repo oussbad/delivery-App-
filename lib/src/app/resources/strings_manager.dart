@@ -96,4 +96,15 @@ class StringsManager {
   static const String templateLoadedError = "Server Error: Failed to load template";
   static const String networkError = "Unable to connect to the internet";
   static const String unexpectedError = "An unexpected error has occurred";
+
+  ///
+  /// Messages
+  ///
+  static const String success = 'Success! Your operation was completed';
+  static const String error = 'An error occurred';
+  static const String network = 'No Internet Connection';
+  static const String empty = 'No data available at the moment';
+  static const String notFound = 'Page not found';
+  static const String notFound404 = '404';
+  static const String notFoundButton = 'Go Back';
 }

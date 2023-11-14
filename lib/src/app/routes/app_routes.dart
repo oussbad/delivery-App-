@@ -14,6 +14,11 @@ abstract class _Paths {
   static const onBoarding = '/onboarding';
 
   ///
+  /// Malicious Pages
+  ///
+  static const notFound = '/notFound';
+
+  ///
   /// Legal Pages
   ///
   static const terms = '/terms';
@@ -64,6 +69,11 @@ abstract class AppRoutes {
   ///
   static const splash = _Paths.splash;
   static const onBoarding = _Paths.onBoarding;
+
+  ///
+  /// Malicious Pages
+  ///
+  static const notFound = _Paths.notFound;
 
   ///
   /// Legal Pages

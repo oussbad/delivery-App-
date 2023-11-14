@@ -8,6 +8,7 @@ import 'package:boxpend_flutter_android_app/src/presentation/home/pages/home_pag
 import 'package:boxpend_flutter_android_app/src/presentation/home/pages/orders_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/policy_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/terms_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/malicious/not_found_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/notification/binds/notifcations_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/notification/pages/notifications_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/binds/create_order_bind.dart';
@@ -31,6 +32,11 @@ class AppPages {
   AppPages._();
 
   static const initial = AppRoutes.createOrder;
+
+  static final notFound = GetPage(
+    name: _Paths.notFound,
+    page: () => const NotFoundPage(),
+  );
 
   static final pages = [
     ///

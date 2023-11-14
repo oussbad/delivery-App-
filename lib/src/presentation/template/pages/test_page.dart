@@ -1,3 +1,4 @@
+import 'package:boxpend_flutter_android_app/src/app/core/error/failures.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
@@ -6,6 +7,7 @@ import 'package:boxpend_flutter_android_app/src/app/widgets/checkbox_widget.dart
 import 'package:boxpend_flutter_android_app/src/app/widgets/drop_down_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/icon_button_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/message_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/radio_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/avatar_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_field_widget.dart';
@@ -25,25 +27,15 @@ class TestPage extends GetView<TestController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              AvatarWidget.widthStatus(
-                isSuccess: true,
-                asset: 'https://i.pravatar.cc/300',
-              ),
+              MessageWidget.empty(),
               GapWidget.s16(),
-              AvatarWidget.widthStatus(
-                isSuccess: false,
-                asset: 'A',
-              ),
+              MessageWidget.success(),
               GapWidget.s16(),
-              AvatarWidget(
-                size: AvatarSize.medium,
-                asset: 'A',
-              ),
+              MessageWidget.error(),
               GapWidget.s16(),
-              AvatarWidget(
-                size: AvatarSize.large,
-                asset: 'https://i.pravatar.cc/300',
-              ),
+              MessageWidget.failure(failure: ServerFailure()),
+              GapWidget.s16(),
+              MessageWidget.failure(failure: NetworkFailure()),
             ],
           ),
         ),

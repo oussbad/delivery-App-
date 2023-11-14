@@ -17,6 +17,7 @@ class Boxpend extends GetView<AppController> {
       title: StringsManager.appTitle,
       debugShowCheckedModeBanner: false,
       initialRoute: AppPages.initial,
+      unknownRoute: AppPages.notFound,
       initialBinding: AppBind(),
       getPages: AppPages.pages,
       locale: controller.loadLang(),
