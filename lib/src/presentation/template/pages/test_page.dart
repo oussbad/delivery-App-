@@ -10,6 +10,7 @@ import 'package:boxpend_flutter_android_app/src/app/widgets/icon_button_widget.d
 import 'package:boxpend_flutter_android_app/src/app/widgets/message_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/radio_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/avatar_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/tabs_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_field_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/test_controller.dart';
 import 'package:flutter/material.dart';
@@ -22,22 +23,25 @@ class TestPage extends GetView<TestController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              MessageWidget.empty(),
-              GapWidget.s16(),
-              MessageWidget.success(),
-              GapWidget.s16(),
-              MessageWidget.error(),
-              GapWidget.s16(),
-              MessageWidget.failure(failure: ServerFailure()),
-              GapWidget.s16(),
-              MessageWidget.failure(failure: NetworkFailure()),
-            ],
-          ),
+        padding: EdgeInsets.symmetric(vertical: AppSpacing.s16),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TabsWidget(
+              tabs: ['Order', 'Delivered', 'Closed'],
+              tabViews: [
+                Center(
+                  child: Text('Order'),
+                ),
+                Center(
+                  child: Text('Delivered'),
+                ),
+                Center(
+                  child: Text('Closed'),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

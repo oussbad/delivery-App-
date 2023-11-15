@@ -39,7 +39,7 @@ class AppPalette {
   static Color btnColor5 = const Color(0xFF716D88).withOpacity(.2);
   static Color disabledBtn1 = const Color(0xFFE6E1E5).withOpacity(.12);
   static Color disabledBtn2 = const Color(0xFFC8C5CA);
-
+  static Color tabsBorderColor = const Color(0xFF4D5061).withOpacity(.24);
   // Input Colors
   static Color white5 = white.withOpacity(.05);
 

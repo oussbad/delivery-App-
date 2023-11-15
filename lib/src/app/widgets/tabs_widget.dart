@@ -1,3 +1,6 @@
+import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
+import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
+import 'package:boxpend_flutter_android_app/src/app/themes/app_typography.dart';
 import 'package:flutter/material.dart';
 
 class TabsWidget extends StatelessWidget {
@@ -12,7 +15,7 @@ class TabsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
+    return Expanded(
       child: DefaultTabController(
         length: tabs.length,
         child: Column(
@@ -26,14 +29,36 @@ class TabsWidget extends StatelessWidget {
   }
 
   Widget _buildTabs() {
-    return TabBar(
-      tabs: tabs
-          .map(
-            (tab) => Tab(
-              text: tab,
-            ),
-          )
-          .toList(),
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
+      decoration: BoxDecoration(
+        border: Border(
+          bottom: BorderSide(
+            color: AppPalette.tabsBorderColor,
+          ),
+        ),
+      ),
+      child: TabBar(
+        indicatorWeight: 2.5,
+        indicatorColor: AppPalette.info,
+        indicatorSize: TabBarIndicatorSize.tab,
+        unselectedLabelStyle: const TextStyle(
+          fontWeight: AppTypography.w400,
+        ),
+        labelColor: AppPalette.info,
+        unselectedLabelColor: AppPalette.btnColor4,
+        labelStyle: const TextStyle(
+          fontSize: AppTypography.t16,
+          fontWeight: AppTypography.w600,
+        ),
+        tabs: tabs
+            .map(
+              (tab) => Tab(
+                text: tab,
+              ),
+            )
+            .toList(),
+      ),
     );
   }
 
