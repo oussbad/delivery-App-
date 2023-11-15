@@ -5,7 +5,6 @@ import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signin_p
 import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signup_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/binds/home_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/pages/home_page.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/home/pages/orders_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/policy_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/terms_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/malicious/not_found_page.dart';
@@ -14,6 +13,7 @@ import 'package:boxpend_flutter_android_app/src/presentation/notification/pages/
 import 'package:boxpend_flutter_android_app/src/presentation/order/binds/create_order_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/binds/orders_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/pages/create_order_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/order/pages/orders_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/settings/binds/settings_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/settings/pages/settings_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/binds/test_bind.dart';

@@ -1,13 +1,10 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/connections/pages/connections_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/controllers/home_controller.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/home/pages/connections_page.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/home/pages/notifications_page.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/home/pages/orders_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/pages/statistics_page.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/home/widgets/search_widget.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/home/widgets/sidebar_widget.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/order/pages/orders_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:heroicons/heroicons.dart';
@@ -29,17 +26,7 @@ class HomePage extends GetView<HomeController> {
           icon: const HeroIcon(HeroIcons.bars3),
           onPressed: controller.openDrawer,
         ),
-        actions: [
-          IconButton(
-            icon: const HeroIcon(HeroIcons.magnifyingGlass),
-            onPressed: () => showSearch(
-              context: context,
-              delegate: SearchWidget(),
-            ),
-          ),
-        ],
       ),
-      drawer: const SidebarWidget(),
       body: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: AppSpacing.s16,
@@ -51,7 +38,6 @@ class HomePage extends GetView<HomeController> {
             children: const [
               OrdersPage(),
               StatisticsPage(),
-              NotificationsPage(),
               ConnectionsPage(),
             ],
           ),

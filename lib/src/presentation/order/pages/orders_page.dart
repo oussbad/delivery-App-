@@ -2,15 +2,13 @@ import 'package:boxpend_flutter_android_app/src/presentation/order/controllers/o
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class NotificationsPage extends GetView<OrdersController> {
-  const NotificationsPage({super.key});
+class OrdersPage extends GetView<OrdersController> {
+  const OrdersPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Orders Page'),
-      ),
+    return const SizedBox(
+      child: Text('Orders Page'),
     );
   }
 }

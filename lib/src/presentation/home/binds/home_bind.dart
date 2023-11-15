@@ -1,6 +1,7 @@
-import 'package:boxpend_flutter_android_app/src/presentation/home/controllers/search_controller.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/home/controllers/sidebar_controller.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/connections/controllers/connections_controller.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/controllers/home_controller.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/home/controllers/statistics_controller.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/order/controllers/orders_controller.dart';
 import 'package:get/get.dart';
 
 class HomeBind extends Bindings {
@@ -9,11 +10,14 @@ class HomeBind extends Bindings {
     Get.lazyPut<HomeController>(
       () => HomeController(),
     );
-    Get.lazyPut<SidebarController>(
-      () => SidebarController(),
+    Get.lazyPut<OrdersController>(
+      () => OrdersController(),
     );
-    Get.lazyPut<SearchController>(
-      () => SearchController(),
+    Get.lazyPut<StatisticsController>(
+      () => StatisticsController(),
+    );
+    Get.lazyPut<ConnectionsController>(
+      () => ConnectionsController(),
     );
   }
 }
