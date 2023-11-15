@@ -10,8 +10,10 @@ import 'package:boxpend_flutter_android_app/src/app/widgets/icon_button_widget.d
 import 'package:boxpend_flutter_android_app/src/app/widgets/message_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/radio_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/avatar_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/state_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/tabs_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_field_widget.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/order/widgets/order_item_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/test_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,20 +29,37 @@ class TestPage extends GetView<TestController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TabsWidget(
-              tabs: ['Order', 'Delivered', 'Closed'],
-              tabViews: [
-                Center(
-                  child: Text('Order'),
-                ),
-                Center(
-                  child: Text('Delivered'),
-                ),
-                Center(
-                  child: Text('Closed'),
-                ),
-              ],
+            OrderItemwWidget(
+              state: StateWidget(
+                state: StateType.success,
+              ),
+              title: 'omar elhassani',
+              subtitle: 'Order #123456',
             ),
+            SizedBox(
+              height: AppSpacing.s16,
+            ),
+            OrderItemwWidget2(
+              state: StateWidget(
+                state: StateType.warning,
+              ),
+              title: "omar elhassani ",
+              subtitle: "Order #123456 ",
+            ),
+            // TabsWidget(
+            //   tabs: ['Order', 'Delivered', 'Closed'],
+            //   tabViews: [
+            //     Center(
+            //       child: Text('Order'),
+            //     ),
+            //     Center(
+            //       child: Text('Delivered'),
+            //     ),
+            //     Center(
+            //       child: Text('Closed'),
+            //     ),
+            //   ],
+            // ),
           ],
         ),
       ),
