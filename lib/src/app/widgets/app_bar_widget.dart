@@ -71,7 +71,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           leading,
-          _buildActions(),
+          GetUtils.isNullOrBlank(actions)! ? const SizedBox.shrink() : _buildActions(),
         ],
       ),
     );
