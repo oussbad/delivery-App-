@@ -15,7 +15,7 @@ class StateWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(AppSpacing.s8),
+      padding: EdgeInsets.all(6),
       decoration: BoxDecoration(
         color: _setColor(),
         shape: BoxShape.circle,

@@ -25,41 +25,16 @@ class TestPage extends GetView<TestController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical: AppSpacing.s16),
+        padding: EdgeInsets.all(AppSpacing.s16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             OrderItemwWidget(
-              state: StateWidget(
-                state: StateType.success,
-              ),
-              title: 'omar elhassani',
+              onPressed: () {},
+              state: const StateWidget(state: StateType.warning),
+              title: 'Omar elhassani',
               subtitle: 'Order #123456',
             ),
-            SizedBox(
-              height: AppSpacing.s16,
-            ),
-            OrderItemwWidget2(
-              state: StateWidget(
-                state: StateType.warning,
-              ),
-              title: "omar elhassani ",
-              subtitle: "Order #123456 ",
-            ),
-            // TabsWidget(
-            //   tabs: ['Order', 'Delivered', 'Closed'],
-            //   tabViews: [
-            //     Center(
-            //       child: Text('Order'),
-            //     ),
-            //     Center(
-            //       child: Text('Delivered'),
-            //     ),
-            //     Center(
-            //       child: Text('Closed'),
-            //     ),
-            //   ],
-            // ),
           ],
         ),
       ),

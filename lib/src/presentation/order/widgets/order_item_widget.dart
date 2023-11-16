@@ -11,85 +11,48 @@ class OrderItemwWidget extends StatelessWidget {
     required this.state,
     required this.title,
     required this.subtitle,
-    this.onTap,
+    this.onPressed,
   });
 
   final StateWidget state;
   final String title;
   final String subtitle;
-  final VoidCallback? onTap;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: AppPalette.bg1,
-        borderRadius: BorderRadius.circular(AppSpacing.s8),
-      ),
-      child: ListTile(
-        onTap: onTap,
-        leading: Container(
-          height: AppSpacing.s20,
-          width: AppSpacing.s20,
-          margin: EdgeInsets.symmetric(vertical: AppSpacing.s16),
-          child: state,
+    return InkWell(
+      onTap: onPressed,
+      radius: AppSpacing.r4,
+      child: Container(
+        padding: EdgeInsets.all(AppSpacing.s16),
+        decoration: BoxDecoration(
+          color: AppPalette.bg1,
+          borderRadius: BorderRadius.circular(AppSpacing.r4),
         ),
-        title: TextBlocKWidget.t24(
-          title,
-          color: AppPalette.white,
-          fontWeight: FontWeight.bold,
+        child: Row(
+          children: [
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
+              child: Center(child: state),
+            ),
+            GapWidget.s16(axe: GapEnum.horizontal),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextBlocKWidget.t16(
+                  title,
+                  color: AppPalette.white,
+                ),
+                GapWidget.s8(),
+                TextBlocKWidget.t14(
+                  subtitle,
+                  color: AppPalette.bg2,
+                ),
+              ],
+            ),
+          ],
         ),
-        subtitle: TextBlocKWidget.t16(
-          subtitle,
-          color: AppPalette.bg2,
-          fontWeight: FontWeight.normal,
-        ),
-        contentPadding: EdgeInsets.symmetric(
-          horizontal: AppSpacing.s24,
-        ),
-      ),
-    );
-  }
-}
-
-// custom list tile
-
-class OrderItemwWidget2 extends StatelessWidget {
-  const OrderItemwWidget2({super.key, required this.title, required this.subtitle, required this.state});
-  final String title;
-  final String subtitle;
-  final StateWidget state;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: AppSpacing.s14),
-      decoration: BoxDecoration(
-        color: AppPalette.bg1,
-        borderRadius: BorderRadius.circular(AppSpacing.s8),
-      ),
-      child: Row(
-        children: [
-          Container(width: 20, height: 20, margin: EdgeInsets.symmetric(horizontal: AppSpacing.s16), child: state),
-          SizedBox(
-            width: 20,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TextBlocKWidget.t24(
-                title,
-                color: AppPalette.white,
-                fontWeight: FontWeight.bold,
-              ),
-              TextBlocKWidget.t16(
-                subtitle,
-                color: AppPalette.bg2,
-                fontWeight: FontWeight.normal,
-              ),
-            ],
-          ),
-        ],
       ),
     );
   }
