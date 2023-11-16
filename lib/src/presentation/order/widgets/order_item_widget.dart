@@ -23,11 +23,11 @@ class OrderItemwWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPressed,
-      radius: AppSpacing.r4,
+      borderRadius: BorderRadius.circular(AppSpacing.r4),
       child: Container(
         padding: EdgeInsets.all(AppSpacing.s16),
         decoration: BoxDecoration(
-          color: AppPalette.bg1,
+          color: AppPalette.white.withOpacity(.02),
           borderRadius: BorderRadius.circular(AppSpacing.r4),
         ),
         child: Row(
