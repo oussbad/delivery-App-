@@ -1,12 +1,9 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
-import 'package:boxpend_flutter_android_app/src/app/themes/app_typography.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:heroicons/heroicons.dart';
-import 'package:get/get.dart';
 
 class EmailVerificationPage extends StatelessWidget {
   const EmailVerificationPage({super.key});
@@ -17,7 +14,7 @@ class EmailVerificationPage extends StatelessWidget {
       body: Center(
         child: Form(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
+            padding: EdgeInsets.symmetric(horizontal: AppSpacing.s24),
             child: _buildColumn(),
           ),
         ),
@@ -29,19 +26,15 @@ class EmailVerificationPage extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        HeroIcon(
-          HeroIcons.envelope,
+        Icon(
+          Icons.email_rounded,
           color: AppPalette.primarySwatch,
-        ),
-        GapWidget.s24(),
-        TextBlocKWidget.t14(
-          StringsManager.emailSent.tr,
-          color: AppPalette.white,
-          textAlign: TextAlign.center,
+          size: AppSpacing.s60,
         ),
         GapWidget.s8(),
-        TextBlocKWidget.t14(
-          StringsManager.emailSentDescription.tr,
+        TextBlocKWidget.t16(
+          StringsManager.emailSent,
+          color: AppPalette.white,
           textAlign: TextAlign.center,
         ),
       ],

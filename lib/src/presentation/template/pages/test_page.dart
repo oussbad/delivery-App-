@@ -1,4 +1,6 @@
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/state_widget.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/order/widgets/order_item_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/test_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,7 +15,14 @@ class TestPage extends GetView<TestController> {
         padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [Text('Data')],
+          children: [
+            OrderItemwWidget(
+              onPressed: () {},
+              state: StateWidget(state: StateType.success),
+              title: 'Title',
+              subtitle: 'Subtitle',
+            ),
+          ],
         ),
       ),
     );

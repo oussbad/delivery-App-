@@ -1,4 +1,5 @@
 import 'package:boxpend_flutter_android_app/src/app/helpers/validators.dart';
+import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
@@ -32,21 +33,22 @@ class SignInPage extends GetView<SignInController> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        TextBlocKWidget.t14(
-          StringsManager.welcomeBack.tr,
+        TextBlocKWidget.t24(
+          StringsManager.welcomeBack,
           color: AppPalette.white,
           textAlign: TextAlign.center,
         ),
-        GapWidget.s8(),
+        GapWidget.s24(),
         TextFieldWidget(
           controller: controller.emailController,
-          placeholder: StringsManager.email.tr,
+          placeholder: StringsManager.email,
           validator: Validator().required().isEmail().run,
         ),
-        GapWidget.s8(),
+        GapWidget.s16(),
         ButtonWidget(
-          label: StringsManager.continueTo.tr,
           onPressed: controller.signin,
+          label: StringsManager.continueTo,
+          isLarge: true,
         ),
         GapWidget.s8(),
         _buildAfterSignInButton(),
@@ -55,12 +57,10 @@ class SignInPage extends GetView<SignInController> {
   }
 
   Widget _buildAfterSignInButton() {
-    return TextButton(
+    return ButtonWidget(
       onPressed: controller.goToSignUpPage,
-      child: TextBlocKWidget.t14(
-        StringsManager.needAnAccount.tr,
-        textAlign: TextAlign.center,
-      ),
+      type: ButtonType.text,
+      label: StringsManager.needAnAccount,
     );
   }
 }

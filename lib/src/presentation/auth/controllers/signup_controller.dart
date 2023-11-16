@@ -9,7 +9,7 @@ enum UserType { provider, delivery }
 class SignUpController extends GetxController {
   static SignUpController get to => Get.find();
 
-  final Rx<UserType> userType = UserType.provider.obs;
+  final RxString userType = 'Provider'.obs;
   final signupFormKey = GlobalKey<FormState>();
   final fullNameController = TextEditingController();
   final emailController = TextEditingController();
@@ -53,7 +53,7 @@ class SignUpController extends GetxController {
     }
   }
 
-  void onUserTypeChanged(UserType? value) => userType(value);
+  void onUserTypeChanged(String? value) => userType(value);
 
   void onIsAcceptedChanged(bool? value) => isAccepted(value);
 
