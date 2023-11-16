@@ -8,7 +8,7 @@ class OnBoardingController extends GetxController {
   final RxInt index = 1.obs;
   final int itemCount = 2;
   final PageController pageController = PageController(
-    initialPage: 1,
+    initialPage: 0,
   );
   void onSkip() {
     Get.offAllNamed(AppRoutes.home);

@@ -30,18 +30,18 @@ class OnBoardingContentWidget extends StatelessWidget {
             height: AppSpacing.s64 * 2.5,
             width: AppSpacing.s64 * 2.5,
           ),
-          GapWidget.s8(),
-          TextBlocKWidget.t14(
+          GapWidget.s24(),
+          TextBlocKWidget.t16(
             title,
-            color: AppPalette.white,
             textAlign: TextAlign.center,
           ),
           GapWidget.s8(),
           TextBlocKWidget.t14(
             subTitle,
+            color: AppPalette.bg2,
             textAlign: TextAlign.center,
           ),
-          GapWidget.s8(),
+          GapWidget.s24(),
           child ?? const SizedBox.shrink()
         ],
       ),

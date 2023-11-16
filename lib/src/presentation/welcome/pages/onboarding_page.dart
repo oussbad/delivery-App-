@@ -33,17 +33,18 @@ class OnBoardingPage extends GetView<OnBoardingController> {
       controller: controller.pageController,
       onPageChanged: controller.onPageChanged,
       children: [
-        OnBoardingContentWidget(
+        const OnBoardingContentWidget(
           image: AssetsManager.onBoarding1,
-          title: StringsManager.onBoardingTitle1.tr,
-          subTitle: StringsManager.onBoardingSubTitle2.tr,
+          title: StringsManager.onBoardingTitle1,
+          subTitle: StringsManager.onBoardingSubTitle2,
         ),
         OnBoardingContentWidget(
           image: AssetsManager.onBoarding2,
-          title: StringsManager.onBoardingTitle2.tr,
-          subTitle: StringsManager.onBoardingSubTitle2.tr,
+          title: StringsManager.onBoardingTitle2,
+          subTitle: StringsManager.onBoardingSubTitle2,
           child: ButtonWidget(
-            label: StringsManager.getStarted.tr,
+            isLarge: true,
+            label: StringsManager.getStarted,
             onPressed: () {
               controller.onSkip();
             },

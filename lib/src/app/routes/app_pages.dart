@@ -29,7 +29,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = AppRoutes.emailVerification;
+  static const initial = AppRoutes.splash;
 
   static final notFound = GetPage(
     name: _Paths.notFound,
