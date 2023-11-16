@@ -11,9 +11,7 @@ import 'package:boxpend_flutter_android_app/src/presentation/malicious/not_found
 import 'package:boxpend_flutter_android_app/src/presentation/notification/binds/notifcations_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/notification/pages/notifications_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/binds/create_order_bind.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/order/binds/orders_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/pages/create_order_page.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/order/pages/orders_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/settings/binds/settings_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/settings/pages/settings_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/binds/test_bind.dart';
@@ -120,11 +118,6 @@ class AppPages {
     ///
     /// Orders pages
     ///
-    GetPage(
-      name: _Paths.orders,
-      page: () => const OrdersPage(),
-      binding: OrdersBind(),
-    ),
     GetPage(
       name: _Paths.createOrder,
       page: () => CreateOrderPage(),

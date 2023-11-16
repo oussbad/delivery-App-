@@ -35,33 +35,29 @@ class IconButtonWidget extends StatelessWidget {
             AppSpacing.r7,
           ),
         ),
-        child: _buildIcon(),
+        child: _buildIcon(null),
       ),
     );
   }
 
   Widget _buildCircularIconButton() {
-    return ClipOval(
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          onTap: onPressed,
-          child: Container(
-            padding: EdgeInsets.all(AppSpacing.s16),
-            decoration: BoxDecoration(
-              color: AppPalette.btnColor5,
-            ),
-            child: _buildIcon(),
-          ),
-        ),
+    return InkWell(
+      onTap: onPressed,
+      borderRadius: BorderRadius.circular(17),
+      child: CircleAvatar(
+        radius: 17,
+        backgroundColor: AppPalette.btnColor5,
+        child: _buildIcon(18),
       ),
     );
   }
 
-  Widget _buildIcon() {
+  Widget _buildIcon(double? size) {
     return SvgPicture.asset(
       icon,
       color: AppPalette.btnColor1,
+      width: size,
+      height: size,
     );
   }
 }

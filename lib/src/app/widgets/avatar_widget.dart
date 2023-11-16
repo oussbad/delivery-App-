@@ -26,13 +26,13 @@ class _AvaarBasicWidget extends StatelessWidget {
   double _setAvatarSize() {
     switch (size) {
       case AvatarSize.small:
-        return AppSpacing.s24;
+        return AppSpacing.s16;
       case AvatarSize.medium:
-        return AppSpacing.s36;
-      case AvatarSize.large:
-        return AppSpacing.s44;
-      default:
         return AppSpacing.s24;
+      case AvatarSize.large:
+        return AppSpacing.s36;
+      default:
+        return AppSpacing.s16;
     }
   }
 
@@ -85,6 +85,7 @@ class _AvaarBasicWidget extends StatelessWidget {
       child: Center(
         child: TextBlocKWidget.t16(
           text,
+          textAlign: TextAlign.center,
           color: AppPalette.white,
         ),
       ),

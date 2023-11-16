@@ -36,6 +36,7 @@ flutter:
     - assets/json/policy.json
     - assets/json/terms.json
     - assets/icons/plus.svg
+    - assets/icons/notification.svg
 
   fonts:
     - family: Roboto

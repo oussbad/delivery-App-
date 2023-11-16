@@ -2,6 +2,7 @@ import 'package:boxpend_flutter_android_app/src/app/core/error/failures.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/app_bar_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/button_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/checkbox_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/drop_down_widget.dart';
@@ -22,26 +23,29 @@ class TestPage extends GetView<TestController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBarWidget(
+        withBackButton: true,
+        withLogo: false,
+        title: 'Title',
+        actions: [
+          IconButtonWidget(
+            onPressed: () {},
+            icon: AssetsManager.bellIcon,
+          ),
+          GapWidget.s8(
+            axe: GapEnum.horizontal,
+          ),
+          AvatarWidget(
+            size: AvatarSize.small,
+            asset: 'j',
+          ),
+        ],
+      ),
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical: AppSpacing.s16),
+        padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TabsWidget(
-              tabs: ['Order', 'Delivered', 'Closed'],
-              tabViews: [
-                Center(
-                  child: Text('Order'),
-                ),
-                Center(
-                  child: Text('Delivered'),
-                ),
-                Center(
-                  child: Text('Closed'),
-                ),
-              ],
-            ),
-          ],
+          children: [Text('Data')],
         ),
       ),
     );
