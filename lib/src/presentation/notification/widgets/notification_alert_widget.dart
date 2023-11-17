@@ -8,12 +8,10 @@ class NotificationAlertWidget extends StatelessWidget {
     super.key,
     required this.notificationsState,
     required this.enableNotifications,
-
   });
 
   final String notificationsState;
   final VoidCallback enableNotifications;
-
 
   @override
   Widget build(BuildContext context) {
@@ -47,9 +45,10 @@ class NotificationAlertWidget extends StatelessWidget {
             children: [
               Text(
                 notificationsState,
-                style: const TextStyle(
-                  color: Color.fromARGB(255, 198, 186, 186),
+                style: TextStyle(
+                  color: AppPalette.white,
                   fontSize: 16,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
               TextButton(
@@ -59,6 +58,7 @@ class NotificationAlertWidget extends StatelessWidget {
                   style: TextStyle(
                     color: AppPalette.warning, // TODO notificationsStateColor,
                     fontSize: 16,
+                    fontWeight: FontWeight.w600,
                     decoration: TextDecoration.underline,
                   ),
                 ),
