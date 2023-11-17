@@ -14,6 +14,7 @@ class TemplateRepositoryImpl implements TemplateRepository {
     required this.datasource,
     required this.netwrok,
   });
+
   @override
   Future<Either<Failure, Template>> getTemplate() async {
     final isConnected = await netwrok.isConnected();
