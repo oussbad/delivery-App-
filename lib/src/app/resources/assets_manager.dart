@@ -19,4 +19,5 @@ class AssetsManager {
   ///
   static const String plusIcon = 'assets/icons/plus.svg';
   static const String bellIcon = 'assets/icons/notification.svg';
+  static const String closeIcon = 'assets/icons/close.svg';
 }
