@@ -29,7 +29,11 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
+<<<<<<< HEAD
   static const initial = AppRoutes.createOrder;
+=======
+  static const initial = AppRoutes.test;
+>>>>>>> feat/omar/eng-144-notification-alert-design
 
   static final notFound = GetPage(
     name: _Paths.notFound,

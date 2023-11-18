@@ -7,10 +7,8 @@ class NotificationsPage extends GetView<NotificationsController> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Notifications Page'),
-      ),
+    return Scaffold(
+      body: Text('Notification Page'),
     );
   }
 }
