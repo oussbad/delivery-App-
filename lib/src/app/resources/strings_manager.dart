@@ -61,6 +61,7 @@ class StringsManager {
   ///
   static const String receiverName = 'Receiver name';
   static const String price = 'Price';
+  static const String order = 'Order';
   static const String phoneNumber1 = 'Phone number 1';
   static const String phoneNumber2 = 'Phone number 2';
   static const String address = 'Address';
@@ -68,6 +69,8 @@ class StringsManager {
   static const String notes = 'Notes';
   static const String submit = 'Submit';
   static const String allowopenPackageBeforePayment = 'Allow open package before payment';
+  static const String orderDelivered = 'has been delivered';
+  static const String orderReturned = 'has been returned';
 
   ///
   /// Form Validation

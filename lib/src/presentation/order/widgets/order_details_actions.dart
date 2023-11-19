@@ -26,11 +26,11 @@ class OrderDetailsActionsWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          _buildAction(AssetsManager.whatsapp, whatsappOnPressed),
+          _buildAction(AssetsManager.whatsappIcon, whatsappOnPressed),
           GapWidget.s8(axe: GapEnum.horizontal),
-          _buildAction(AssetsManager.map, mapOnPressed),
+          _buildAction(AssetsManager.mapIcon, mapOnPressed),
           GapWidget.s8(axe: GapEnum.horizontal),
-          _buildAction(AssetsManager.call, callOnPressed),
+          _buildAction(AssetsManager.callIcon, callOnPressed),
         ],
       ),
     );
