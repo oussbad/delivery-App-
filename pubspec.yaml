@@ -9,8 +9,8 @@ dependencies:
   dartz: ^0.10.1
   device_preview: ^1.1.0
   dio: ^5.3.2
-  firebase_core: ^2.15.0
-  firebase_messaging: ^14.6.5
+  #firebase_core: ^2.15.0
+  #firebase_messaging: ^14.6.5
   flutter:
     sdk: flutter
   flutter_secure_storage: ^8.1.0
@@ -38,6 +38,10 @@ flutter:
     - assets/icons/plus.svg
     - assets/icons/notification.svg
     - assets/icons/close.svg
+    - assets/icons/whatsapp.svg
+    - assets/icons/call.svg
+    - assets/icons/location.svg
+    - assets/icons/map.svg
 
   fonts:
     - family: Roboto

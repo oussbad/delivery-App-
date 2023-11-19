@@ -20,4 +20,8 @@ class AssetsManager {
   static const String plusIcon = 'assets/icons/plus.svg';
   static const String bellIcon = 'assets/icons/notification.svg';
   static const String closeIcon = 'assets/icons/close.svg';
+  static const String whatsapp = 'assets/icons/whatsapp.svg';
+  static const String call = 'assets/icons/call.svg';
+  static const String locattion = 'assets/icons/location.svg';
+  static const String map = 'assets/icons/map.svg';
 }

@@ -2,6 +2,7 @@ import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/state_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/notification/widgets/notification_alert_widget.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/order/widgets/order_details_actions.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/widgets/order_item_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/controllers/test_controller.dart';
 import 'package:flutter/material.dart';
@@ -18,11 +19,11 @@ class TestPage extends GetView<TestController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            NotificationAlertWidget(
-              onEnabled: () {},
+            OrderDetailsActionsWidget(
+              whatsappOnPressed: () {},
+              mapOnPressed: () {},
+              callOnPressed: () {},
             ),
-            GapWidget.s16(),
-            NotificationAlertWidget(onEnabled: () {}),
           ],
         ),
       ),
