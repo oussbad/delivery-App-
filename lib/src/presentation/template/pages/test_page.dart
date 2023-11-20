@@ -1,5 +1,9 @@
+import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/button_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/header_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/icon_button_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/state_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/notification/widgets/notification_alert_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/notification/widgets/notification_order_widget.dart';
@@ -15,24 +19,40 @@ class TestPage extends GetView<TestController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            NotificationOrderWidget(
-              status: OrderStatus.delivered,
-              orderId: '0003',
-              date: DateTime.now(),
-            ),
-            GapWidget.s16(),
-            NotificationOrderWidget(
-              status: OrderStatus.returned,
-              orderId: '0004',
-              date: DateTime.now(),
-            ),
-          ],
-        ),
+      body: Column(
+        //mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          HeaderWidget(
+            title: 'Provider',
+            actions: [],
+          ),
+          HeaderWidget(
+            title: 'Provider',
+            actions: [
+              IconButtonWidget(
+                icon: AssetsManager.bellIcon,
+                onPressed: () {},
+                isPrimary: false,
+              ),
+            ],
+          ),
+          HeaderWidget(
+            title: 'Provider',
+            actions: [
+              IconButtonWidget(
+                icon: AssetsManager.bellIcon,
+                onPressed: () {},
+                isPrimary: false,
+              ),
+              GapWidget.s16(axe: GapEnum.horizontal),
+              ButtonWidget(
+                label: 'New Order',
+                onPressed: () {},
+                icon: AssetsManager.plusIcon,
+              )
+            ],
+          ),
+        ],
       ),
     );
   }
