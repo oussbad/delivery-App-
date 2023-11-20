@@ -29,7 +29,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = AppRoutes.test;
+  static const initial = AppRoutes.home;
 
   static final notFound = GetPage(
     name: _Paths.notFound,
@@ -102,7 +102,7 @@ class AppPages {
     ///
     GetPage(
       name: _Paths.home,
-      page: () => const HomePage(),
+      page: () => HomePage(),
       binding: HomeBind(),
     ),
 

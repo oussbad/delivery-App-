@@ -7,7 +7,7 @@ import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.da
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-enum OrderStatus { delivered, returned }
+enum OrderStatus { delivered, pending, returned }
 
 class NotificationOrderWidget extends StatelessWidget {
   const NotificationOrderWidget({super.key, required this.status, required this.orderId, required this.date});
@@ -90,6 +90,8 @@ class NotificationOrderWidget extends StatelessWidget {
     switch (status) {
       case OrderStatus.delivered:
         return AssetsManager.orderDoneIcon;
+      case OrderStatus.pending:
+        return AssetsManager.orderPendingIcon;
       case OrderStatus.returned:
         return AssetsManager.orderErrorIcon;
       default:
@@ -101,6 +103,8 @@ class NotificationOrderWidget extends StatelessWidget {
     switch (status) {
       case OrderStatus.delivered:
         return AppPalette.success;
+      case OrderStatus.pending:
+        return AppPalette.warning;
       case OrderStatus.returned:
         return AppPalette.danger;
       default:
@@ -112,6 +116,8 @@ class NotificationOrderWidget extends StatelessWidget {
     switch (status) {
       case OrderStatus.delivered:
         return StringsManager.orderDelivered;
+      case OrderStatus.pending:
+        return StringsManager.orderPending;
       case OrderStatus.returned:
         return StringsManager.orderReturned;
       default:

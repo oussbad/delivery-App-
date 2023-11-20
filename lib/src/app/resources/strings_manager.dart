@@ -70,6 +70,7 @@ class StringsManager {
   static const String submit = 'Submit';
   static const String allowopenPackageBeforePayment = 'Allow open package before payment';
   static const String orderDelivered = 'has been delivered';
+  static const String orderPending = 'is still waiting';
   static const String orderReturned = 'has been returned';
 
   ///

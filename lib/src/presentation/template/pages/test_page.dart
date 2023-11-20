@@ -22,36 +22,35 @@ class TestPage extends GetView<TestController> {
       body: Column(
         //mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          HeaderWidget(
-            title: 'Provider',
-            actions: [],
+          NotificationOrderWidget(
+            status: OrderStatus.pending,
+            orderId: '0003',
+            date: DateTime.now(),
           ),
-          HeaderWidget(
-            title: 'Provider',
-            actions: [
-              IconButtonWidget(
-                icon: AssetsManager.bellIcon,
-                onPressed: () {},
-                isPrimary: false,
-              ),
-            ],
-          ),
-          HeaderWidget(
-            title: 'Provider',
-            actions: [
-              IconButtonWidget(
-                icon: AssetsManager.bellIcon,
-                onPressed: () {},
-                isPrimary: false,
-              ),
-              GapWidget.s16(axe: GapEnum.horizontal),
-              ButtonWidget(
-                label: 'New Order',
-                onPressed: () {},
-                icon: AssetsManager.plusIcon,
-              )
-            ],
-          ),
+          // HeaderWidget(
+          //   title: 'Provider',
+          //   actions: [],
+          // ),
+          // HeaderWidget(
+          //   title: 'Provider',
+          //   actions: [
+          //     IconButtonWidget(
+          //       icon: AssetsManager.bellIcon,
+          //       onPressed: () {},
+          //       isPrimary: false,
+          //     ),
+          //   ],
+          // ),
+          // HeaderWidget(
+          //   title: 'Provider',
+          //   actions: [
+          //     NotificationOrderWidget(
+          //       status: OrderStatus.pending,
+          //       orderId: '00003',
+          //       date: DateTime.now(),
+          //     ),
+          //   ],
+          // ),
         ],
       ),
     );

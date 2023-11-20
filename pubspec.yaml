@@ -44,6 +44,10 @@ flutter:
     - assets/icons/map.svg
     - assets/icons/order_done.svg
     - assets/icons/order_error.svg
+    - assets/icons/order_pending.svg
+    - assets/icons/statistics.svg
+    - assets/icons/profile2.svg
+    - assets/icons/box.svg
 
   fonts:
     - family: Roboto

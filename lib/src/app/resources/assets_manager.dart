@@ -26,4 +26,8 @@ class AssetsManager {
   static const String mapIcon = 'assets/icons/map.svg';
   static const String orderDoneIcon = 'assets/icons/order_done.svg';
   static const String orderErrorIcon = 'assets/icons/order_error.svg';
+  static const String orderPendingIcon = 'assets/icons/order_pending.svg';
+  static const String statisticsIcon = 'assets/icons/statistics.svg';
+  static const String profile2Icon = 'assets/icons/profile2.svg';
+  static const String boxIcon = 'assets/icons/box.svg';
 }
