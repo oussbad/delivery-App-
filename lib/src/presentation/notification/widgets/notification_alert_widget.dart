@@ -26,52 +26,55 @@ class _NotificationAlertWidgetState extends State<NotificationAlertWidget> {
   Widget build(BuildContext context) {
     return _isDismissed
         ? const SizedBox.shrink()
-        : InkWell(
-            onTap: widget.onEnabled,
-            borderRadius: BorderRadius.circular(AppSpacing.r4),
-            child: ClipPath(
-              clipper: ShapeBorderClipper(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(AppSpacing.r4),
-                  ),
-                ),
-              ),
-              child: Container(
-                padding: EdgeInsets.all(AppSpacing.s20),
-                decoration: BoxDecoration(
-                  color: AppPalette.warning.withOpacity(.06),
-                  border: Border(
-                    left: BorderSide(
-                      color: AppPalette.warning,
-                      width: 3,
+        : Container(
+            margin: EdgeInsets.only(top: AppSpacing.s20),
+            child: InkWell(
+              onTap: widget.onEnabled,
+              borderRadius: BorderRadius.circular(AppSpacing.r4),
+              child: ClipPath(
+                clipper: ShapeBorderClipper(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(AppSpacing.r4),
                     ),
                   ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        TextBlocKWidget.t16('Notifications are Disabled'),
-                        GapWidget.s8(),
-                        InkWell(
-                          onTap: widget.onEnabled,
-                          child: TextBlocKWidget.t14(
-                            'Enable',
-                            color: AppPalette.warning,
-                            decoration: TextDecoration.underline,
-                            fontWeight: AppTypography.w600,
+                child: Container(
+                  padding: EdgeInsets.all(AppSpacing.s20),
+                  decoration: BoxDecoration(
+                    color: AppPalette.warning.withOpacity(.06),
+                    border: Border(
+                      left: BorderSide(
+                        color: AppPalette.warning,
+                        width: 3,
+                      ),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          TextBlocKWidget.t16('Notifications are Disabled'),
+                          GapWidget.s8(),
+                          InkWell(
+                            onTap: widget.onEnabled,
+                            child: TextBlocKWidget.t14(
+                              'Enable',
+                              color: AppPalette.warning,
+                              decoration: TextDecoration.underline,
+                              fontWeight: AppTypography.w600,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    IconButtonWidget(
-                      icon: AssetsManager.closeIcon,
-                      onPressed: () => setState(() => _isDismissed = !_isDismissed),
-                    )
-                  ],
+                        ],
+                      ),
+                      IconButtonWidget(
+                        icon: AssetsManager.closeIcon,
+                        onPressed: () => setState(() => _isDismissed = !_isDismissed),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

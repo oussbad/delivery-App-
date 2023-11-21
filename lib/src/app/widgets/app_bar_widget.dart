@@ -1,6 +1,7 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/icon_button_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,12 +13,14 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     this.title,
     this.actions,
     this.withBackButton = false,
+    this.withCloseButton = false,
     this.withLogo = true,
   });
 
   final String? title;
   final List<Widget>? actions;
   final bool withBackButton;
+  final bool withCloseButton;
   final bool withLogo;
 
   @override
@@ -27,6 +30,10 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     List<Widget> leadingList = [];
     Widget leading = const SizedBox.shrink();
+
+    if (withCloseButton) {
+      leadingList.add(_buildCloseButton());
+    }
 
     if (withBackButton) {
       leadingList.add(_buildBackButton());
@@ -88,6 +95,13 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     return InkWell(
       onTap: () => Get.back(),
       child: const Icon(Icons.arrow_back_rounded),
+    );
+  }
+
+  Widget _buildCloseButton() {
+    return IconButtonWidget(
+      onPressed: () => Get.back(),
+      icon: AssetsManager.closeIcon,
     );
   }
 

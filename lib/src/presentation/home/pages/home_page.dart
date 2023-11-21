@@ -10,6 +10,7 @@ import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.da
 import 'package:boxpend_flutter_android_app/src/presentation/connections/pages/connections_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/controllers/home_controller.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/pages/statistics_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/notification/pages/notifications_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/pages/orders_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -49,7 +50,16 @@ class HomePage extends GetView<HomeController> {
       appBar: AppBarWidget(
         actions: [
           IconButtonWidget(
-            onPressed: () {},
+            onPressed: () => Get.dialog(
+              Container(
+                color: AppPalette.bg1,
+                width: double.infinity,
+                height: double.infinity,
+                child: const NotificationsPage(),
+              ),
+              barrierColor: AppPalette.black,
+              barrierDismissible: false,
+            ),
             icon: AssetsManager.bellIcon,
           ),
           GapWidget.s8(axe: GapEnum.horizontal),
