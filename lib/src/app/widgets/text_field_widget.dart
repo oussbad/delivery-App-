@@ -12,6 +12,7 @@ class TextFieldWidget extends StatelessWidget {
     this.initialValue,
     this.validator,
     this.isHidden = false,
+    this.isTextarea = false,
   });
 
   final String placeholder;
@@ -20,6 +21,7 @@ class TextFieldWidget extends StatelessWidget {
   final TextEditingController? controller;
   final String? Function(String?)? validator;
   final bool? isHidden;
+  final bool isTextarea;
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +36,7 @@ class TextFieldWidget extends StatelessWidget {
         fontSize: AppTypography.t16,
       ),
       decoration: _buildDecoration(),
+      maxLines: isTextarea ? 3 : null,
     );
   }
 

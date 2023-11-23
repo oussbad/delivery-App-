@@ -94,6 +94,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   Widget _buildBackButton() {
     return InkWell(
       onTap: () => Get.back(),
+      borderRadius: BorderRadius.circular(500),
       child: const Icon(Icons.arrow_back_rounded),
     );
   }

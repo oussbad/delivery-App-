@@ -126,6 +126,7 @@ class _OrderFormWidgetState extends State<OrderFormWidget> {
               initialValue: widget.formData != null ? widget.formData!.notes : null,
               controller: _notesController,
               placeholder: StringsManager.notes,
+              isTextarea: true,
               validator: Validator().isOptional().run,
             ),
             GapWidget.s16(),

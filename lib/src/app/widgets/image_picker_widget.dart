@@ -5,7 +5,6 @@ import 'package:boxpend_flutter_android_app/src/app/utils/app_snackbar.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:heroicons/heroicons.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
@@ -78,12 +77,12 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
       shrinkWrap: true,
       children: [
         _buildListTile(
-          icon: HeroIcons.camera,
+          icon: Icons.camera_rounded,
           label: StringsManager.camera,
           onTaped: () => _upload(ImageSource.camera),
         ),
         _buildListTile(
-          icon: HeroIcons.photo,
+          icon: Icons.photo_rounded,
           label: StringsManager.gallery,
           onTaped: () => _upload(ImageSource.gallery),
         ),
@@ -93,7 +92,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
 
   Widget _buildListTile({
     required String label,
-    required HeroIcons icon,
+    required IconData icon,
     required VoidCallback onTaped,
     Color? color,
   }) {
@@ -102,7 +101,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
         label,
         color: color ?? AppPalette.white,
       ),
-      leading: HeroIcon(
+      leading: Icon(
         color: color ?? AppPalette.white,
         icon,
       ),
