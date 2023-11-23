@@ -1,3 +1,9 @@
+import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
+import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/drop_down_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/header_widget.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/home/widgets/statistics_item_widget.dart';
 import 'package:flutter/material.dart';
 
 class StatisticsPage extends StatelessWidget {
@@ -5,8 +11,57 @@ class StatisticsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
-      child: Text('Statistics'),
+    return Column(
+      children: [
+        HeaderWidget(
+          title: StringsManager.statistics,
+          actions: [
+            DropdownWidget(
+              onChanged: (value) {},
+              value: 'This month',
+              items: const [
+                'Item 1',
+                'Item 2',
+                'Item 3',
+              ],
+            ),
+          ],
+        ),
+        Expanded(
+          child: ListView(
+            shrinkWrap: true,
+            padding: EdgeInsets.all(AppSpacing.s16),
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Expanded(
+                    child: StatisticsItemWidget(
+                      label: 'Delivered',
+                      total: 100,
+                      type: DataStatus.delivered,
+                    ),
+                  ),
+                  GapWidget.s16(axe: GapEnum.horizontal),
+                  const Expanded(
+                    child: StatisticsItemWidget(
+                      label: 'Returned',
+                      total: 2,
+                      type: DataStatus.returned,
+                    ),
+                  ),
+                ],
+              ),
+              GapWidget.s16(axe: GapEnum.horizontal),
+              const StatisticsItemWidget(
+                label: 'Total',
+                total: 102,
+                type: DataStatus.total,
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

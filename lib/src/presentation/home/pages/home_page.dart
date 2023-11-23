@@ -69,20 +69,14 @@ class HomePage extends GetView<HomeController> {
           ),
         ],
       ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: AppSpacing.s16,
-          vertical: AppSpacing.s8,
-        ),
-        child: Obx(
-          () => IndexedStack(
-            index: controller.currentIndex.value,
-            children: const [
-              OrdersPage(),
-              StatisticsPage(),
-              ConnectionsPage(),
-            ],
-          ),
+      body: Obx(
+        () => IndexedStack(
+          index: controller.currentIndex.value,
+          children: const [
+            StatisticsPage(),
+            OrdersPage(),
+            ConnectionsPage(),
+          ],
         ),
       ),
       bottomNavigationBar: _buildBottomNavigationBar(),
