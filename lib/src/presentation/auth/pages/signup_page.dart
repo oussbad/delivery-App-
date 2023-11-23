@@ -61,7 +61,8 @@ class SignUpPage extends GetView<SignUpController> {
         ButtonWidget(
           label: StringsManager.createAccount.tr,
           onPressed: controller.signup,
-          isLarge: true,
+          isExpanded: true,
+          size: ButtonSize.large,
         ),
         GapWidget.s8(),
         _buildAfterSignUpButton(),

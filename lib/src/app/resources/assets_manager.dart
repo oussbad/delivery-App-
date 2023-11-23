@@ -30,4 +30,6 @@ class AssetsManager {
   static const String statisticsIcon = 'assets/icons/statistics.svg';
   static const String profile2Icon = 'assets/icons/profile2.svg';
   static const String boxIcon = 'assets/icons/box.svg';
+    static const String dropdownIcon = 'assets/icons/arrow_drop_down.svg';
+
 }

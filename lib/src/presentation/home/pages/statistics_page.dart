@@ -18,7 +18,7 @@ class StatisticsPage extends StatelessWidget {
           actions: [
             DropdownWidget(
               onChanged: (value) {},
-              value: 'This month',
+              value: 'Today',
               items: const [
                 'Item 1',
                 'Item 2',

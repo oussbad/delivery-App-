@@ -1,4 +1,5 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
+import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/button_widget.dart';
@@ -43,7 +44,8 @@ class OnBoardingPage extends GetView<OnBoardingController> {
           title: StringsManager.onBoardingTitle2,
           subTitle: StringsManager.onBoardingSubTitle2,
           child: ButtonWidget(
-            isLarge: true,
+            isExpanded: true,
+            size: ButtonSize.large,
             label: StringsManager.getStarted,
             onPressed: () {
               controller.onSkip();

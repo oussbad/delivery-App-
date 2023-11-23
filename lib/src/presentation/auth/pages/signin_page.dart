@@ -48,7 +48,8 @@ class SignInPage extends GetView<SignInController> {
         ButtonWidget(
           onPressed: controller.signin,
           label: StringsManager.continueTo,
-          isLarge: true,
+          isExpanded: true,
+          size: ButtonSize.large,
         ),
         GapWidget.s8(),
         _buildAfterSignInButton(),

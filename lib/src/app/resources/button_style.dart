@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 enum ButtonType { primary, secondary, danger, outline, text }
 
+enum ButtonSize { small, medium, large }
+
 Color? setBgColor(ButtonType type) {
   switch (type) {
     case ButtonType.primary:

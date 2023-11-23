@@ -11,22 +11,24 @@ class ButtonWidget extends StatelessWidget {
     required this.label,
     required this.onPressed,
     this.type = ButtonType.primary,
-    this.isLarge = false,
+    this.size = ButtonSize.medium,
     this.icon,
+    this.isExpanded = false,
     this.isDisabled = false,
   });
 
   final String label;
   final VoidCallback onPressed;
   final ButtonType type;
-  final bool isLarge;
+  final ButtonSize size;
+  final bool isExpanded;
   final String? icon;
   final bool isDisabled;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: isLarge ? double.infinity : null,
+      width: isExpanded ? double.infinity : null,
       child: icon != null ? _buildButtonWithIcon() : _buildButton(),
     );
   }
@@ -70,11 +72,33 @@ class ButtonWidget extends StatelessWidget {
         ),
       ),
       padding: MaterialStateProperty.all(
-        EdgeInsets.symmetric(
-          vertical: isLarge ? AppSpacing.s24 : AppSpacing.s20,
-          horizontal: AppSpacing.s24,
-        ),
+        setSize(size),
       ),
     );
+  }
+
+  EdgeInsets setSize(ButtonSize size) {
+    switch (size) {
+      case ButtonSize.small:
+        return EdgeInsets.symmetric(
+          vertical: AppSpacing.s14,
+          horizontal: AppSpacing.s8,
+        );
+      case ButtonSize.medium:
+        return EdgeInsets.symmetric(
+          vertical: AppSpacing.s20,
+          horizontal: AppSpacing.s8,
+        );
+      case ButtonSize.large:
+        return EdgeInsets.symmetric(
+          vertical: AppSpacing.s24,
+          horizontal: AppSpacing.s24,
+        );
+      default:
+        return EdgeInsets.symmetric(
+          vertical: AppSpacing.s20,
+          horizontal: AppSpacing.s16,
+        );
+    }
   }
 }
