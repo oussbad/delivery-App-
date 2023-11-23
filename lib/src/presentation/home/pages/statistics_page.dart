@@ -37,7 +37,7 @@ class StatisticsPage extends StatelessWidget {
                 children: [
                   const Expanded(
                     child: StatisticsItemWidget(
-                      label: 'Delivered',
+                      label: StringsManager.delivered,
                       total: 100,
                       type: DataStatus.delivered,
                     ),
@@ -45,7 +45,7 @@ class StatisticsPage extends StatelessWidget {
                   GapWidget.s16(axe: GapEnum.horizontal),
                   const Expanded(
                     child: StatisticsItemWidget(
-                      label: 'Returned',
+                      label: StringsManager.returned,
                       total: 2,
                       type: DataStatus.returned,
                     ),
@@ -54,7 +54,7 @@ class StatisticsPage extends StatelessWidget {
               ),
               GapWidget.s16(axe: GapEnum.horizontal),
               const StatisticsItemWidget(
-                label: 'Total',
+                label: StringsManager.total,
                 total: 102,
                 type: DataStatus.total,
               ),

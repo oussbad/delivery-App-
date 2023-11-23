@@ -1,5 +1,6 @@
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
+import 'package:boxpend_flutter_android_app/src/app/themes/app_typography.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +49,10 @@ class StatisticsItemWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TextBlocKWidget.t16(label),
+                TextBlocKWidget.t16(
+                  label,
+                  fontWeight: AppTypography.w500,
+                ),
                 GapWidget.s8(),
                 TextBlocKWidget.t24(
                   total.toString(),
