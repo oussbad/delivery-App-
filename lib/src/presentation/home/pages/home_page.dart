@@ -84,27 +84,29 @@ class HomePage extends GetView<HomeController> {
   }
 
   Widget? _buildBottomNavigationBar() {
-    return Material(
+    return BottomAppBar(
       color: AppPalette.bg3,
-      child: Padding(
-        padding: EdgeInsets.all(AppSpacing.s8),
+      child: SizedBox(
+        height: 84,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: _items
               .asMap()
               .map(
                 (key, value) => MapEntry(
                   key,
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      IconButton(
-                        onPressed: () => controller.changeScreen(key),
-                        icon: _buildItemIcon(key, value.icon),
-                      ),
-                      _buildLabel(key, value.label),
-                    ],
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        IconButton(
+                          onPressed: () => controller.changeScreen(key),
+                          icon: _buildItemIcon(key, value.icon),
+                        ),
+                        _buildLabel(key, value.label),
+                      ],
+                    ),
                   ),
                 ),
               )
