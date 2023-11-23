@@ -1,7 +1,6 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
-import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/app_bar_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/avatar_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
@@ -72,8 +71,8 @@ class HomePage extends GetView<HomeController> {
         () => IndexedStack(
           index: controller.currentIndex.value,
           children: const [
-            StatisticsPage(),
             OrdersPage(),
+            StatisticsPage(),
             ConnectionsPage(),
           ],
         ),

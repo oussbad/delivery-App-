@@ -5,8 +5,8 @@ import 'package:boxpend_flutter_android_app/src/app/widgets/state_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:flutter/material.dart';
 
-class OrderItemwWidget extends StatelessWidget {
-  const OrderItemwWidget({
+class OrderItemWidget extends StatelessWidget {
+  const OrderItemWidget({
     super.key,
     required this.state,
     required this.title,

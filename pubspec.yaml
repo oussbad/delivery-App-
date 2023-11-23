@@ -48,6 +48,7 @@ flutter:
     - assets/icons/profile2.svg
     - assets/icons/box.svg
     - assets/icons/arrow_drop_down.svg
+    - assets/icons/sort.svg
 
   fonts:
     - family: Roboto

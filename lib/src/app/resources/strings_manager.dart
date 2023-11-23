@@ -75,6 +75,8 @@ class StringsManager {
   static const String delivered = 'Delivered';
   static const String returned = 'Returned';
   static const String total = 'Total';
+  static const String open = 'Open';
+  static const String closed = 'Closed';
 
   ///
   /// Form Validation
