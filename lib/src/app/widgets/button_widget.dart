@@ -1,6 +1,7 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
+import 'package:boxpend_flutter_android_app/src/app/themes/app_typography.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -54,10 +55,30 @@ class ButtonWidget extends StatelessWidget {
   }
 
   Widget _buildTextButton() {
-    return TextBlocKWidget.t16(
-      label,
-      color: isDisabled ? AppPalette.disabledBtn2 : setTextColor(type),
-    );
+    switch (size) {
+      case ButtonSize.small:
+        return TextBlocKWidget.t14(
+          label,
+          color: isDisabled ? AppPalette.disabledBtn2 : setTextColor(type),
+          fontWeight: AppTypography.w700,
+        );
+      case ButtonSize.medium:
+        return TextBlocKWidget.t14(
+          label,
+          color: isDisabled ? AppPalette.disabledBtn2 : setTextColor(type),
+          fontWeight: AppTypography.w700,
+        );
+      case ButtonSize.large:
+        return TextBlocKWidget.t16(
+          label,
+          color: isDisabled ? AppPalette.disabledBtn2 : setTextColor(type),
+        );
+      default:
+        return TextBlocKWidget.t16(
+          label,
+          color: isDisabled ? AppPalette.disabledBtn2 : setTextColor(type),
+        );
+    }
   }
 
   ButtonStyle? _setButtonStyle() {

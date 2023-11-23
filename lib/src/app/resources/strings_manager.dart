@@ -79,6 +79,13 @@ class StringsManager {
   static const String closed = 'Closed';
 
   ///
+  /// Connections Pages
+  ///
+  static const String newConnection = 'New Connection';
+  static const String accepted = 'Accepted';
+  static const String pending = 'Pending';
+
+  ///
   /// Form Validation
   ///
   static const String requiredErrorMessage = "This field is required";

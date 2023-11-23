@@ -50,12 +50,7 @@ class HomePage extends GetView<HomeController> {
         actions: [
           IconButtonWidget(
             onPressed: () => Get.dialog(
-              Container(
-                color: const Color(0xFF1E272E),
-                width: double.infinity,
-                height: double.infinity,
-                child: const NotificationsPage(),
-              ),
+              const NotificationsPage(),
               barrierDismissible: false,
             ),
             icon: AssetsManager.bellIcon,

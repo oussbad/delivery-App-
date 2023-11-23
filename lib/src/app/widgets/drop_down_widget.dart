@@ -28,25 +28,23 @@ class DropdownWidget extends StatelessWidget {
     return ButtonWidget(
       label: value,
       icon: AssetsManager.dropdownIcon,
+      size: ButtonSize.large,
       onPressed: () => Get.bottomSheet(
         ColoredBox(
-          color: const Color(0xFF1E272E),
-          child: ColoredBox(
-            color: AppPalette.bg1,
-            child: ListView(
-              shrinkWrap: true,
-              children: items
-                  .map(
-                    (item) => ListTile(
-                      onTap: () {
-                        onChanged!(item);
-                        Get.back();
-                      },
-                      title: TextBlocKWidget.t16(item),
-                    ),
-                  )
-                  .toList(),
-            ),
+          color: AppPalette.bg4,
+          child: ListView(
+            shrinkWrap: true,
+            children: items
+                .map(
+                  (item) => ListTile(
+                    onTap: () {
+                      onChanged!(item);
+                      Get.back();
+                    },
+                    title: TextBlocKWidget.t16(item),
+                  ),
+                )
+                .toList(),
           ),
         ),
         shape: RoundedRectangleBorder(

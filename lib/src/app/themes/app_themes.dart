@@ -9,7 +9,7 @@ class AppThemes {
     fontFamily: AppTypography.familyRoboto,
     brightness: Brightness.dark,
     primarySwatch: AppPalette.primarySwatch,
-    scaffoldBackgroundColor: AppPalette.bg1,
+    scaffoldBackgroundColor: AppPalette.bg4,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       selectedLabelStyle: TextStyle(
         fontSize: AppTypography.t14,

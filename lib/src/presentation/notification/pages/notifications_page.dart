@@ -16,38 +16,43 @@ class NotificationsPage extends GetView<NotificationsController> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: AppPalette.bg1,
-      child: Column(
-        children: [
-          const AppBarWidget(
-            withCloseButton: true,
-            withLogo: false,
-          ),
-          const HeaderWidget(
-            title: StringsManager.notifications,
-            actions: [],
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
-            child: NotificationAlertWidget(
-              onEnabled: () {},
+      child: Container(
+        color: AppPalette.bg4,
+        child: Column(
+          children: [
+            const AppBarWidget(
+              withCloseButton: true,
+              withLogo: false,
             ),
-          ),
-          Expanded(
-            child: ListView.separated(
-              shrinkWrap: true,
-              itemCount: 20,
-              padding: EdgeInsets.all(AppSpacing.s16),
-              separatorBuilder: (BuildContext context, int index) => GapWidget.s8(),
-              itemBuilder: (context, index) => NotificationOrderWidget(
-                status: OrderStatus.delivered,
-                orderId: '0003',
-                date: DateTime.now(),
+            const HeaderWidget(
+              title: StringsManager.notifications,
+              actions: [],
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
+              child: NotificationAlertWidget(
+                onEnabled: () {},
               ),
             ),
-          ),
-          GapWidget.s16(),
-        ],
+            Expanded(
+              child: ListView.separated(
+                shrinkWrap: true,
+                itemCount: 20,
+                padding: EdgeInsets.all(AppSpacing.s16),
+                separatorBuilder: (BuildContext context, int index) => GapWidget.s8(),
+                itemBuilder: (context, index) => Material(
+                  color: AppPalette.bg4,
+                  child: NotificationOrderWidget(
+                    status: OrderStatus.delivered,
+                    orderId: '0003',
+                    date: DateTime.now(),
+                  ),
+                ),
+              ),
+            ),
+            GapWidget.s16(),
+          ],
+        ),
       ),
     );
   }

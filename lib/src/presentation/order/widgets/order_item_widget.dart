@@ -25,10 +25,7 @@ class OrderItemWidget extends StatelessWidget {
       onTap: onPressed,
       borderRadius: BorderRadius.circular(AppSpacing.r4),
       child: Container(
-        padding: EdgeInsets.symmetric(
-          vertical: AppSpacing.s24,
-          horizontal: AppSpacing.s16,
-        ),
+        padding: EdgeInsets.all(AppSpacing.s16),
         decoration: BoxDecoration(
           color: AppPalette.white.withOpacity(.02),
           borderRadius: BorderRadius.circular(AppSpacing.r4),

@@ -1,5 +1,6 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
+import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/drop_down_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
@@ -17,44 +18,44 @@ class OrdersPage extends GetView<OrdersController> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        HeaderWidget(
-          title: StringsManager.orders,
-          actions: [
-            IconButtonWidget(
-              onPressed: () {},
-              icon: AssetsManager.sortIcon,
-              isPrimary: false,
-            ),
-            GapWidget.s16(axe: GapEnum.horizontal),
-            DropdownWidget(
-              onChanged: (value) {},
-              value: 'Today',
-              items: const [
-                'Item 1',
-                'Item 2',
-                'Item 3',
-              ],
-            ),
-          ],
-        ),
-        TabsWidget(
-          tabs: const [
-            StringsManager.open,
-            StringsManager.delivered,
-            StringsManager.closed,
-          ],
-          tabViews: [
-            _buildOrders(),
-            _buildOrders(),
-            _buildOrders(),
-            // _buildOrders(),
-            // _buildOrders(),
-            // _buildOrders(),
-          ],
-        ),
-      ],
+    return Material(
+      color: AppPalette.bg4,
+      child: Column(
+        children: [
+          HeaderWidget(
+            title: StringsManager.orders,
+            actions: [
+              IconButtonWidget(
+                onPressed: () {},
+                icon: AssetsManager.sortIcon,
+                isPrimary: false,
+              ),
+              GapWidget.s16(axe: GapEnum.horizontal),
+              DropdownWidget(
+                onChanged: (value) {},
+                value: 'Today',
+                items: const [
+                  'Item 1',
+                  'Item 2',
+                  'Item 3',
+                ],
+              ),
+            ],
+          ),
+          TabsWidget(
+            tabs: const [
+              StringsManager.open,
+              StringsManager.delivered,
+              StringsManager.closed,
+            ],
+            tabViews: [
+              _buildOrders(),
+              _buildOrders(),
+              _buildOrders(),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
