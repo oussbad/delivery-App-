@@ -1,5 +1,6 @@
 import 'package:boxpend_flutter_android_app/src/app/helpers/validators.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
+import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
@@ -45,6 +46,17 @@ class SignInPage extends GetView<SignInController> {
           validator: Validator().required().isEmail().run,
         ),
         GapWidget.s16(),
+        TextFieldWidget(
+          controller: controller.emailController,
+          placeholder: StringsManager.password,
+          validator: Validator()
+              .required()
+              .password(
+                ConstantsManager.maxPassword,
+              )
+              .run,
+        ),
+        GapWidget.s24(),
         ButtonWidget(
           onPressed: controller.signin,
           label: StringsManager.continueTo,

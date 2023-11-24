@@ -9,19 +9,15 @@ import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signin_p
 import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signup_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/binds/home_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/pages/home_page.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/policy_page.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/terms_page.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/help_page.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/malicious/not_found_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/malicious/Pages/policy_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/malicious/Pages/terms_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/malicious/Pages/help_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/malicious/Pages/not_found_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/binds/create_order_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/binds/order_details_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/pages/create_order_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/pages/order_details_page.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/settings/binds/settings_bind.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/settings/pages/settings_page.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/template/binds/test_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/binds/template_bind.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/template/pages/test_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/pages/template_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/binds/onboarding_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/binds/splash_bind.dart';
@@ -34,7 +30,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = AppRoutes.home;
+  static const initial = AppRoutes.splash;
 
   static final notFound = GetPage(
     name: _Paths.notFound,
@@ -50,11 +46,7 @@ class AppPages {
       page: () => const TemplatePage(),
       binding: TemplateBind(),
     ),
-    GetPage(
-      name: _Paths.test,
-      page: () => const TestPage(),
-      binding: TestBind(),
-    ),
+
     //---------------------------------------
 
     ///
@@ -123,15 +115,6 @@ class AppPages {
       name: _Paths.home,
       page: () => HomePage(),
       binding: HomeBind(),
-    ),
-
-    ///
-    /// Settings pages
-    ///
-    GetPage(
-      name: _Paths.settings,
-      page: () => const SettingsPage(),
-      binding: SettingsBind(),
     ),
 
     ///

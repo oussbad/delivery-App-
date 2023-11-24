@@ -3,9 +3,9 @@ import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.da
 import 'package:boxpend_flutter_android_app/src/app/widgets/app_bar_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/loader_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/legal/Controllers/legal_controller.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/legal/models/legal_model.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/legal/widgets/legal_widget.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/malicious/Controllers/legal_controller.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/malicious/models/legal_model.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/malicious/widgets/legal_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

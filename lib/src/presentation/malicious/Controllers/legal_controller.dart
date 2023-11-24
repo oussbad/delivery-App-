@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:boxpend_flutter_android_app/src/presentation/legal/models/legal_model.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/malicious/models/legal_model.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:get/get.dart';
 

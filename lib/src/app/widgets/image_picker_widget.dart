@@ -1,6 +1,7 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
+import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/utils/app_snackbar.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +63,12 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
     });
   }
 
-  void _openBottmSheet() => Get.bottomSheet(_bottomSheet());
+  void _openBottmSheet() => Get.bottomSheet(
+        _bottomSheet(),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppSpacing.r4),
+        ),
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -73,20 +79,23 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
   }
 
   Widget _bottomSheet() {
-    return ListView(
-      shrinkWrap: true,
-      children: [
-        _buildListTile(
-          icon: Icons.camera_rounded,
-          label: StringsManager.camera,
-          onTaped: () => _upload(ImageSource.camera),
-        ),
-        _buildListTile(
-          icon: Icons.photo_rounded,
-          label: StringsManager.gallery,
-          onTaped: () => _upload(ImageSource.gallery),
-        ),
-      ],
+    return Material(
+      color: AppPalette.bg4,
+      child: ListView(
+        shrinkWrap: true,
+        children: [
+          _buildListTile(
+            icon: Icons.camera_rounded,
+            label: StringsManager.camera,
+            onTaped: () => _upload(ImageSource.camera),
+          ),
+          _buildListTile(
+            icon: Icons.photo_rounded,
+            label: StringsManager.gallery,
+            onTaped: () => _upload(ImageSource.gallery),
+          ),
+        ],
+      ),
     );
   }
 
@@ -97,7 +106,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
     Color? color,
   }) {
     return ListTile(
-      title: TextBlocKWidget.t14(
+      title: TextBlocKWidget.t16(
         label,
         color: color ?? AppPalette.white,
       ),

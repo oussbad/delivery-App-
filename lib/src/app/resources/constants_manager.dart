@@ -2,9 +2,10 @@ class ConstantsManager {
   ConstantsManager._();
 
   ///
-  /// Image Picker
+  /// Inputs
   ///
   static const int maxImageSize = 5 * 1024 * 1024; // (in bytes) 5 MB
+  static const int maxPassword = 8; // (in bytes) 5 MB
 
   ///
   /// Local Storage
