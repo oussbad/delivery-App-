@@ -1,5 +1,6 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/app_bar_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/loader_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/legal/Controllers/legal_controller.dart';
@@ -16,10 +17,10 @@ class PolicyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: TextBlocKWidget.t14(
-          StringsManager.policyPrivacy,
-        ),
+      appBar: const AppBarWidget(
+        withLogo: false,
+        withBackButton: true,
+        title: StringsManager.policyPrivacy,
       ),
       body: FutureBuilder<List<LegalModel>>(
         future: controller.loadLegalData(AssetsManager.policy),

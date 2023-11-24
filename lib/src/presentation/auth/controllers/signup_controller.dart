@@ -57,9 +57,9 @@ class SignUpController extends GetxController {
 
   void onIsAcceptedChanged(bool? value) => isAccepted(value);
 
-  void goToTermsAndConditionsPage() => Get.offAllNamed(AppRoutes.template);
+  void goToTermsAndConditionsPage() => Get.toNamed(AppRoutes.terms);
 
-  void goToPolicyPrivacyPage() => Get.offAllNamed(AppRoutes.template);
+  void goToPolicyPrivacyPage() => Get.toNamed(AppRoutes.policy);
 
   void goToSignInPage() => Get.offAllNamed(AppRoutes.signIn);
 }

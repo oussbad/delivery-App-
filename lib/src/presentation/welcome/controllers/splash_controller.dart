@@ -27,7 +27,7 @@ class SplashController extends GetxController {
       );
       Get.offAllNamed(AppRoutes.onBoarding);
     } else {
-      Get.offAllNamed(AppRoutes.home);
+      Get.offAllNamed(AppRoutes.signIn);
     }
   }
 

@@ -21,7 +21,7 @@ class SignInPage extends GetView<SignInController> {
         child: Form(
           key: controller.signinFormKey,
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
+            padding: EdgeInsets.symmetric(horizontal: AppSpacing.s36),
             child: _buildColumn(),
           ),
         ),

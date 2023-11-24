@@ -24,7 +24,7 @@ class SignUpPage extends GetView<SignUpController> {
         child: Form(
           key: controller.signupFormKey,
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
+            padding: EdgeInsets.symmetric(horizontal: AppSpacing.s36),
             child: _buildColumn(),
           ),
         ),
