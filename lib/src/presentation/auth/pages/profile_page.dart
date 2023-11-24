@@ -38,7 +38,7 @@ class ProfilePage extends GetView<ProfileController> {
                   _buildUserInfo(),
                   GapWidget.s24(),
                   ProfileItemWidget(
-                    onPressed: () => Get.toNamed(AppRoutes.terms),
+                    onPressed: () => Get.toNamed(AppRoutes.editProfile),
                     icon: AssetsManager.profileIcon,
                     title: StringsManager.editProfile,
                   ),
@@ -107,8 +107,9 @@ class ProfilePage extends GetView<ProfileController> {
 
   Widget _buildUserInfo() {
     return Material(
+      color: AppPalette.bg4,
       child: ListTile(
-        tileColor: AppPalette.info.withOpacity(.06),
+        tileColor: AppPalette.primarySwatch.withOpacity(.06),
         contentPadding: EdgeInsets.all(AppSpacing.s16),
         leading: const AvatarWidget(asset: 'Aimrane'),
         shape: RoundedRectangleBorder(

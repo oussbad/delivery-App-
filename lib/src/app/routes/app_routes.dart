@@ -23,14 +23,16 @@ abstract class _Paths {
   ///
   static const terms = '/terms';
   static const policy = '/policy';
+  static const help = '/help';
 
   ///
   /// Auth Pages
   ///
   static const signUp = '/signup';
   static const signIn = '/signin';
-  static const emailVerification = '/emailVerification';
-  static const changePassword = '/changePassword';
+  static const emailVerification = '/email-verification';
+  static const changePassword = '/change-password';
+  static const editProfile = '/edit-profile';
 
   ///
   /// Home Pages
@@ -76,6 +78,7 @@ abstract class AppRoutes {
   ///
   static const terms = _Paths.terms;
   static const policy = _Paths.policy;
+  static const help = _Paths.help;
 
   ///
   /// Auth Pages
@@ -84,6 +87,7 @@ abstract class AppRoutes {
   static const signIn = _Paths.signIn;
   static const emailVerification = _Paths.emailVerification;
   static const changePassword = _Paths.changePassword;
+  static const editProfile = _Paths.editProfile;
 
   ///
   /// Home Pages

@@ -1,7 +1,9 @@
 import 'package:boxpend_flutter_android_app/src/presentation/auth/binds/change_password_bind.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/auth/binds/edit_profile_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/binds/signin_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/binds/signup_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/change_password_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/edit_profile_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/email_verification_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signin_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signup_page.dart';
@@ -9,6 +11,7 @@ import 'package:boxpend_flutter_android_app/src/presentation/home/binds/home_bin
 import 'package:boxpend_flutter_android_app/src/presentation/home/pages/home_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/policy_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/terms_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/help_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/malicious/not_found_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/binds/create_order_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/binds/order_details_bind.dart';
@@ -31,7 +34,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = AppRoutes.splash;
+  static const initial = AppRoutes.home;
 
   static final notFound = GetPage(
     name: _Paths.notFound,
@@ -80,6 +83,10 @@ class AppPages {
       name: _Paths.policy,
       page: () => PolicyPage(),
     ),
+    GetPage(
+      name: _Paths.help,
+      page: () => HelpPage(),
+    ),
 
     ///
     /// Auth Pages
@@ -102,6 +109,11 @@ class AppPages {
       name: _Paths.changePassword,
       page: () => const ChangePasswordPage(),
       binding: ChangePasswordBind(),
+    ),
+    GetPage(
+      name: _Paths.editProfile,
+      page: () => const EditProfilePage(),
+      binding: EditProfileBind(),
     ),
 
     ///

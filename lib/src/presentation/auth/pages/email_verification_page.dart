@@ -12,11 +12,9 @@ class EmailVerificationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Form(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: AppSpacing.s24),
-            child: _buildColumn(),
-          ),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: AppSpacing.s40),
+          child: _buildColumn(),
         ),
       ),
     );

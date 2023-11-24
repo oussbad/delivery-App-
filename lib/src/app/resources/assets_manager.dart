@@ -13,6 +13,7 @@ class AssetsManager {
   ///
   static const String policy = 'assets/json/policy.json';
   static const String terms = 'assets/json/terms.json';
+  static const String help = 'assets/json/help.json';
 
   ///
   /// Icons
