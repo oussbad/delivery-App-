@@ -22,8 +22,8 @@ class ConnectionItemWidget extends StatelessWidget {
       onTap: () {},
       tileColor: AppPalette.white.withOpacity(.02),
       contentPadding: EdgeInsets.symmetric(
-        vertical: AppSpacing.s8,
         horizontal: AppSpacing.s16,
+        vertical: AppSpacing.s8,
       ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(AppSpacing.r4),
@@ -36,13 +36,10 @@ class ConnectionItemWidget extends StatelessWidget {
         title,
         fontWeight: AppTypography.w400,
       ),
-      subtitle: Padding(
-        padding: EdgeInsets.only(bottom: AppSpacing.s8),
-        child: TextBlocKWidget.t16(
-          subtitle,
-          color: AppPalette.bg2,
-          fontWeight: AppTypography.w400,
-        ),
+      subtitle: TextBlocKWidget.t16(
+        subtitle,
+        color: AppPalette.bg2,
+        fontWeight: AppTypography.w400,
       ),
     );
   }

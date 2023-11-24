@@ -58,13 +58,19 @@ class HomePage extends GetView<HomeController> {
             icon: AssetsManager.bellIcon,
           ),
           GapWidget.s8(axe: GapEnum.horizontal),
-          AvatarWidget(
-            onPressed: () => Get.dialog(
-              const ProfilePage(),
-              barrierDismissible: false,
+          Material(
+            shape: const CircleBorder(),
+            clipBehavior: Clip.antiAlias,
+            child: InkWell(
+              onTap: () => Get.dialog(
+                const ProfilePage(),
+                barrierDismissible: false,
+              ),
+              child: const AvatarWidget(
+                asset: 'jib',
+                size: AvatarSize.small,
+              ),
             ),
-            asset: 'jib',
-            size: AvatarSize.small,
           ),
         ],
       ),

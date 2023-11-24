@@ -47,16 +47,16 @@ class OrderDetailsPage extends GetView<OrderDetailsController> {
                     title: 'Aimran',
                   ),
                   GapWidget.s16(),
-                  const OrderDetailsItemWidget(
+                  OrderDetailsItemWidget(
                     icon: AssetsManager.callIcon,
                     title: '+212 6 22854163',
-                    isCopied: true,
+                    onCopied: () {},
                   ),
                   GapWidget.s16(),
-                  const OrderDetailsItemWidget(
+                  OrderDetailsItemWidget(
                     icon: AssetsManager.locationIcon,
                     title: 'Ouezzane, Ain Dorij 16222',
-                    isCopied: true,
+                    onCopied: () {},
                   ),
                   GapWidget.s16(),
                   const OrderDetailsItemWidget(
@@ -65,8 +65,7 @@ class OrderDetailsPage extends GetView<OrderDetailsController> {
                   ),
                   GapWidget.s16(),
                   const OrderDetailsItemWidget(
-                                        icon: AssetsManager.infoIcon,
-
+                    icon: AssetsManager.infoIcon,
                     title: 'Phasellus felis orci, maximus sit amet malesuada ac, pretium eget nisl. Donec finibus neque at mi volutpat dignissim.',
                   ),
                   GapWidget.s16(),

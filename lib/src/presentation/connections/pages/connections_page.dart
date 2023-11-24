@@ -63,7 +63,7 @@ class ConnectionsPage extends GetView<ConnectionsController> {
         child: const ConnectionItemWidget(
           title: 'Monir El Wafi',
           subtitle: 'monir.elwafi@gmail.com',
-          avatar: 'dav',
+          avatar: 'Jab',
         ),
       ),
     );

@@ -11,12 +11,12 @@ class OrderDetailsItemWidget extends StatelessWidget {
     super.key,
     required this.icon,
     required this.title,
-    this.isCopied = false,
+    this.onCopied,
   });
 
   final String icon;
   final String title;
-  final bool isCopied;
+  final VoidCallback? onCopied;
 
   @override
   Widget build(BuildContext context) {
@@ -42,13 +42,18 @@ class OrderDetailsItemWidget extends StatelessWidget {
               color: AppPalette.white.withOpacity(.7),
             ),
           ),
-          isCopied
-              ? InkWell(
-                  onTap: () {},
-                  borderRadius: BorderRadius.circular(17),
-                  child: SvgPicture.asset(
-                    AssetsManager.copyIcon,
-                    color: AppPalette.disabledBtn1,
+          onCopied != null
+              ? Material(
+                  shape: const CircleBorder(),
+                  clipBehavior: Clip.antiAlias,
+                  color: Colors.transparent,
+                  child: InkWell(
+                    radius: 200,
+                    onTap: onCopied,
+                    child: SvgPicture.asset(
+                      AssetsManager.copyIcon,
+                      color: AppPalette.disabledBtn1,
+                    ),
                   ),
                 )
               : const SizedBox.shrink(),

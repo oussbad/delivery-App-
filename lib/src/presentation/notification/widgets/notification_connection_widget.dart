@@ -1,4 +1,3 @@
-import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
@@ -26,7 +25,10 @@ class NotificationConnectionWidget extends StatelessWidget {
     return ListTile(
       onTap: () {},
       tileColor: AppPalette.white.withOpacity(.02),
-      contentPadding: EdgeInsets.all(AppSpacing.s8),
+      contentPadding: EdgeInsets.symmetric(
+        horizontal: AppSpacing.s16,
+        vertical: AppSpacing.s8,
+      ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(AppSpacing.r4),
       ),

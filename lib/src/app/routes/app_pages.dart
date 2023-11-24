@@ -30,7 +30,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = AppRoutes.splash;
+  static const initial = AppRoutes.home;
 
   static final notFound = GetPage(
     name: _Paths.notFound,

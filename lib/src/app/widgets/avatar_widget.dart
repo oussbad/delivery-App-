@@ -14,20 +14,15 @@ class _AvaarBasicWidget extends StatelessWidget {
     required this.asset,
     required this.size,
     this.status,
-    this.onPressed,
   });
 
   final String asset;
   final AvatarSize size;
   final ConnectionStatus? status;
-  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onPressed,
-      child: GetUtils.isNull(status) ? _buildAvatar() : _buildAvatarWithStatus(),
-    );
+    return GetUtils.isNull(status) ? _buildAvatar() : _buildAvatarWithStatus();
   }
 
   double _setAvatarSize() {
@@ -105,14 +100,12 @@ class AvatarWidget extends _AvaarBasicWidget {
     super.key,
     required super.asset,
     super.size = AvatarSize.medium,
-    super.onPressed,
   });
 
   const AvatarWidget.widthStatus({
     super.key,
     required super.asset,
     super.status,
-    super.onPressed,
   }) : super(
           size: AvatarSize.small,
         );

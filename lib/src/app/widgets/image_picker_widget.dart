@@ -72,7 +72,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: _openBottmSheet,
       child: widget.child,
     );
