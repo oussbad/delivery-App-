@@ -83,7 +83,7 @@ class OrdersPage extends GetView<OrdersController> {
       padding: EdgeInsets.all(AppSpacing.s16),
       separatorBuilder: (context, index) => GapWidget.s16(),
       itemBuilder: (context, index) => OrderItemWidget(
-        onPressed: () {},
+        onPressed: () => Get.toNamed(AppRoutes.order),
         state: const StateWidget(
           state: StateType.warning,
         ),

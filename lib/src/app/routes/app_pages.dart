@@ -11,7 +11,9 @@ import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/policy_
 import 'package:boxpend_flutter_android_app/src/presentation/legal/Pages/terms_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/malicious/not_found_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/binds/create_order_bind.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/order/binds/order_details_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/pages/create_order_page.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/order/pages/order_details_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/settings/binds/settings_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/settings/pages/settings_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/template/binds/test_bind.dart';
@@ -127,6 +129,11 @@ class AppPages {
       name: _Paths.createOrder,
       page: () => CreateOrderPage(),
       binding: CreateOrderBind(),
+    ),
+    GetPage(
+      name: _Paths.order,
+      page: () => const OrderDetailsPage(),
+      binding: OrderDetailsBind(),
     ),
   ];
 }

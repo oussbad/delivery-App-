@@ -79,6 +79,8 @@ class StringsManager {
   static const String open = 'Open';
   static const String closed = 'Closed';
   static const String newOrder = 'New Order';
+  static const String delete = 'Delete';
+  static const String edit = 'Edit';
 
   ///
   /// Connections Pages

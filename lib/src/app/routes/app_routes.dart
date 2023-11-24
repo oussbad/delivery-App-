@@ -46,6 +46,7 @@ abstract class _Paths {
   /// Order Pages
   ///
   static const createOrder = '/create-order';
+  static const order = '/order';
 }
 
 abstract class AppRoutes {
@@ -98,4 +99,5 @@ abstract class AppRoutes {
   /// Order Pages
   ///
   static const createOrder = _Paths.createOrder;
+  static const order = _Paths.order;
 }
