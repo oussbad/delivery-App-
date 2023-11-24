@@ -44,7 +44,7 @@ class ProfilePage extends GetView<ProfileController> {
                   ),
                   GapWidget.s16(),
                   ProfileItemWidget(
-                    onPressed: () => Get.toNamed(AppRoutes.terms),
+                    onPressed: () => Get.toNamed(AppRoutes.changePassword),
                     icon: AssetsManager.passwordIcon,
                     title: StringsManager.changePassword,
                   ),
