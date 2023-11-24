@@ -25,12 +25,12 @@ class _SwitchButtonWidgetState extends State<SwitchButtonWidget> {
   Widget _buildTrack() {
     return AnimatedContainer(
       duration: _setDuration(),
-      width: AppSpacing.s16 * 2,
-      height: AppSpacing.s18,
+      width: AppSpacing.s24 * 2,
+      height: AppSpacing.s24,
       decoration: BoxDecoration(
         color: _isEnabled ? AppPalette.primarySwatch : AppPalette.disabledBtn1,
         borderRadius: BorderRadius.circular(
-          AppSpacing.s16 * 2,
+          AppSpacing.s20 * 2,
         ),
       ),
       child: _buildThumb(),
@@ -40,14 +40,14 @@ class _SwitchButtonWidgetState extends State<SwitchButtonWidget> {
   Widget _buildThumb() {
     return AnimatedAlign(
       duration: _setDuration(),
-      alignment: _isEnabled ? Alignment.centerLeft : Alignment.centerRight,
+      alignment: _isEnabled ? Alignment.centerRight : Alignment.centerLeft,
       child: AnimatedContainer(
-        margin: EdgeInsets.all(AppSpacing.s8),
+        margin: const EdgeInsets.all(6),
         duration: _setDuration(),
         width: AppSpacing.s16,
         height: AppSpacing.s16,
         decoration: BoxDecoration(
-          color: _isEnabled ? AppPalette.white : AppPalette.disabledBtn2,
+          color: AppPalette.bg4,
           shape: BoxShape.circle,
         ),
       ),
