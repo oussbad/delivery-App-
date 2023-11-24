@@ -13,6 +13,7 @@ class DropdownWidget extends StatelessWidget {
     required this.value,
     required this.items,
     this.type = ButtonType.primary,
+    this.size = ButtonSize.large,
     this.onChanged,
     this.isDisabled = false,
   }) : super(key: key);
@@ -21,6 +22,7 @@ class DropdownWidget extends StatelessWidget {
   final List<String> items;
   final Function(String?)? onChanged;
   final ButtonType type;
+  final ButtonSize size;
   final bool isDisabled;
 
   @override
@@ -28,7 +30,8 @@ class DropdownWidget extends StatelessWidget {
     return ButtonWidget(
       label: value,
       icon: AssetsManager.dropdownIcon,
-      size: ButtonSize.large,
+      size: size,
+      isDisabled: isDisabled,
       onPressed: () => Get.bottomSheet(
         Material(
           color: AppPalette.bg4,

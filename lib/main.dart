@@ -9,10 +9,10 @@ void main() async {
   runApp(
     DevicePreview(
       enabled: true,
-      isToolbarVisible: false,
-      defaultDevice: DevicePreview.defaultDevices.firstWhere(
-        (device) => device.name == "Small",
-      ),
+      //isToolbarVisible: false,
+      // defaultDevice: DevicePreview.defaultDevices.firstWhere(
+      //   (device) => device.name == "Small",
+      // ),
       backgroundColor: Colors.black87,
       tools: const [
         ...DevicePreview.defaultTools,

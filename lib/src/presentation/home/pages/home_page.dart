@@ -7,6 +7,7 @@ import 'package:boxpend_flutter_android_app/src/app/widgets/avatar_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/icon_button_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/profile_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/connections/pages/connections_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/controllers/home_controller.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/pages/statistics_page.dart';
@@ -58,7 +59,10 @@ class HomePage extends GetView<HomeController> {
           ),
           GapWidget.s8(axe: GapEnum.horizontal),
           AvatarWidget(
-            onPressed: () => Get.toNamed(AppRoutes.profile),
+            onPressed: () => Get.dialog(
+              const ProfilePage(),
+              barrierDismissible: false,
+            ),
             asset: 'jib',
             size: AvatarSize.small,
           ),

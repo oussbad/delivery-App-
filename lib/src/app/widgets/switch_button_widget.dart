@@ -25,12 +25,12 @@ class _SwitchButtonWidgetState extends State<SwitchButtonWidget> {
   Widget _buildTrack() {
     return AnimatedContainer(
       duration: _setDuration(),
-      width: AppSpacing.s36 * 2,
-      height: AppSpacing.s36,
+      width: AppSpacing.s16 * 2,
+      height: AppSpacing.s18,
       decoration: BoxDecoration(
         color: _isEnabled ? AppPalette.primarySwatch : AppPalette.disabledBtn1,
         borderRadius: BorderRadius.circular(
-          AppSpacing.s36 * 2,
+          AppSpacing.s16 * 2,
         ),
       ),
       child: _buildThumb(),

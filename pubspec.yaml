@@ -54,6 +54,10 @@ flutter:
     - assets/icons/location.svg
     - assets/icons/dollar.svg
     - assets/icons/info.svg
+    - assets/icons/password.svg
+    - assets/icons/sun.svg
+    - assets/icons/global.svg
+    - assets/icons/logout.svg
 
   fonts:
     - family: Roboto

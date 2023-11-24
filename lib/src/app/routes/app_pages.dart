@@ -1,8 +1,6 @@
-import 'package:boxpend_flutter_android_app/src/presentation/auth/binds/profile_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/binds/signin_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/binds/signup_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/email_verification_page.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/profile_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signin_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/auth/pages/signup_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/home/binds/home_bind.dart';
@@ -97,11 +95,6 @@ class AppPages {
     GetPage(
       name: _Paths.emailVerification,
       page: () => const EmailVerificationPage(),
-    ),
-    GetPage(
-      name: _Paths.profile,
-      page: () => const ProfilePage(),
-      binding: ProfileBind(),
     ),
 
     ///
