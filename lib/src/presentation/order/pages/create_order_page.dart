@@ -1,3 +1,4 @@
+import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/app_bar_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/controllers/create_order_controller.dart';
@@ -16,7 +17,7 @@ class CreateOrderPage extends GetView<CreateOrderController> {
       appBar: const AppBarWidget(
         withBackButton: true,
         withLogo: false,
-        title: 'New Order',
+        title: StringsManager.newOrder,
       ),
       body: Column(
         children: [

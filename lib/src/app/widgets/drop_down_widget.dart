@@ -30,7 +30,7 @@ class DropdownWidget extends StatelessWidget {
       icon: AssetsManager.dropdownIcon,
       size: ButtonSize.large,
       onPressed: () => Get.bottomSheet(
-        ColoredBox(
+        Material(
           color: AppPalette.bg4,
           child: ListView(
             shrinkWrap: true,
@@ -53,31 +53,4 @@ class DropdownWidget extends StatelessWidget {
       ),
     );
   }
-
-  // Widget _buildDropdown() {
-  //   return DropdownButtonHideUnderline(
-  //     child: DropdownButton<String>(
-  //       iconEnabledColor: isDisabled ? AppPalette.disabledBtn2 : setTextColor(type),
-  //       hint: Padding(
-  //         padding: EdgeInsets.symmetric(
-  //           vertical: AppSpacing.s8,
-  //           horizontal: AppSpacing.s8,
-  //         ),
-  //         child: TextBlocKWidget.t16(
-  //           value,
-  //           color: isDisabled ? AppPalette.disabledBtn2 : setTextColor(type),
-  //         ),
-  //       ),
-  //       onChanged: isDisabled ? null : onChanged,
-  //       items: items
-  //           .map(
-  //             (item) => DropdownMenuItem(
-  //               value: item,
-  //               child: TextBlocKWidget.t16(item),
-  //             ),
-  //           )
-  //           .toList(),
-  //     ),
-  //   );
-  // }
 }

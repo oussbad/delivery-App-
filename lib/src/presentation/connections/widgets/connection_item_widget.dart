@@ -21,7 +21,10 @@ class ConnectionItemWidget extends StatelessWidget {
     return ListTile(
       onTap: () {},
       tileColor: AppPalette.white.withOpacity(.02),
-      contentPadding: EdgeInsets.all(AppSpacing.s8),
+      contentPadding: EdgeInsets.symmetric(
+        vertical: AppSpacing.s8,
+        horizontal: AppSpacing.s16,
+      ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(AppSpacing.r4),
       ),
@@ -32,7 +35,6 @@ class ConnectionItemWidget extends StatelessWidget {
       title: TextBlocKWidget.t16(
         title,
         fontWeight: AppTypography.w400,
-        color: AppPalette.white.withOpacity(.7),
       ),
       subtitle: Padding(
         padding: EdgeInsets.only(bottom: AppSpacing.s8),

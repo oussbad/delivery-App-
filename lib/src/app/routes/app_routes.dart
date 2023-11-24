@@ -30,6 +30,7 @@ abstract class _Paths {
   static const signUp = '/signup';
   static const signIn = '/signin';
   static const emailVerification = '/emailVerification';
+  static const profile = '/profile';
 
   ///
   /// Home Pages
@@ -81,6 +82,7 @@ abstract class AppRoutes {
   static const signUp = _Paths.signUp;
   static const signIn = _Paths.signIn;
   static const emailVerification = _Paths.emailVerification;
+  static const profile = _Paths.profile;
 
   ///
   /// Home Pages

@@ -1,5 +1,6 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
+import 'package:boxpend_flutter_android_app/src/app/routes/app_pages.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/app_bar_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/avatar_widget.dart';
@@ -56,7 +57,8 @@ class HomePage extends GetView<HomeController> {
             icon: AssetsManager.bellIcon,
           ),
           GapWidget.s8(axe: GapEnum.horizontal),
-          const AvatarWidget(
+          AvatarWidget(
+            onPressed: () => Get.toNamed(AppRoutes.profile),
             asset: 'jib',
             size: AvatarSize.small,
           ),

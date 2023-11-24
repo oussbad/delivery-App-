@@ -30,6 +30,7 @@ class StringsManager {
   static const String needAnAccount = 'Need an account? Signup';
   static const String continueTo = 'Continue';
   static const String emailSent = 'We have sent you an email to login please open your email and click the link in it';
+  static const String profile = 'My Profile';
 
   ///
   /// Home Pages
@@ -77,6 +78,7 @@ class StringsManager {
   static const String total = 'Total';
   static const String open = 'Open';
   static const String closed = 'Closed';
+  static const String newOrder = 'New Order';
 
   ///
   /// Connections Pages

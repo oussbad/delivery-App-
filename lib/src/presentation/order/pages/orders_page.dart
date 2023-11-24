@@ -1,13 +1,16 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
+import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
+import 'package:boxpend_flutter_android_app/src/app/routes/app_pages.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/drop_down_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/button_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/header_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/tabs_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/state_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/icon_button_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/widgets/order_item_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/controllers/orders_controller.dart';
 import 'package:flutter/material.dart';
@@ -26,19 +29,33 @@ class OrdersPage extends GetView<OrdersController> {
             title: StringsManager.orders,
             actions: [
               IconButtonWidget(
-                onPressed: () {},
+                onPressed: () => Get.bottomSheet(
+                  Material(
+                    color: AppPalette.bg4,
+                    child: ListView(
+                      shrinkWrap: true,
+                      children: ['Item 1', 'Item 2', 'Item 3']
+                          .map(
+                            (item) => ListTile(
+                              onTap: () => Get.back(),
+                              title: TextBlocKWidget.t16(item),
+                            ),
+                          )
+                          .toList(),
+                    ),
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(AppSpacing.r4),
+                  ),
+                ),
                 icon: AssetsManager.sortIcon,
                 isPrimary: false,
               ),
               GapWidget.s16(axe: GapEnum.horizontal),
-              DropdownWidget(
-                onChanged: (value) {},
-                value: 'Today',
-                items: const [
-                  'Item 1',
-                  'Item 2',
-                  'Item 3',
-                ],
+              ButtonWidget(
+                onPressed: () => Get.toNamed(AppRoutes.createOrder),
+                size: ButtonSize.large,
+                label: StringsManager.newOrder,
               ),
             ],
           ),
