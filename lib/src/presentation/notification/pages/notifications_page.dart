@@ -2,13 +2,17 @@ import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.da
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/app_bar_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/avatar_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/header_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/notification/controllers/notifications_controller.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/notification/widgets/notification_alert_widget.dart';
+import 'package:boxpend_flutter_android_app/src/presentation/notification/widgets/notification_connection_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/notification/widgets/notification_order_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+enum NotificationType { order, connection }
 
 class NotificationsPage extends GetView<NotificationsController> {
   const NotificationsPage({super.key});
@@ -40,14 +44,24 @@ class NotificationsPage extends GetView<NotificationsController> {
                 itemCount: 20,
                 padding: EdgeInsets.all(AppSpacing.s16),
                 separatorBuilder: (BuildContext context, int index) => GapWidget.s8(),
-                itemBuilder: (context, index) => Material(
-                  color: AppPalette.bg4,
-                  child: NotificationOrderWidget(
-                    status: OrderStatus.delivered,
-                    orderId: '0003',
-                    date: DateTime.now(),
-                  ),
-                ),
+                itemBuilder: (context, index) => index.isOdd
+                    ? Material(
+                        color: AppPalette.bg4,
+                        child: NotificationOrderWidget(
+                          status: [1, 2].contains(index) ? OrderStatus.delivered : OrderStatus.pending,
+                          orderId: '0003',
+                          date: DateTime.now(),
+                        ),
+                      )
+                    : Material(
+                        color: AppPalette.bg4,
+                        child: NotificationConnectionWidget(
+                          status: [0, 2].contains(index) ? ConnectionStatus.accepted : ConnectionStatus.rejected,
+                          avatar: 'Jab',
+                          username: 'Monir El Wafi',
+                          date: DateTime.now(),
+                        ),
+                      ),
               ),
             ),
             GapWidget.s16(),

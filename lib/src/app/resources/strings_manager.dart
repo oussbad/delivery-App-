@@ -93,6 +93,8 @@ class StringsManager {
   static const String newConnection = 'New Connection';
   static const String accepted = 'Accepted';
   static const String pending = 'Pending';
+  static const String invitationAccepted = 'accepted your invitation';
+  static const String invitationRejected = 'rejected your invitation';
 
   ///
   /// Form Validation

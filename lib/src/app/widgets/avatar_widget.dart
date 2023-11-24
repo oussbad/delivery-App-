@@ -6,25 +6,27 @@ import 'package:get/get.dart';
 
 enum AvatarSize { small, medium, large }
 
+enum ConnectionStatus { accepted, rejected }
+
 class _AvaarBasicWidget extends StatelessWidget {
   const _AvaarBasicWidget({
     super.key,
     required this.asset,
     required this.size,
-    this.isSuccess,
+    this.status,
     this.onPressed,
   });
 
   final String asset;
   final AvatarSize size;
-  final bool? isSuccess;
+  final ConnectionStatus? status;
   final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPressed,
-      child: GetUtils.isNull(isSuccess) ? _buildAvatar() : _buildAvatarWithStatus(),
+      child: GetUtils.isNull(status) ? _buildAvatar() : _buildAvatarWithStatus(),
     );
   }
 
@@ -49,12 +51,12 @@ class _AvaarBasicWidget extends StatelessWidget {
           bottom: 0,
           right: 0,
           child: CircleAvatar(
-            backgroundColor: isSuccess! ? AppPalette.success : AppPalette.danger,
-            radius: 10,
+            backgroundColor: status == ConnectionStatus.accepted ? AppPalette.success : AppPalette.danger,
+            radius: 6,
             child: Icon(
-              isSuccess! ? Icons.check_rounded : Icons.close_rounded,
+              status == ConnectionStatus.accepted ? Icons.check_rounded : Icons.close_rounded,
               color: AppPalette.white,
-              size: AppSpacing.s8,
+              size: 4,
             ),
           ),
         ),
@@ -109,7 +111,7 @@ class AvatarWidget extends _AvaarBasicWidget {
   const AvatarWidget.widthStatus({
     super.key,
     required super.asset,
-    required super.isSuccess,
+    super.status,
     super.onPressed,
   }) : super(
           size: AvatarSize.small,

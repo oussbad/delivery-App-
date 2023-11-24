@@ -10,7 +10,12 @@ import 'package:flutter_svg/svg.dart';
 enum OrderStatus { delivered, pending, returned }
 
 class NotificationOrderWidget extends StatelessWidget {
-  const NotificationOrderWidget({super.key, required this.status, required this.orderId, required this.date});
+  const NotificationOrderWidget({
+    super.key,
+    required this.status,
+    required this.orderId,
+    required this.date,
+  });
 
   final OrderStatus status;
   final String orderId;
