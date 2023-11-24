@@ -88,7 +88,8 @@ class OrdersPage extends GetView<OrdersController> {
           state: StateType.warning,
         ),
         title: 'Mohamed El Alaoui',
-        subtitle: '12May - 400 MAD',
+        date: DateTime.now(),
+        price: 400,
       ),
     );
   }

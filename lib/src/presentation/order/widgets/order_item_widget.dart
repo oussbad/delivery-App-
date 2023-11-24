@@ -1,5 +1,6 @@
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/bullet_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/state_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
@@ -10,13 +11,15 @@ class OrderItemWidget extends StatelessWidget {
     super.key,
     required this.state,
     required this.title,
-    required this.subtitle,
+    required this.date,
+    required this.price,
     this.onPressed,
   });
 
   final StateWidget state;
   final String title;
-  final String subtitle;
+  final DateTime date;
+  final double price;
   final VoidCallback? onPressed;
 
   @override
@@ -45,10 +48,25 @@ class OrderItemWidget extends StatelessWidget {
                   color: AppPalette.white,
                 ),
                 GapWidget.s8(),
-                TextBlocKWidget.t14(
-                  subtitle,
-                  color: AppPalette.bg2,
-                ),
+                Row(
+                  children: [
+                    TextBlocKWidget.t14(
+                      '12 May',
+                      color: AppPalette.bg2,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: AppSpacing.s8),
+                      child: BulletWidget(
+                        color: AppPalette.bg2,
+                        radius: 2,
+                      ),
+                    ),
+                    TextBlocKWidget.t14(
+                      '${price.toString()} MAD',
+                      color: AppPalette.bg2,
+                    ),
+                  ],
+                )
               ],
             ),
           ],
