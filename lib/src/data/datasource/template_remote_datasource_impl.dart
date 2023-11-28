@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:boxpend_flutter_android_app/src/app/core/error/exceptions.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
-import 'package:boxpend_flutter_android_app/src/data/datasource/template/template_remote_datasource.dart';
+import 'package:boxpend_flutter_android_app/src/data/interfaces/template_remote_datasource.dart';
 import 'package:boxpend_flutter_android_app/src/app/core/services/api_service.dart';
 import 'package:boxpend_flutter_android_app/src/data/models/template_model.dart';
 
