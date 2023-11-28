@@ -1,3 +1,4 @@
+import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
@@ -6,6 +7,7 @@ import 'package:boxpend_flutter_android_app/src/app/themes/app_typography.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/button_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/header_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/slidable_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/tabs_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_field_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/connections/controllers/connections_controller.dart';
@@ -58,12 +60,25 @@ class ConnectionsPage extends GetView<ConnectionsController> {
       itemCount: 20,
       padding: EdgeInsets.all(AppSpacing.s16),
       separatorBuilder: (context, index) => GapWidget.s16(),
-      itemBuilder: (context, index) => Material(
-        color: AppPalette.bg4,
-        child: const ConnectionItemWidget(
-          title: 'Monir El Wafi',
-          subtitle: 'monir.elwafi@gmail.com',
-          avatar: 'Jab',
+      itemBuilder: (context, index) => SlidableWidget(
+        children: [
+          SlidableModel(
+            icon: AssetsManager.trashIcon,
+            color: AppPalette.danger,
+            onPressed: () {},
+          ),
+          SlidableModel(
+            icon: AssetsManager.revokeIcon,
+            onPressed: () {},
+          ),
+        ],
+        child: Material(
+          color: AppPalette.bg4,
+          child: const ConnectionItemWidget(
+            title: 'Monir El Wafi',
+            subtitle: 'monir.elwafi@gmail.com',
+            avatar: 'Jab',
+          ),
         ),
       ),
     );

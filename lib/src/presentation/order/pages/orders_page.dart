@@ -7,6 +7,7 @@ import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/button_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/header_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/slidable_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/tabs_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/state_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/icon_button_widget.dart';
@@ -82,14 +83,30 @@ class OrdersPage extends GetView<OrdersController> {
       itemCount: 20,
       padding: EdgeInsets.all(AppSpacing.s16),
       separatorBuilder: (context, index) => GapWidget.s16(),
-      itemBuilder: (context, index) => OrderItemWidget(
-        onPressed: () => Get.toNamed(AppRoutes.order),
-        state: const StateWidget(
-          state: StateType.warning,
+      itemBuilder: (context, index) => SlidableWidget(
+        children: [
+          SlidableModel(
+            icon: AssetsManager.whatsappIcon,
+            onPressed: () {},
+          ),
+          SlidableModel(
+            icon: AssetsManager.mapIcon,
+            onPressed: () {},
+          ),
+          SlidableModel(
+            icon: AssetsManager.callIcon,
+            onPressed: () {},
+          ),
+        ],
+        child: OrderItemWidget(
+          onPressed: () => Get.toNamed(AppRoutes.order),
+          state: const StateWidget(
+            state: StateType.warning,
+          ),
+          title: 'Mohamed El Alaoui',
+          date: DateTime.now(),
+          price: 400,
         ),
-        title: 'Mohamed El Alaoui',
-        date: DateTime.now(),
-        price: 400,
       ),
     );
   }

@@ -42,4 +42,6 @@ class AssetsManager {
   static const String sunIcon = 'assets/icons/sun.svg';
   static const String globalIcon = 'assets/icons/global.svg';
   static const String logoutIcon = 'assets/icons/logout.svg';
+  static const String trashIcon = 'assets/icons/trash.svg';
+  static const String revokeIcon = 'assets/icons/revoke.svg';
 }
