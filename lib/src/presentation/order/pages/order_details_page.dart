@@ -50,13 +50,13 @@ class OrderDetailsPage extends GetView<OrderDetailsController> {
                   OrderDetailsItemWidget(
                     icon: AssetsManager.callIcon,
                     title: '+212 6 22854163',
-                    onCopied: () {},
+                    onCopied: () => controller.copyData('+212 6 22854163'),
                   ),
                   GapWidget.s16(),
                   OrderDetailsItemWidget(
                     icon: AssetsManager.locationIcon,
                     title: 'Ouezzane, Ain Dorij 16222',
-                    onCopied: () {},
+                    onCopied: () => controller.copyData('Ouezzane, Ain Dorij 16222'),
                   ),
                   GapWidget.s16(),
                   const OrderDetailsItemWidget(
