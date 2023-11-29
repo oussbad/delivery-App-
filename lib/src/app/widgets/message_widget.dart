@@ -44,13 +44,14 @@ class _MessageBasicWidget extends StatelessWidget {
   ) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
       children: [
         Icon(
           messageIcon,
           color: messageIconColor,
           size: AppSpacing.s40,
         ),
-        GapWidget.s8(),
+        GapWidget.s16(),
         TextBlocKWidget.t14(
           messageText,
           textAlign: TextAlign.center,
@@ -77,19 +78,6 @@ class _MessageBasicWidget extends StatelessWidget {
 }
 
 class MessageWidget extends _MessageBasicWidget {
-  // const MessageWidget({
-  //   super.key,
-  //   required super.message,
-  //   required super.icon,
-  //   required super.color,
-  //   this.withBackButton = false,
-  // }) : super(
-  //         message: message,
-  //         color: color,
-  //         icon: icon,
-  //         withBackButton: withBackButton,
-  //       );
-
   MessageWidget.success({
     super.key,
     super.message = StringsManager.success,

@@ -1,6 +1,7 @@
 import 'package:boxpend_flutter_android_app/src/app/helpers/app_dialogs.dart';
 import 'package:boxpend_flutter_android_app/src/app/helpers/validators.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
+import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
@@ -53,13 +54,12 @@ class SignInPage extends GetView<SignInController> {
           validator: Validator().required().password().run,
         ),
         GapWidget.s24(),
-        // ButtonWidget(
-        //   // onPressed: controller.signIn,
-        //   onPressed: () => Get.
-        //   label: StringsManager.continueTo,
-        //   isExpanded: true,
-        //   size: ButtonSize.large,
-        // ),
+        ButtonWidget(
+          onPressed: () => showAppDialog(status: MessageStatus.failure),
+          label: StringsManager.continueTo,
+          isExpanded: true,
+          size: ButtonSize.large,
+        ),
         GapWidget.s8(),
         _buildAfterSignInButton(),
       ],

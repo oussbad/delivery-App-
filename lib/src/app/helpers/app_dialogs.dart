@@ -5,10 +5,10 @@ import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.da
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-enum SnackBarStatus { success, failure }
+enum MessageStatus { success, failure }
 
-void showSnackbar({
-  required SnackBarStatus status,
+void showAppSnackbar({
+  required MessageStatus status,
   required String message,
 }) {
   Get.rawSnackbar(
@@ -28,30 +28,42 @@ void showSnackbar({
   );
 }
 
-// void showDialog({
-//   required SnackBarStatus status,
-//   required String message,
-// }) {
-//   Get.dialog(
-//     Dialog(
-//       shape: RoundedRectangleBorder(
-//         borderRadius: BorderRadius.circular(AppSpacing.r4),
-//       ),
-//       child: MessageWidget,
-//     ),
-//   );
-// }
+void showAppDialog({
+  required MessageStatus status,
+  String? message,
+}) {
+  Get.dialog(
+    Dialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(AppSpacing.r4),
+      ),
+      child: Container(
+        height: 200,
+        color: AppPalette.bg4,
+        child: Center(
+          child: status == MessageStatus.success
+              ? MessageWidget.success(
+                  //message: message!,
+                  )
+              : MessageWidget.error(
+                  //message: message!,
+                  ),
+        ),
+      ),
+    ),
+  );
+}
 
-Color _setColor(SnackBarStatus status) {
-  if (status == SnackBarStatus.success) {
+Color _setColor(MessageStatus status) {
+  if (status == MessageStatus.success) {
     return AppPalette.success;
   } else {
     return AppPalette.danger;
   }
 }
 
-IconData _setIcon(SnackBarStatus status) {
-  if (status == SnackBarStatus.success) {
+IconData _setIcon(MessageStatus status) {
+  if (status == MessageStatus.success) {
     return Icons.check_rounded;
   } else {
     return Icons.close_rounded;
