@@ -1,7 +1,9 @@
 import 'package:boxpend_flutter_android_app/src/app/core/services/local_storage_service.dart';
 import 'package:boxpend_flutter_android_app/src/app/core/services/network_service.dart';
+import 'package:boxpend_flutter_android_app/src/app/core/services/url_launcher_service.dart';
 import 'package:boxpend_flutter_android_app/src/app/services/local_storage_service_impl.dart';
 import 'package:boxpend_flutter_android_app/src/app/services/network_service_impl.dart';
+import 'package:boxpend_flutter_android_app/src/app/services/url_launcher_service_impl.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
@@ -30,6 +32,7 @@ class DenpendencyInjection {
     ///
     /// Register App Services
     ///
+    await Get.putAsync<URLLauncherService>(() async => URLLauncherServiceImpl());
     await Get.putAsync<NetworkService>(() async => NetworkServiceImpl());
     await Get.putAsync<LocalStorageService>(() async => LocalStorageServiceImpl());
     Get.put<Dio>(Dio());

@@ -33,9 +33,9 @@ class OrderDetailsPage extends GetView<OrderDetailsController> {
         child: Column(
           children: [
             OrderDetailsActionsWidget(
-              whatsappOnPressed: () {},
-              mapOnPressed: () {},
-              callOnPressed: () {},
+              whatsappOnPressed: () => controller.launchWhatsapp('phone'),
+              mapOnPressed: () => controller.launchMap('mapsLink'),
+              callOnPressed: () => controller.launchCall('phone'),
             ),
             GapWidget.s16(),
             Expanded(
