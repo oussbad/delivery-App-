@@ -20,7 +20,7 @@ class TextFieldWidget extends StatelessWidget {
   final String? initialValue;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
-  final bool? isHidden;
+  final bool isHidden;
   final bool isTextarea;
 
   @override
@@ -29,14 +29,14 @@ class TextFieldWidget extends StatelessWidget {
       initialValue: initialValue,
       controller: controller,
       validator: validator,
-      obscureText: isHidden!,
+      obscureText: isHidden,
       keyboardType: type,
       style: TextStyle(
         color: AppPalette.white,
         fontSize: AppTypography.t16,
       ),
       decoration: _buildDecoration(),
-      maxLines: isTextarea ? 3 : null,
+      maxLines: isTextarea ? 3 : 1,
     );
   }
 

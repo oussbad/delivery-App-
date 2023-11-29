@@ -77,6 +77,19 @@ class _MessageBasicWidget extends StatelessWidget {
 }
 
 class MessageWidget extends _MessageBasicWidget {
+  // const MessageWidget({
+  //   super.key,
+  //   required super.message,
+  //   required super.icon,
+  //   required super.color,
+  //   this.withBackButton = false,
+  // }) : super(
+  //         message: message,
+  //         color: color,
+  //         icon: icon,
+  //         withBackButton: withBackButton,
+  //       );
+
   MessageWidget.success({
     super.key,
     super.message = StringsManager.success,

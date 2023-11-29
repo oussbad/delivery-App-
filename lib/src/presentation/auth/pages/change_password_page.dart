@@ -1,6 +1,5 @@
 import 'package:boxpend_flutter_android_app/src/app/helpers/validators.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
-import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/app_bar_widget.dart';
@@ -36,12 +35,7 @@ class ChangePasswordPage extends GetView<ChangePasswordController> {
             TextFieldWidget(
               controller: controller.passwordController,
               placeholder: StringsManager.password,
-              validator: Validator()
-                  .required()
-                  .password(
-                    ConstantsManager.maxPassword,
-                  )
-                  .run,
+              validator: Validator().required().password().run,
             ),
             GapWidget.s16(),
             TextFieldWidget(

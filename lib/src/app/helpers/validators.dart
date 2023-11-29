@@ -1,3 +1,4 @@
+import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:get/get.dart';
 
@@ -36,8 +37,13 @@ class Validator {
         (value) => !GetUtils.isEmail(value!) ? StringsManager.emailErrorMessage : null,
       );
 
-  Validator password(int max) => _addValidators(
-        (value) => GetUtils.isLengthLessThan(value, max) ? StringsManager.passwordErrorMessage : null,
+  Validator password() => _addValidators(
+        (value) => GetUtils.isLengthLessThan(
+          value,
+          ConstantsManager.maxPassword,
+        )
+            ? StringsManager.passwordErrorMessage
+            : null,
       );
 
   Validator confirmPassword(String password, String confirmPassword) => _addValidators(

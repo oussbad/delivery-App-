@@ -1,6 +1,5 @@
 import 'package:boxpend_flutter_android_app/src/app/helpers/validators.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
-import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
@@ -60,12 +59,7 @@ class SignUpPage extends GetView<SignUpController> {
         TextFieldWidget(
           controller: controller.emailController,
           placeholder: StringsManager.password,
-          validator: Validator()
-              .required()
-              .password(
-                ConstantsManager.maxPassword,
-              )
-              .run,
+          validator: Validator().required().password().run,
         ),
         GapWidget.s16(),
         _buildCheckbox(),

@@ -30,7 +30,7 @@ class StringsManager {
   static const String haveAnAccount = 'Have an account? Login';
   static const String welcomeBack = 'Welcome Back';
   static const String needAnAccount = 'Need an account? Signup';
-  static const String continueTo = 'Continue';
+  static const String continueTo = 'Sign In';
   static const String emailSent = 'We have sent you an email to login please open your email and click the link in it';
   static const String changePassword = 'Change password';
   static const String theme = 'Theme';

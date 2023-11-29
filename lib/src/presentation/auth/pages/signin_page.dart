@@ -1,6 +1,6 @@
+import 'package:boxpend_flutter_android_app/src/app/helpers/app_dialogs.dart';
 import 'package:boxpend_flutter_android_app/src/app/helpers/validators.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
-import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
@@ -47,22 +47,19 @@ class SignInPage extends GetView<SignInController> {
         ),
         GapWidget.s16(),
         TextFieldWidget(
-          controller: controller.emailController,
+          isHidden: true,
+          controller: controller.passwordController,
           placeholder: StringsManager.password,
-          validator: Validator()
-              .required()
-              .password(
-                ConstantsManager.maxPassword,
-              )
-              .run,
+          validator: Validator().required().password().run,
         ),
         GapWidget.s24(),
-        ButtonWidget(
-          onPressed: controller.signin,
-          label: StringsManager.continueTo,
-          isExpanded: true,
-          size: ButtonSize.large,
-        ),
+        // ButtonWidget(
+        //   // onPressed: controller.signIn,
+        //   onPressed: () => Get.
+        //   label: StringsManager.continueTo,
+        //   isExpanded: true,
+        //   size: ButtonSize.large,
+        // ),
         GapWidget.s8(),
         _buildAfterSignInButton(),
       ],

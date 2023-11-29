@@ -1,5 +1,4 @@
 import 'package:boxpend_flutter_android_app/src/app/routes/app_pages.dart';
-import 'package:boxpend_flutter_android_app/src/app/utils/app_snackbar.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/loader_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +8,18 @@ class SignInController extends GetxController {
 
   final signinFormKey = GlobalKey<FormState>();
   final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   void onClose() {
     emailController.dispose();
+    passwordController.dispose();
     super.onClose();
   }
 
-  void signin() => Get.offAllNamed(AppRoutes.home);
+//  void signin() => Get.offAllNamed(AppRoutes.home);
 
-  void signinn() async {
+  void signIn() async {
     if (signinFormKey.currentState!.validate()) {
       Get.showOverlay(
         opacity: .8,
@@ -26,24 +27,7 @@ class SignInController extends GetxController {
         asyncFunction: () {
           return Future.delayed(
             const Duration(milliseconds: 5000),
-            () {
-              if (1 != 1) {
-                Get.back();
-                AppSnackbar.show(
-                  title: 'title',
-                  message: 'message',
-                  icon: Icons.info,
-                );
-                Get.offAllNamed(AppRoutes.home);
-              } else {
-                AppSnackbar.show(
-                  title: 'title',
-                  message: 'message',
-                  status: SnackBarStatus.failure,
-                  icon: Icons.info,
-                );
-              }
-            },
+            () {},
           );
         },
       );
