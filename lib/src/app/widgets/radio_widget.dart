@@ -13,15 +13,15 @@ class RadioWidget<T> extends StatelessWidget {
   });
 
   final String label;
-  final String value;
-  final String groupValue;
-  final void Function(String?) onChanged;
+  final T value;
+  final T groupValue;
+  final void Function(T?) onChanged;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Radio<String>(
+        Radio<T>(
           fillColor: MaterialStateProperty.all<Color>(
             AppPalette.btnColor1,
           ),

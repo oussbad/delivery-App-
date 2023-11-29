@@ -29,10 +29,7 @@ void showAppSnackbar({
   );
 }
 
-void showAppDialog({
-  required MessageStatus status,
-  String? message,
-}) {
+void showAppDialog(MessageWidget message) {
   Get.dialog(
     Dialog(
       shape: RoundedRectangleBorder(
@@ -42,13 +39,7 @@ void showAppDialog({
         height: 200,
         color: AppPalette.bg4,
         child: Center(
-          child: status == MessageStatus.success
-              ? MessageWidget.success(
-                  //message: message!,
-                  )
-              : MessageWidget.error(
-                  // message: message,
-                  ),
+          child: message,
         ),
       ),
     ),

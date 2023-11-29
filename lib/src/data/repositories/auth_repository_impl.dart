@@ -1,9 +1,8 @@
-import 'package:boxpend_flutter_android_app/src/app/core/error/exceptions.dart';
-import 'package:boxpend_flutter_android_app/src/app/core/services/network_service.dart';
 import 'package:boxpend_flutter_android_app/src/app/utils/base.dart';
 import 'package:boxpend_flutter_android_app/src/data/interfaces/auth_datasource.dart';
 import 'package:boxpend_flutter_android_app/src/domain/entities/session_entity.dart';
 import 'package:boxpend_flutter_android_app/src/app/core/error/failures.dart';
+import 'package:boxpend_flutter_android_app/src/domain/entities/user_entity.dart';
 import 'package:boxpend_flutter_android_app/src/domain/repositories/auth_repository.dart';
 import 'package:dartz/dartz.dart';
 
@@ -15,9 +14,10 @@ class AuthRepositoryImpl extends BaseRespository implements AuthRepository {
   });
 
   @override
-  Future<Either<Failure, Session>> signUp(String email) {
-    // TODO: implement signUp
-    throw UnimplementedError();
+  Future<Either<Failure, Session>> signUp(User user) async {
+    return await performAuth(
+      () async => await datasource.signUp(user),
+    );
   }
 
   @override

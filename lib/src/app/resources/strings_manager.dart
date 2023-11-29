@@ -126,10 +126,12 @@ class StringsManager {
   ///
   /// Messages
   ///
-  static const String signingsuccess = 'Success! Your operation was completed';
-  static const String authError = 'Invalid information!';
+  static const String signingsuccess = 'Sign in successfully!';
+  static const String signupgsuccess = 'Account created successfully!';
+  static const String authError = 'Invalid auth information!';
   static const String success = 'Success! Your operation was completed';
-  static const String error = 'An error occurred';
+  static const String error = 'Unexpected error occurred';
+  static const String acceptTerms = 'Please accept the terms and conditions to continue';
   static const String network = 'No Internet Connection';
   static const String empty = 'No data available at the moment';
   static const String notFound = 'Page not found';

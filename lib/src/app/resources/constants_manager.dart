@@ -31,4 +31,5 @@ class ConstantsManager {
   ///
   static const String getTemplateEndpoint = '/template';
   static const String signInEndpoint = '/auth/v1/token?grant_type=password';
+  static const String signUpEndpoint = '/auth/v1/signup';
 }
