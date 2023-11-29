@@ -18,8 +18,9 @@ class ConstantsManager {
   ///
   /// API URLs
   ///
-  static const String apiKey = '';
-  static const String baseUrl = 'https://1a02e1e1-a6a1-426d-83ca-156489879dbc.mock.pstmn.io';
+  static const String baseUrl = 'https://pamsplhnsjhmxmobscwt.supabase.co';
+  static const String apiKey =
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBhbXNwbGhuc2pobXhtb2JzY3d0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEwOTIwMDgsImV4cCI6MjAxNjY2ODAwOH0.N0OEatZhIEoou_EZ7AiCKAdsKLHumCZwR-gF9D_4g8M';
   static const Duration connectTimeout = Duration(microseconds: 15000);
   static const Duration receiveTimeout = Duration(microseconds: 15000);
   static const Duration sendTimeout = Duration(microseconds: 15000);
