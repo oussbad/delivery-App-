@@ -21,6 +21,8 @@ class ConstantsManager {
   static const String baseUrl = 'https://pamsplhnsjhmxmobscwt.supabase.co';
   static const String apiKey =
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBhbXNwbGhuc2pobXhtb2JzY3d0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEwOTIwMDgsImV4cCI6MjAxNjY2ODAwOH0.N0OEatZhIEoou_EZ7AiCKAdsKLHumCZwR-gF9D_4g8M';
+  static const String authZKey =
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBhbXNwbGhuc2pobXhtb2JzY3d0Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwMTA5MjAwOCwiZXhwIjoyMDE2NjY4MDA4fQ.tPS9qpZ9WxsUjLCnES3fKTp8nrEFLoeSD-UdYxu0pxE';
   static const Duration connectTimeout = Duration(microseconds: 15000);
   static const Duration receiveTimeout = Duration(microseconds: 15000);
   static const Duration sendTimeout = Duration(microseconds: 15000);
