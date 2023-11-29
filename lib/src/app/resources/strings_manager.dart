@@ -126,6 +126,8 @@ class StringsManager {
   ///
   /// Messages
   ///
+  static const String signingsuccess = 'Success! Your operation was completed';
+  static const String authError = 'Invalid information!';
   static const String success = 'Success! Your operation was completed';
   static const String error = 'An error occurred';
   static const String network = 'No Internet Connection';

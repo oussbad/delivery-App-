@@ -119,6 +119,8 @@ class MessageWidget extends _MessageBasicWidget {
 String _setErrorMessage(Failure failure) {
   if (failure is NetworkFailure) {
     return StringsManager.network;
+  } else if (failure is AuthFailure) {
+    return StringsManager.authError;
   } else {
     return StringsManager.error;
   }

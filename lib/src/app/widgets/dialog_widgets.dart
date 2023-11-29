@@ -1,5 +1,6 @@
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/loader_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/message_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +47,7 @@ void showAppDialog({
                   //message: message!,
                   )
               : MessageWidget.error(
-                  //message: message!,
+                  // message: message,
                   ),
         ),
       ),
@@ -68,4 +69,17 @@ IconData _setIcon(MessageStatus status) {
   } else {
     return Icons.close_rounded;
   }
+}
+
+showAppOverlay(future) {
+  Get.showOverlay(
+    opacity: .8,
+    loadingWidget: const LoaderWidget(),
+    asyncFunction: () {
+      return Future.delayed(
+        const Duration(milliseconds: 500),
+        future,
+      );
+    },
+  );
 }

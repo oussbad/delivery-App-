@@ -1,4 +1,4 @@
-import 'package:boxpend_flutter_android_app/src/app/helpers/validators.dart';
+import 'package:boxpend_flutter_android_app/src/app/utils/validators.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';

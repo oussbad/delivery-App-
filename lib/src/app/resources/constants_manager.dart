@@ -30,4 +30,5 @@ class ConstantsManager {
   /// API Endpoints
   ///
   static const String getTemplateEndpoint = '/template';
+  static const String signInEndpoint = '/auth/v1/token?grant_type=password';
 }
