@@ -39,7 +39,7 @@ class SignInController extends GetxController {
           Get.offAllNamed(AppRoutes.home);
           showAppSnackbar(
             status: MessageStatus.success,
-            message: StringsManager.signingsuccess,
+            message: StringsManager.signinSuccess,
           );
         },
       );

@@ -11,6 +11,7 @@ import 'package:boxpend_flutter_android_app/src/data/interfaces/auth_datasource.
 import 'package:boxpend_flutter_android_app/src/data/repositories/auth_repository_impl.dart';
 import 'package:boxpend_flutter_android_app/src/domain/repositories/auth_repository.dart';
 import 'package:boxpend_flutter_android_app/src/domain/usecases/auth/signin_usecase.dart';
+import 'package:boxpend_flutter_android_app/src/domain/usecases/auth/signout_usecase.dart';
 import 'package:boxpend_flutter_android_app/src/domain/usecases/auth/signup_usecase.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/widgets.dart';
@@ -60,5 +61,6 @@ class DenpendencyInjection {
     Get.lazyPut<AuthRepository>(() => AuthRepositoryImpl(datasource: Get.find()));
     Get.putAsync(() async => SignInUsecase(Get.find()));
     Get.putAsync(() async => SignUpUsecase(Get.find()));
+    Get.putAsync(() async => SignOutUsecase(Get.find()));
   }
 }

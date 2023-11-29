@@ -7,6 +7,7 @@ import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_typography.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/app_bar_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/avatar_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/dialog_widgets.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/drop_down_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/switch_button_widget.dart';
@@ -84,7 +85,7 @@ class ProfilePage extends GetView<ProfileController> {
                   ),
                   GapWidget.s16(),
                   ProfileItemWidget(
-                    onPressed: () {},
+                    onPressed: () => showAppOverlay(controller.signOut),
                     color: AppPalette.danger,
                     icon: AssetsManager.logoutIcon,
                     title: StringsManager.logout,

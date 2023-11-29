@@ -38,8 +38,8 @@ class DioServiceImpl extends ApiService {
 
   @override
   Future<ApiResponse> post(
-    String endpoint,
-    Map<String, dynamic> data, {
+    String endpoint, {
+    Map<String, dynamic>? data,
     Map<String, dynamic>? headers,
   }) async {
     final response = await _dio.post(
@@ -54,8 +54,8 @@ class DioServiceImpl extends ApiService {
 
   @override
   Future<ApiResponse> update(
-    String endpoint,
-    Map<String, dynamic> data, {
+    String endpoint, {
+    Map<String, dynamic>? data,
     Map<String, dynamic>? headers,
   }) async {
     final response = await _dio.put(

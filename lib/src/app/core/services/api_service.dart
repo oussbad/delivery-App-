@@ -20,14 +20,14 @@ abstract class ApiService extends GetxService {
   });
 
   Future<ApiResponse> post(
-    String endpoint,
-    Map<String, dynamic> data, {
+    String endpoint, {
+    Map<String, dynamic> data,
     Map<String, dynamic>? headers,
   });
 
   Future<ApiResponse> update(
-    String endpoint,
-    Map<String, dynamic> data, {
+    String endpoint, {
+    Map<String, dynamic> data,
     Map<String, dynamic>? headers,
   });
 

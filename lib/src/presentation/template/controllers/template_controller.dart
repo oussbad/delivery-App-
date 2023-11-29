@@ -1,5 +1,4 @@
 import 'package:boxpend_flutter_android_app/src/app/core/error/failures.dart';
-import 'package:boxpend_flutter_android_app/src/app/core/usecases/usecase.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/domain/entities/template_entity.dart';
 import 'package:boxpend_flutter_android_app/src/domain/usecases/template/get_template_usecase.dart';
@@ -24,7 +23,7 @@ class TemplateController extends GetxController {
 
   void loadTemplate() async {
     isLoading(true);
-    final result = await _getTemplateUsecase.call(NoParams());
+    final result = await _getTemplateUsecase.call();
     result.fold(
       (error) {
         isLoading(false);

@@ -45,7 +45,7 @@ class SignUpController extends GetxController {
             goToSignInPage();
             showAppSnackbar(
               status: MessageStatus.success,
-              message: StringsManager.signupgsuccess,
+              message: StringsManager.signupSuccess,
             );
           },
         );

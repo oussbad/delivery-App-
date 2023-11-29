@@ -16,7 +16,7 @@ class AuthDatasourceImpl implements AuthDatasource {
       () async {
         final result = await api.post(
           ConstantsManager.signInEndpoint,
-          {
+          data: {
             "email": email,
             "password": password,
           },
@@ -33,17 +33,27 @@ class AuthDatasourceImpl implements AuthDatasource {
       () async {
         final result = await api.post(
           ConstantsManager.signUpEndpoint,
-          {
+          data: {
             "email": user.email,
             "password": user.password,
             "data": {
-              "name": user.name,
+              "username": user.name,
               "role": user.role,
             }
           },
         );
         final data = SessionModel.fromJson(result.body);
         return data;
+      },
+    );
+  }
+
+  @override
+  Future<void> signOut() async {
+    return await onPerformAuth(
+      () async {
+        final result = await api.post(ConstantsManager.signOutEndpoint);
+        return result;
       },
     );
   }

@@ -28,8 +28,9 @@ class AuthRepositoryImpl extends BaseRespository implements AuthRepository {
   }
 
   @override
-  Future<Either<Failure, Unit>> signOut() {
-    // TODO: implement signOut
-    throw UnimplementedError();
+  Future<Either<Failure, Unit>> signOut() async {
+    return await performAuth(
+      () async => await datasource.signOut(),
+    );
   }
 }

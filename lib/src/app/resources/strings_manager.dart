@@ -126,8 +126,9 @@ class StringsManager {
   ///
   /// Messages
   ///
-  static const String signingsuccess = 'Sign in successfully!';
-  static const String signupgsuccess = 'Account created successfully!';
+  static const String signinSuccess = 'Sign in successfully!';
+  static const String signupSuccess = 'Account created successfully!';
+  static const String signoutSuccess = 'Sign out successfully!';
   static const String authError = 'Invalid auth information!';
   static const String success = 'Success! Your operation was completed';
   static const String error = 'Unexpected error occurred';

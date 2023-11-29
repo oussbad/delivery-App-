@@ -1,7 +1,9 @@
 import 'package:boxpend_flutter_android_app/src/app/core/error/failures.dart';
 import 'package:dartz/dartz.dart';
 
-class NoParams {}
+abstract class UsecaseNoParams<Type> {
+  Future<Either<Failure, Type>> call();
+}
 
 abstract class Usecase<Type, Params> {
   Future<Either<Failure, Type>> call(Params params);
