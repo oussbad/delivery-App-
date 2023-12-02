@@ -16,10 +16,6 @@ import 'package:boxpend_flutter_android_app/src/domain/usecases/auth/signup_usec
 import 'package:dio/dio.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:boxpend_flutter_android_app/src/data/interfaces/template_remote_datasource.dart';
-import 'package:boxpend_flutter_android_app/src/data/datasource/template_remote_datasource_impl.dart';
-import 'package:boxpend_flutter_android_app/src/data/repositories/template_repository_impl.dart';
-import 'package:boxpend_flutter_android_app/src/domain/repositories/template_repository.dart';
 import 'package:get_storage/get_storage.dart';
 
 import '../core/services/api_service.dart';
@@ -46,13 +42,7 @@ class DenpendencyInjection {
     await Get.putAsync<LocalStorageService>(() async => LocalStorageServiceImpl());
     await Get.putAsync<TokenService>(() async => TokenServiceImpl());
     Get.put<Dio>(Dio());
-    await Get.putAsync<ApiService>(() async => DioServiceImpl(Get.find()));
-
-    ///
-    /// Register Template Dependencies
-    ///
-    Get.lazyPut<TemplateRemoteDatasource>(() => TemplateRemoteDatasourceImpl(api: Get.find()));
-    Get.lazyPut<TemplateRepository>(() => TemplateRepositoryImpl(datasource: Get.find(), netwrok: Get.find()));
+    await Get.putAsync<ApiService>(() async => DioServiceImpl());
 
     ///
     /// Register Auth Dependencies

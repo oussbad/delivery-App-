@@ -4,6 +4,7 @@ import 'package:boxpend_flutter_android_app/src/app/utils/base.dart';
 import 'package:boxpend_flutter_android_app/src/data/interfaces/auth_datasource.dart';
 import 'package:boxpend_flutter_android_app/src/data/models/session_model.dart';
 import 'package:boxpend_flutter_android_app/src/domain/entities/user_entity.dart';
+import 'package:dartz/dartz.dart';
 
 class AuthDatasourceImpl implements AuthDatasource {
   final ApiService api;
@@ -52,8 +53,8 @@ class AuthDatasourceImpl implements AuthDatasource {
   Future<void> signOut() async {
     return await onPerformAuth(
       () async {
-        final result = await api.post(ConstantsManager.signOutEndpoint);
-        return result;
+        await api.post(ConstantsManager.signOutEndpoint);
+        return unit;
       },
     );
   }

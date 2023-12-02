@@ -23,9 +23,9 @@ class StatisticsPage extends StatelessWidget {
                 onChanged: (value) {},
                 value: 'Today',
                 items: const [
-                  'Item 1',
-                  'Item 2',
-                  'Item 3',
+                  'Today',
+                  'Yesterday',
+                  'Last Month',
                 ],
               ),
             ],

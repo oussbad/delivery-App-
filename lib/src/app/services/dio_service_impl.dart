@@ -1,22 +1,26 @@
 import 'package:boxpend_flutter_android_app/src/app/core/services/api_service.dart';
+import 'package:boxpend_flutter_android_app/src/app/middlewares/token_interceptor.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:dio/dio.dart';
 
 class DioServiceImpl extends ApiService {
-  DioServiceImpl(this._dio) {
-    _dio.options = BaseOptions(
-      baseUrl: ConstantsManager.baseUrl,
-      //  connectTimeout: ConstantsManager.connectTimeout,
-      // receiveTimeout: ConstantsManager.receiveTimeout,
-      // sendTimeout: ConstantsManager.sendTimeout,
-      headers: {
-        // "Content-Type": "application/json",
-        "apikey": ConstantsManager.apiKey,
-      },
-      contentType: "application/json",
-      responseType: ResponseType.json,
-    );
-  }
+  DioServiceImpl()
+      : _dio = Dio(
+          BaseOptions(
+            baseUrl: ConstantsManager.baseUrl,
+            //  connectTimeout: ConstantsManager.connectTimeout,
+            // receiveTimeout: ConstantsManager.receiveTimeout,
+            // sendTimeout: ConstantsManager.sendTimeout,
+            headers: {
+              // "Content-Type": "application/json",
+              "apikey": ConstantsManager.apiKey,
+            },
+            contentType: "application/json",
+            responseType: ResponseType.json,
+          ),
+        )..interceptors.addAll([
+            TokenInterceptor(),
+          ]);
 
   final Dio _dio;
 

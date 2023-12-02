@@ -2,6 +2,7 @@ import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dar
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/routes/app_pages.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
+import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/app_bar_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/avatar_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
@@ -91,8 +92,8 @@ class HomePage extends GetView<HomeController> {
   Widget? _buildBottomNavigationBar() {
     return BottomAppBar(
       color: AppPalette.bg3,
-      child: SizedBox(
-        height: 84,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: AppSpacing.s16),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: _items
@@ -102,14 +103,35 @@ class HomePage extends GetView<HomeController> {
                   key,
                   Expanded(
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        IconButton(
-                          onPressed: () => controller.changeScreen(key),
-                          icon: _buildItemIcon(key, value.icon),
+                        Obx(
+                          () => Container(
+                            height: 3,
+                            decoration: BoxDecoration(
+                              color: (controller.currentIndex.value == key) ? AppPalette.primarySwatch : null,
+                              borderRadius: const BorderRadius.only(
+                                bottomLeft: Radius.circular(700),
+                                bottomRight: Radius.circular(700),
+                              ),
+                            ),
+                          ),
                         ),
-                        _buildLabel(key, value.label),
+                        SizedBox(
+                          height: 80,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(
+                                onPressed: () => controller.changeScreen(key),
+                                icon: _buildItemIcon(key, value.icon),
+                              ),
+                              _buildLabel(key, value.label),
+                            ],
+                          ),
+                        )
                       ],
                     ),
                   ),
@@ -126,8 +148,8 @@ class HomePage extends GetView<HomeController> {
     return Obx(
       () => SvgPicture.asset(
         icon,
-        width: 28,
-        height: 28,
+        width: 30,
+        height: 30,
         color: (controller.currentIndex.value == index) ? AppPalette.primarySwatch : AppPalette.disabledBtn1,
       ),
     );
@@ -135,7 +157,7 @@ class HomePage extends GetView<HomeController> {
 
   Widget _buildLabel(int index, String label) {
     return Obx(
-      () => TextBlocKWidget.t14(
+      () => TextBlocKWidget.t16(
         label,
         color: (controller.currentIndex.value == index) ? AppPalette.primarySwatch : AppPalette.disabledBtn1,
       ),

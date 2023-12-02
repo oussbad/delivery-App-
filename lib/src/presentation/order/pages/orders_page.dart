@@ -10,8 +10,6 @@ import 'package:boxpend_flutter_android_app/src/app/widgets/header_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/slidable_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/tabs_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/state_widget.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/icon_button_widget.dart';
-import 'package:boxpend_flutter_android_app/src/app/widgets/text_block_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/widgets/order_item_widget.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/controllers/orders_controller.dart';
 import 'package:flutter/material.dart';
@@ -29,29 +27,6 @@ class OrdersPage extends GetView<OrdersController> {
           HeaderWidget(
             title: StringsManager.orders,
             actions: [
-              IconButtonWidget(
-                onPressed: () => Get.bottomSheet(
-                  Material(
-                    color: AppPalette.bg4,
-                    child: ListView(
-                      shrinkWrap: true,
-                      children: ['Item 1', 'Item 2', 'Item 3']
-                          .map(
-                            (item) => ListTile(
-                              onTap: () => Get.back(),
-                              title: TextBlocKWidget.t16(item),
-                            ),
-                          )
-                          .toList(),
-                    ),
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(AppSpacing.r4),
-                  ),
-                ),
-                icon: AssetsManager.sortIcon,
-                isPrimary: false,
-              ),
               GapWidget.s16(axe: GapEnum.horizontal),
               ButtonWidget(
                 onPressed: () => Get.toNamed(AppRoutes.createOrder),
