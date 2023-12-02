@@ -12,7 +12,6 @@ class DioServiceImpl extends ApiService {
             // receiveTimeout: ConstantsManager.receiveTimeout,
             // sendTimeout: ConstantsManager.sendTimeout,
             headers: {
-              // "Content-Type": "application/json",
               "apikey": ConstantsManager.apiKey,
             },
             contentType: "application/json",
