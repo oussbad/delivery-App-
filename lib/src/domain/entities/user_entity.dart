@@ -9,6 +9,7 @@ class User {
   final String? status;
   final String? name;
   final String? email;
+  final String? password;
   final String? image;
   final String? phoneNumber;
   final String? businessName;
@@ -26,6 +27,7 @@ class User {
     this.id,
     this.status,
     this.name,
+    this.password,
     this.email,
     this.image,
     this.phoneNumber,

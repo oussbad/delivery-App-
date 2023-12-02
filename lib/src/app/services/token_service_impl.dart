@@ -6,7 +6,9 @@ class TokenServiceImpl extends TokenService {
   final FlutterSecureStorage _secureStorage = const FlutterSecureStorage();
 
   @override
-  Future<String?> getToken() async => await _secureStorage.read(key: ConstantsManager.token);
+  Future<String?> getToken() async => await _secureStorage.read(
+        key: ConstantsManager.token,
+      );
 
   @override
   Future<void> setToken(String token) async => await _secureStorage.write(
@@ -15,5 +17,7 @@ class TokenServiceImpl extends TokenService {
       );
 
   @override
-  Future<void> removeToken() async => await _secureStorage.delete(key: ConstantsManager.token);
+  Future<void> removeToken() async => await _secureStorage.delete(
+        key: ConstantsManager.token,
+      );
 }

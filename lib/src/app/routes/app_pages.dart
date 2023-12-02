@@ -17,8 +17,6 @@ import 'package:boxpend_flutter_android_app/src/presentation/order/binds/create_
 import 'package:boxpend_flutter_android_app/src/presentation/order/binds/order_details_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/pages/create_order_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/order/pages/order_details_page.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/template/binds/template_bind.dart';
-import 'package:boxpend_flutter_android_app/src/presentation/template/pages/template_page.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/binds/onboarding_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/binds/splash_bind.dart';
 import 'package:boxpend_flutter_android_app/src/presentation/welcome/pages/onboarding_page.dart';
@@ -30,7 +28,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = AppRoutes.home;
+  static const initial = AppRoutes.signIn;
 
   static final notFound = GetPage(
     name: _Paths.notFound,
@@ -38,17 +36,6 @@ class AppPages {
   );
 
   static final pages = [
-    ///
-    /// Just a example to copy from
-    ///
-    GetPage(
-      name: _Paths.template,
-      page: () => const TemplatePage(),
-      binding: TemplateBind(),
-    ),
-
-    //---------------------------------------
-
     ///
     /// Welcome Pages
     ///

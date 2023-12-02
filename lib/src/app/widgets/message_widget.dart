@@ -44,13 +44,14 @@ class _MessageBasicWidget extends StatelessWidget {
   ) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
       children: [
         Icon(
           messageIcon,
           color: messageIconColor,
           size: AppSpacing.s40,
         ),
-        GapWidget.s8(),
+        GapWidget.s16(),
         TextBlocKWidget.t14(
           messageText,
           textAlign: TextAlign.center,
@@ -118,6 +119,8 @@ class MessageWidget extends _MessageBasicWidget {
 String _setErrorMessage(Failure failure) {
   if (failure is NetworkFailure) {
     return StringsManager.network;
+  } else if (failure is AuthFailure) {
+    return StringsManager.authError;
   } else {
     return StringsManager.error;
   }

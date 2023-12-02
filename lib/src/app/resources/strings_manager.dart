@@ -30,7 +30,7 @@ class StringsManager {
   static const String haveAnAccount = 'Have an account? Login';
   static const String welcomeBack = 'Welcome Back';
   static const String needAnAccount = 'Need an account? Signup';
-  static const String continueTo = 'Continue';
+  static const String continueTo = 'Sign In';
   static const String emailSent = 'We have sent you an email to login please open your email and click the link in it';
   static const String changePassword = 'Change password';
   static const String theme = 'Theme';
@@ -126,8 +126,13 @@ class StringsManager {
   ///
   /// Messages
   ///
+  static const String signinSuccess = 'Sign in successfully!';
+  static const String signupSuccess = 'Account created successfully!';
+  static const String signoutSuccess = 'Sign out successfully!';
+  static const String authError = 'Invalid auth information!';
   static const String success = 'Success! Your operation was completed';
-  static const String error = 'An error occurred';
+  static const String error = 'Unexpected error occurred';
+  static const String acceptTerms = 'Please accept the terms and conditions to continue';
   static const String network = 'No Internet Connection';
   static const String empty = 'No data available at the moment';
   static const String notFound = 'Page not found';

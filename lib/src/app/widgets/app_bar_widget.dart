@@ -1,4 +1,6 @@
 import 'package:boxpend_flutter_android_app/src/app/resources/assets_manager.dart';
+import 'package:boxpend_flutter_android_app/src/app/routes/app_pages.dart';
+import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/icon_button_widget.dart';
@@ -11,6 +13,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   const AppBarWidget({
     super.key,
     this.title,
+    this.subtitle,
     this.actions,
     this.withBackButton = false,
     this.withCloseButton = false,
@@ -18,6 +21,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   });
 
   final String? title;
+  final String? subtitle;
   final List<Widget>? actions;
   final bool withBackButton;
   final bool withCloseButton;
@@ -47,7 +51,18 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       if (withBackButton) {
         leadingList.add(GapWidget.s16(axe: GapEnum.horizontal));
       }
-      leadingList.add(_buildTitle());
+      if (!GetUtils.isNullOrBlank(subtitle)!) {
+        leadingList.add(Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            _buildTitle(),
+            _buildSubTitle(),
+          ],
+        ));
+      } else {
+        leadingList.add(_buildTitle());
+      }
     }
 
     if (leadingList.length > 1) {
@@ -107,6 +122,11 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   }
 
   Widget _buildTitle() => TextBlocKWidget.t16(title!);
+
+  Widget _buildSubTitle() => TextBlocKWidget.t14(
+        subtitle!,
+        color: AppPalette.btnColor4,
+      );
 
   Widget _buildActions() {
     if (actions!.length > 1) {

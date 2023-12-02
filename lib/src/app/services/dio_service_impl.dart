@@ -1,17 +1,25 @@
 import 'package:boxpend_flutter_android_app/src/app/core/services/api_service.dart';
+import 'package:boxpend_flutter_android_app/src/app/middlewares/token_interceptor.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:dio/dio.dart';
 
 class DioServiceImpl extends ApiService {
-  DioServiceImpl(this._dio) {
-    _dio.options = BaseOptions(
-      baseUrl: ConstantsManager.baseUrl,
-      //  connectTimeout: ConstantsManager.connectTimeout,
-      // receiveTimeout: ConstantsManager.receiveTimeout,
-      // sendTimeout: ConstantsManager.sendTimeout,
-      responseType: ResponseType.json,
-    );
-  }
+  DioServiceImpl()
+      : _dio = Dio(
+          BaseOptions(
+            baseUrl: ConstantsManager.baseUrl,
+            //  connectTimeout: ConstantsManager.connectTimeout,
+            // receiveTimeout: ConstantsManager.receiveTimeout,
+            // sendTimeout: ConstantsManager.sendTimeout,
+            headers: {
+              "apikey": ConstantsManager.apiKey,
+            },
+            contentType: "application/json",
+            responseType: ResponseType.json,
+          ),
+        )..interceptors.addAll([
+            TokenInterceptor(),
+          ]);
 
   final Dio _dio;
 
@@ -33,8 +41,8 @@ class DioServiceImpl extends ApiService {
 
   @override
   Future<ApiResponse> post(
-    String endpoint,
-    Map<String, dynamic> data, {
+    String endpoint, {
+    Map<String, dynamic>? data,
     Map<String, dynamic>? headers,
   }) async {
     final response = await _dio.post(
@@ -49,8 +57,8 @@ class DioServiceImpl extends ApiService {
 
   @override
   Future<ApiResponse> update(
-    String endpoint,
-    Map<String, dynamic> data, {
+    String endpoint, {
+    Map<String, dynamic>? data,
     Map<String, dynamic>? headers,
   }) async {
     final response = await _dio.put(

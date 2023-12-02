@@ -20,7 +20,7 @@ class _SwitchButtonWidgetState extends State<SwitchButtonWidget> {
     );
   }
 
-  Duration _setDuration() => const Duration(milliseconds: 500);
+  Duration _setDuration() => const Duration(milliseconds: 300);
 
   Widget _buildTrack() {
     return AnimatedContainer(

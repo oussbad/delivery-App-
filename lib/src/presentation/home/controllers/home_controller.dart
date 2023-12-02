@@ -18,5 +18,4 @@ class HomeController extends GetxController {
 
   void openDrawer() => scaffoldKey.currentState!.openDrawer();
   void changeScreen(int index) => currentIndex(index);
-  void goToAddNewOrderPage() => Get.offAllNamed(AppRoutes.template);
 }

@@ -1,11 +1,11 @@
-import 'package:boxpend_flutter_android_app/src/app/helpers/validators.dart';
+import 'package:boxpend_flutter_android_app/src/app/utils/validators.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/button_style.dart';
-import 'package:boxpend_flutter_android_app/src/app/resources/constants_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/resources/strings_manager.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_palette.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_spacing.dart';
 import 'package:boxpend_flutter_android_app/src/app/themes/app_typography.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/button_widget.dart';
+import 'package:boxpend_flutter_android_app/src/app/widgets/dialog_widgets.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/radio_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/text_field_widget.dart';
 import 'package:boxpend_flutter_android_app/src/app/widgets/gap_widget.dart';
@@ -58,21 +58,17 @@ class SignUpPage extends GetView<SignUpController> {
         ),
         GapWidget.s16(),
         TextFieldWidget(
-          controller: controller.emailController,
+          isHidden: true,
+          controller: controller.passwordController,
           placeholder: StringsManager.password,
-          validator: Validator()
-              .required()
-              .password(
-                ConstantsManager.maxPassword,
-              )
-              .run,
+          validator: Validator().required().password().run,
         ),
         GapWidget.s16(),
         _buildCheckbox(),
         GapWidget.s24(),
         ButtonWidget(
           label: StringsManager.createAccount.tr,
-          onPressed: controller.signup,
+          onPressed: () => showAppOverlay(controller.signUp),
           isExpanded: true,
           size: ButtonSize.large,
         ),
@@ -110,18 +106,18 @@ class SignUpPage extends GetView<SignUpController> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Obx(
-          () => RadioWidget(
+          () => RadioWidget<UserType>(
             label: StringsManager.provider.tr,
-            value: 'Provider',
+            value: UserType.provider,
             groupValue: controller.userType.value,
             onChanged: controller.onUserTypeChanged,
           ),
         ),
         GapWidget.s8(axe: GapEnum.horizontal),
         Obx(
-          () => RadioWidget(
+          () => RadioWidget<UserType>(
             label: StringsManager.delivery.tr,
-            value: 'Delivery',
+            value: UserType.delivery,
             groupValue: controller.userType.value,
             onChanged: controller.onUserTypeChanged,
           ),
