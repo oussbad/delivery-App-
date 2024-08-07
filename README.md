@@ -8,7 +8,7 @@ To use Boxpend, follow these steps:
 
 1. Clone the repository from GitHub:
    ```
-   git clone https://github.com/goaluin/boxpend_android.git
+   git clone https://github.com/oussbad/delivery-App-.git
    ```
 
 2. Change the working directory to the Boxpend folder:
@@ -50,4 +50,4 @@ This project is licensed under the MIT License - see the [LICENSE](https://en.wi
 
 ## Contact
 
-For any inquiries or support, please contact the project maintainer at `serbouti.abdelaziz.contact@gmailcom`.
+For any inquiries or support, please contact  `oussamabadreddine210@gmail.com`.
